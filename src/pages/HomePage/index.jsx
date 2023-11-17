@@ -2,19 +2,24 @@ import './style.css';
 
 export const HomePage = () => {
   return (
-    <div className="container">
-      <main>
-        <p>
-          Startovací šablona pro webovou aplikaci v Reactu. Vytvořeno pomocí{' '}
-          <a href="https://www.npmjs.com/package/create-czechitas-app">
-            create-czechitas-app
-          </a>
-          .
-        </p>
-      </main>
-      <footer>
-        <p>Czechitas, Digitální akademie: Web</p>
-      </footer>
-    </div>
+    <main className="container-main__page">
+      <div className="main__page">
+        <h1 className="title">Můj první plánovač</h1>
+        <div className="question-name">
+          <p>Já jsem dino míno a jak se jmenuješ ty? </p>
+          <input type="text"></input>
+        </div>
+        <div className="dino-foot">
+          <img
+            className="dino-mino__main-page"
+            src="./img/DinoMinoAdjusted.png"
+          />
+          <img
+            className="foot-print__main-page"
+            src="./img/IconsFunctional/footPrintMain.png"
+          />
+        </div>
+      </div>
+    </main>
   );
 };
