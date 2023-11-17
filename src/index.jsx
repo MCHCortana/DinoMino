@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import React from 'react';
 import { App } from './App';
 import { HomePage } from './pages/HomePage';
+import { MenuPage } from './pages/MenuPage';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -15,10 +16,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <HomePage />,
       },
-      // {
-      //   path: '/MenuPage',
-      //   element: <MenuPage />,
-      // },
+      {
+        path: '/menupage',
+        element: <MenuPage />,
+      },
       // {
       //   path: '/gamepage',
       //   element: <GamePage />,
