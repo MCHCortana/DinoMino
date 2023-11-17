@@ -1,1 +1,53 @@
+.container-main__page {
+  min-height: calc(100vh - 4rem);
+  background-image: url(./img/bg2.png);
 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+
+}
+
+.main__page {
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  padding: 50px;
+
+}
+
+input {
+  opacity: 50%;
+  border-radius: 20px;
+  height: 60px;
+  width: 300px;
+  margin: 30px;
+  font-size: 2rem;
+}
+
+.dino-mino__main-page {
+  width: 20rem;
+
+}
+
+.question-name p {
+  font-size: 2.5rem;
+}
+
+.dino-foot {
+  gap: 70px;
+  display: flex;
+  margin: auto;
+  width: 860px;
+}
+
+.foot-print__main-page {
+  width: 15rem;
+  filter: drop-shadow(1px 15px 1px rgba(60, 28, 28, 0.4));
+}
+
+.foot-print__main-page {
+  margin: 70px;
+}
