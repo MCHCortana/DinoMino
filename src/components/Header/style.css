@@ -1,0 +1,14 @@
+header {
+  margin: 0;
+  height: 4rem;
+  background-color: #fff2ccff;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  height: 90%;
+  margin: auto;
+  margin-left: 35px;
+  margin-right: 35px;
+}
