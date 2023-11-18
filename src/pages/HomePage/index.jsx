@@ -6,10 +6,10 @@ export const HomePage = () => {
       <div className="main__page">
         <h1 className="title">Můj první plánovač</h1>
         <div className="question-name">
-          <p className="">Ahoj, já jsem Dino Míno.</p>
+          <p>Ahoj, já jsem Dino Míno.</p>
           <label>
             A jak se jmenuješ ty?
-            <input type="text" class="custom-input"></input>
+            <input type="text" className="custom-input"></input>
           </label>
         </div>
         <div className="dino-foot">
