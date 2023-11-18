@@ -6,8 +6,11 @@ export const HomePage = () => {
       <div className="main__page">
         <h1 className="title">Můj první plánovač</h1>
         <div className="question-name">
-          <p>Já jsem dino míno a jak se jmenuješ ty? </p>
-          <input type="text"></input>
+          <p className="">Ahoj, já jsem Dino Míno.</p>
+          <label>
+            A jak se jmenuješ ty?
+            <input type="text" class="custom-input"></input>
+          </label>
         </div>
         <div className="dino-foot">
           <img

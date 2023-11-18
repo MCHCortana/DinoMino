@@ -1,11 +1,8 @@
 .container-main__page {
   min-height: calc(100vh - 4rem);
-  background-image: url(./img/bg2.png);
-
+  background-image: url(./img/bg1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
-
 }
 
 .main__page {
@@ -14,26 +11,29 @@
 
 .title {
   font-size: 4rem;
-  padding: 50px;
-
+  padding: 40px;
 }
 
 input {
-  opacity: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   height: 60px;
   width: 300px;
   margin: 30px;
   font-size: 2rem;
+  color: #4B0082;
+  text-align: center;
 }
+
 
 .dino-mino__main-page {
   width: 20rem;
 
 }
 
-.question-name p {
-  font-size: 2.5rem;
+.question-name {
+  font-size: 2rem;
+  margin: 20px;
 }
 
 .dino-foot {
@@ -45,8 +45,13 @@ input {
 
 .foot-print__main-page {
   width: 15rem;
-  filter: drop-shadow(1px 15px 1px rgba(60, 28, 28, 0.4));
+  /* filter: drop-shadow(15px 15px 15px rgba(60, 28, 28, 0.4)); */
+  filter: drop-shadow(15px 15px 1px rgba(60, 28, 28, 0.4));
 }
+
+/* .foot-print__main-page:hover {
+ 
+} */
 
 .foot-print__main-page {
   margin: 70px;
