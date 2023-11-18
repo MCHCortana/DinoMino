@@ -1,5 +1,5 @@
 .error-container {
-  background-image: url(./img/bgErrorPage.png);
+  background-image: url(/img/bgErrorPage.png);
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
