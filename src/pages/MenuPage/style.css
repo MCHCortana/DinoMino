@@ -1,20 +1,39 @@
 .container__menu_page {
   min-height: calc(100vh - 4rem);
   background-image: url(./img/bg1.png);
-
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__menu_page::before {
+  background-image: url(./img/bg1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.8;
+}
+
+.container__menu_page h1 {
+  margin: 2%;
+  margin-bottom: 0;
+  margin-left: 15%;
+  width: 100%;
 }
 
 .dino-mino__menupage {
-  position: fixed;
+  max-width: 300px;
+  align-self: flex-end;
 }
 
 .main_menu {
   width: 40rem;
+  aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: #aeec989c;
+  background-color: rgba(255, 242, 204, 0.7);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -22,6 +41,29 @@
 }
 
 .main_menu img {
-  width: 150px;
+  max-width: 12rem;
+}
 
+.menu_page--puzzle,
+.menu_page--planner {
+  margin-left: -30%;
+}
+
+.menu_page--puzzle {
+  margin-top: 30%;
+}
+
+@media (max-width: 500px) {
+  .main_menu img {
+    max-width: 8rem;
+  }
+
+  .dino-mino__menupage {
+    max-width: 200px;
+    align-self: flex-end;
+  }
+
+  .container__menu_page h1 {
+    font-size: 2.5rem;
+  }
 }

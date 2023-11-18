@@ -2,6 +2,7 @@ header {
   margin: 0;
   height: 4rem;
   background-color: #fff2ccff;
+  opacity: 80%;
   display: flex;
   justify-content: space-between;
 }
