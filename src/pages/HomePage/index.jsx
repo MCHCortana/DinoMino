@@ -8,14 +8,17 @@ export const HomePage = () => {
         <div className="question-name">
           <p>Ahoj, já jsem Dino Míno.</p>
           <label>
-            A jak se jmenuješ ty?
-            <input type="text" className="custom-input"></input>
+            <input
+              type="text"
+              placeholder=" A jak se jmenuješ ty?"
+              className="custom-input"
+            ></input>
           </label>
         </div>
         <div className="dino-foot">
           <img
             className="dino-mino__main-page"
-            src="./img/DinoMinoAdjusted.png"
+            src="./img/DinoMinoNoShadow.png"
           />
           <img
             className="foot-print__main-page"

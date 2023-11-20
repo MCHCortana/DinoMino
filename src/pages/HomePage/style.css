@@ -17,8 +17,7 @@
 input {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  height: 60px;
-  width: 300px;
+  line-height: 50px;
   margin: 30px;
   font-size: 2rem;
   color: #4B0082;
@@ -39,6 +38,7 @@ input {
 .dino-foot {
   gap: 70px;
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   width: 860px;
 }
