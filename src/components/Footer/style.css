@@ -1,6 +1,5 @@
 footer {
-  margin: 0;
-  margin-right: 1rem;
+  padding-right: 1rem;
   height: 1.2rem;
   background-color: #fff2ccff;
   display: flex;
