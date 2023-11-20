@@ -3,6 +3,7 @@
   background-image: url(/img/bg1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+
 }
 
 .main__page {
@@ -18,16 +19,14 @@ input {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   line-height: 50px;
-  margin: 30px;
+  margin-top: 30px;
   font-size: 2rem;
   color: #4B0082;
   text-align: center;
 }
 
-
 .dino-mino__main-page {
-  width: 20rem;
-
+  max-width: 20rem;
 }
 
 .question-name {
@@ -36,17 +35,20 @@ input {
 }
 
 .dino-foot {
-  gap: 70px;
+  max-width: 860px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
-  width: 860px;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
 .foot-print__main-page {
   width: 15rem;
-  /* filter: drop-shadow(15px 15px 15px rgba(60, 28, 28, 0.4)); */
   filter: drop-shadow(15px 15px 1px rgba(60, 28, 28, 0.4));
+
 }
 
 /* .foot-print__main-page:hover {
@@ -54,5 +56,5 @@ input {
 } */
 
 .foot-print__main-page {
-  margin: 70px;
+  /* margin: 70px; */
 }

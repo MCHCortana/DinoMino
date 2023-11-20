@@ -1,4 +1,5 @@
 import './style.css';
+import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
   return (
@@ -20,10 +21,12 @@ export const HomePage = () => {
             className="dino-mino__main-page"
             src="./img/DinoMinoNoShadow.png"
           />
-          <img
-            className="foot-print__main-page"
-            src="./img/IconsFunctional/footPrintMain.png"
-          />
+          <Link to="/menupage">
+            <img
+              className="foot-print__main-page"
+              src="./img/IconsFunctional/footPrintMain.png"
+            />
+          </Link>
         </div>
       </div>
     </main>
