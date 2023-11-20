@@ -3,7 +3,6 @@
   background-image: url(/img/bg1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
 }
 
 .main__page {
@@ -54,7 +53,3 @@ input {
 /* .foot-print__main-page:hover {
  
 } */
-
-.foot-print__main-page {
-  /* margin: 70px; */
-}
