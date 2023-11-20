@@ -6,6 +6,7 @@ export const HomePage = () => {
     <main className="container-main__page">
       <div className="main__page">
         <h1 className="title">Můj první plánovač</h1>
+        <img className="faq-HomePage" src="./img/IconsFunctional/faq.png" />
         <div className="question-name">
           <p>Ahoj, já jsem Dino Míno.</p>
           <label>

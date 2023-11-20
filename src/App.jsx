@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 export const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header />  bude pouze na vnitřních strákách - nebude na stránce HomePage a MenuPage*/}
       <Outlet />
       <Footer />
     </>
