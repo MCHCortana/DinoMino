@@ -1,0 +1,69 @@
+.container__game_page {
+  min-height: calc(100vh - 4rem);
+  background-image: url(/img/bg1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-size: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__game_page::before {
+  background-image: url(/img/bg1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.8;
+}
+
+.container__game_page h1 {
+  margin: 2%;
+  margin-bottom: 0;
+  margin-left: 15%;
+  width: 100%;
+}
+
+.dino-mino__gamepage {
+  max-width: 300px;
+  align-self: flex-end;
+}
+
+.game_menu {
+  width: 35rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(255, 242, 204, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game_menu img {
+  max-width: 12rem;
+}
+
+.game_page--dino {
+  margin-top: -80%;
+}
+
+.game_page--presents {
+  margin-bottom: -40%;
+}
+
+
+@media (max-width: 500px) {
+  .game_menu img {
+    max-width: 8rem;
+  }
+
+  .dino-mino__gamepage {
+    max-width: 200px;
+    align-self: flex-end;
+  }
+
+  .container__game_page h1 {
+    font-size: 2.5rem;
+  }
+}

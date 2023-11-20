@@ -3,6 +3,7 @@ import React from 'react';
 import { App } from './App';
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
+import { GamePage } from './pages/GamePage';
 import { ErrorPage } from './pages/ErrorPage';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -21,10 +22,10 @@ const router = createBrowserRouter([
         path: '/menupage',
         element: <MenuPage />,
       },
-      // {
-      //   path: '/gamepage',
-      //   element: <GamePage />,
-      // },
+      {
+        path: '/gamepage',
+        element: <GamePage />,
+      },
     ],
   },
 ]);

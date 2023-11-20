@@ -2,6 +2,7 @@ import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 export const MenuPage = () => {
   return (
@@ -27,10 +28,12 @@ export const MenuPage = () => {
             />
           </Col>
           <Col>
-            <img
-              className="menu_page--puzzle"
-              src="./img/IconsFunctional/puzzle.png"
-            />
+            <Link to="/gamepage">
+              <img
+                className="menu_page--puzzle"
+                src="./img/IconsFunctional/puzzle.png"
+              />
+            </Link>
           </Col>
         </Row>
       </Container>
