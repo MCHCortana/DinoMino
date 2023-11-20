@@ -4,17 +4,10 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 4rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
-.container__menu_page::before {
-  background-image: url(/img/bg1.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  opacity: 0.8;
+.grid-menu_page {
+  margin: auto;
 }
 
 .container__menu_page h1 {
@@ -26,15 +19,20 @@
 
 .dino-mino__menupage {
   max-width: 300px;
+  margin-left: 5rem;
   align-self: flex-end;
 }
 
+.faq-menupage {
+  max-width: 100px;
+}
+
 .main_menu {
-  width: 35rem;
+  max-height: 40vh;
   aspect-ratio: 1/1;
   padding-left: 8%;
   border-radius: 50%;
-  background-color: rgba(255, 242, 204, 0.7);
+  background-color: rgba(204, 254, 255, 0.7);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -42,7 +40,8 @@
 }
 
 .main_menu img {
-  max-width: 10rem;
+  max-width: 12rem;
+  padding: 1rem;
 }
 
 @media (max-width: 500px) {
@@ -52,10 +51,18 @@
 
   .dino-mino__menupage {
     max-width: 200px;
-    align-self: flex-end;
+    margin: auto;
   }
 
   .container__menu_page h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .faq-menupage {
+    max-width: 80px;
+  }
+
+  .grid-menu_page {
+    padding-top: 100px;
   }
 }

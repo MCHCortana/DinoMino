@@ -7,19 +7,20 @@
   align-items: center;
 }
 
-.options-activity_page {
-  width: 50%;
-  background-color: antiquewhite;
+.grid-activity_page {
+  margin: 0;
+  border: 1px black solid;
 }
 
-.summary {
-  width: 40%;
-  min-height: 80%;
-  background-color: antiquewhite;
+.grid-activity_page .col {
+  border: 1px black solid;
 }
 
-.faq-activity_page {
-  width: 40%;
-  background-color: antiquewhite;
+.activity_options {
+  min-height: 50vh;
+}
 
+.dino-mino__activitypage {
+  max-width: 300px;
+  margin-left: 3rem;
 }
