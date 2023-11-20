@@ -38,10 +38,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .game_menu img {
   max-width: 12rem;
+
 }
 
 .game_page--dino {
@@ -50,6 +52,7 @@
 
 .game_page--presents {
   margin-bottom: -40%;
+  margin-right: -8rem;
 }
 
 
