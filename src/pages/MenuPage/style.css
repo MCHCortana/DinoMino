@@ -30,8 +30,9 @@
 }
 
 .main_menu {
-  width: 40rem;
+  width: 35rem;
   aspect-ratio: 1/1;
+  padding-left: 8%;
   border-radius: 50%;
   background-color: rgba(255, 242, 204, 0.7);
   display: flex;
@@ -41,16 +42,7 @@
 }
 
 .main_menu img {
-  max-width: 12rem;
-}
-
-.menu_page--puzzle,
-.menu_page--planner {
-  margin-left: -30%;
-}
-
-.menu_page--puzzle {
-  margin-top: 30%;
+  max-width: 10rem;
 }
 
 @media (max-width: 500px) {

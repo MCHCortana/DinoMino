@@ -2,6 +2,7 @@ import './style.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const GamePage = () => {
   return (
@@ -19,13 +20,6 @@ export const GamePage = () => {
           <Col></Col>
         </Row>
         <Row>
-          {/* <Col></Col> */}
-          {/* <Col>
-            <img
-              className="menu_page--planner"
-              src="./img/IconsFunctional/planner.png"
-            />
-          </Col> */}
           <Col>
             <img
               className="game_page--dino"

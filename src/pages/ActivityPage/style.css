@@ -1,0 +1,25 @@
+.container-activity_page {
+  min-height: calc(100vh - 3.6rem);
+  background-color: rgba(0, 192, 132, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-activity_page {
+  width: 50%;
+  background-color: antiquewhite;
+}
+
+.summary {
+  width: 40%;
+  min-height: 80%;
+  background-color: antiquewhite;
+}
+
+.faq-activity_page {
+  width: 40%;
+  background-color: antiquewhite;
+
+}

@@ -5,6 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { GamePage } from './pages/GamePage';
 import { ErrorPage } from './pages/ErrorPage';
+import { ActivityPage } from './pages/ActivityPage';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/gamepage',
         element: <GamePage />,
+      },
+      {
+        path: '/activitypage',
+        element: <ActivityPage />,
       },
     ],
   },
