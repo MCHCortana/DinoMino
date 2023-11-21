@@ -1,5 +1,6 @@
 import './style.css';
 import { Link } from 'react-router-dom';
+
 export const GamePage = () => {
   return (
     <main className="container__game_page">
@@ -10,7 +11,7 @@ export const GamePage = () => {
           <Link to="/">
             <img
               className="game_page--presents"
-              src="./img/IconsCalendar/presents.png"
+              src="./img/IconsCalendar/christmas-tree2.png"
               alt="Adventní kalendář"
             />
           </Link>
@@ -18,7 +19,7 @@ export const GamePage = () => {
         <div>
           <img
             className="game_page--dino"
-            src="./img/IconsCalendar/dinosaurColor.png"
+            src="./img/IconsCalendar/monster.png"
           />
         </div>
       </div>
