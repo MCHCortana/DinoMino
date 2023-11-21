@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .container__game_page::before {
@@ -30,10 +30,11 @@
 }
 
 .game_menu {
-  width: 35rem;
+  width: 40rem;
+  max-height: 50vh;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: rgba(255, 242, 204, 0.7);
+  background-color: rgba(204, 254, 255, 0.7);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
