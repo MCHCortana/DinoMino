@@ -6,7 +6,7 @@ import { MenuPage } from './pages/MenuPage';
 import { GamePage } from './pages/GamePage';
 import { ErrorPage } from './pages/ErrorPage';
 import { ActivityPage } from './pages/ActivityPage';
-// import { AdventCalendar } from './pages/AdventCalendar';
+import { Advent } from './pages/AdventCalendar';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -28,10 +28,10 @@ const router = createBrowserRouter([
         path: '/gamepage',
         element: <GamePage />,
       },
-      // {
-      //   path: '/gamepage/advent-calendar',
-      //   element: <AdventCalendar />,
-      // },
+      {
+        path: '/gamepage/advent',
+        element: <Advent />,
+      },
       {
         path: '/activitypage',
         element: <ActivityPage />,

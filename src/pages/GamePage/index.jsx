@@ -8,7 +8,7 @@ export const GamePage = () => {
       <img className="dino-mino__gamepage" src="./img/DinoMinoNoShadow.png" />
       <div className="game_menu">
         <div>
-          <Link to="/">
+          <Link to="/gamepage/advent">
             <img
               className="game_page--presents"
               src="./img/IconsCalendar/christmas-tree2.png"
