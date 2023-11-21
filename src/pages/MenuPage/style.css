@@ -39,8 +39,9 @@
   background-color: rgba(204, 254, 255, 0.7);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 5%;
 }
 
 .main_menu img {
