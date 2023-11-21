@@ -1,46 +1,37 @@
 import './style.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { SummaryActivityPage } from '../../components/SummaryActivityPage';
+import { SummaryActivityPage } from './SummaryActivityPage';
+import { DaysMonths } from './DaysMonths';
 
 export const ActivityPage = () => {
   return (
     <main className="container-activity_page">
-      <Container id="container--activity_page">
-        <Row style={{ height: '100%' }}>
-          {/* Left Column */}
-          <Col xs={12} md={6} className="left-column">
-            {/* First Row (2/3 of height) */}
-            <Row className="first-row--activity_page">
-              <Col style={{ backgroundColor: '#eee' }}>Content 1</Col>
-            </Row>
+      {/* Left Column */}
+      <div className="left-column">
+        <div className="container_days_months">
+          <DaysMonths />
+        </div>
+      </div>
 
-            {/* Second Row (30% of height) */}
-            <Row className="second-row--activity_page">
-              <Col id="imgs">
-                <img
-                  className="dino-mino--activity_page"
-                  src="./img/DinoReading.png"
-                  alt="Dinosaur Dino Míno s knihou"
-                />
-              </Col>
-              <Col className="faq--activity_page">
-                <img src="./img/IconsFunctional/faq.png" alt="Pomoc" />
-              </Col>
-            </Row>
-          </Col>
-
-          {/* Right Column */}
-          <Col xs={12} md={6} className="right-column--activity_page">
-            <div className="summary">
-              <SummaryActivityPage />
+      {/* Right Column */}
+      <div className="summary">
+        <SummaryActivityPage />
+        <div className="second-row--activity_page">
+          <div className="imgs_activity_page">
+            <div className="faq--activity_page">
+              <img src="./img/IconsFunctional/faq.png" alt="Pomoc" />
             </div>
-          </Col>
-        </Row>
-      </Container>
+            <div className="dino--activity_page">
+              <img
+                className="dino-mino--activity_page"
+                src="./img/DinoReading.png"
+                alt="Dinosaur Dino Míno s knihou"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };

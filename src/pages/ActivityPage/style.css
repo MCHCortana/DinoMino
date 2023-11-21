@@ -3,43 +3,40 @@
   background-color: rgba(0, 192, 132, 255);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-#container--activity_page {
-  width: 90vw;
-  height: 90vh;
+.container_days_months {
+  border-radius: 2rem;
+  background-color: rgb(246, 196, 204);
 }
 
 .left-column {
-  height: 100%;
-}
-
-.first-row--activity_page {
-  height: 66.67%;
-}
-
-.second-row--activity_page {
-  height: 30%;
-}
-
-.right-column--activity_page {
-  height: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 45%;
 }
 
 .summary {
-  height: 100%;
-  background-color: #ccc
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(204, 254, 255);
+  border-radius: 2rem;
+}
+
+.imgs_activity_page {
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 .dino-mino--activity_page {
   max-width: 250px;
+  margin-top: -10rem;
   margin-left: 3rem;
   filter: drop-shadow(1px 10px 1px rgba(93, 27, 27, 0.4));
+  transform: scaleX(-1)
 }
 
 .faq--activity_page {
@@ -51,6 +48,7 @@
 
 .faq--activity_page img {
   width: 4rem;
+  margin-right: 2rem;
 }
 
 .faq--activity_page img:hover {
