@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { SummaryActivityPage } from '../../components/SummaryActivityPage';
+
 export const ActivityPage = () => {
   return (
     <main className="container-activity_page">
@@ -33,7 +35,9 @@ export const ActivityPage = () => {
 
           {/* Right Column */}
           <Col xs={12} md={6} className="right-column--activity_page">
-            <div className="summary">Summary</div>
+            <div className="summary">
+              <SummaryActivityPage />
+            </div>
           </Col>
         </Row>
       </Container>

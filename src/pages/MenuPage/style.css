@@ -6,10 +6,6 @@
   font-size: 4rem;
 }
 
-.grid-menu_page {
-  margin: auto;
-}
-
 .container__menu_page h1 {
   margin: 2%;
   margin-bottom: 0;
@@ -32,16 +28,24 @@
 }
 
 .main_menu {
-  max-height: 40vh;
+  width: 35rem;
   aspect-ratio: 1/1;
-  padding-left: 8%;
   border-radius: 50%;
-  background-color: rgba(204, 254, 255, 0.7);
+  background-color: rgba(255, 242, 204, 0.7);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 5%;
+  align-content: center;
+}
+
+.menu_icon--one-two {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  align-content: center;
+  gap: 1.5rem;
+
 }
 
 .main_menu img {
@@ -53,25 +57,25 @@
   transform: scale(1.5);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .main_menu img {
-    max-width: 8rem;
+    max-width: 5rem;
   }
 
   .dino-mino__menupage {
-    max-width: 200px;
+    max-width: 150px;
     margin: auto;
   }
 
   .container__menu_page h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .faq-menupage {
     max-width: 80px;
   }
 
-  .grid-menu_page {
-    padding-top: 100px;
+  .main_menu {
+    gap: 0;
   }
 }
