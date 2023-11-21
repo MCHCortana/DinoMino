@@ -9,7 +9,9 @@ export const Header = () => {
           src="./img/IconsFunctional/footPrintMain.png"
         />
       </Link>
-      <img src="./img/IconsFunctional/faq.png" />
+      <Link to="/">
+        <img className="link-menu" src="./img/IconsFunctional/faq.png" />
+      </Link>
     </header>
   );
 };
