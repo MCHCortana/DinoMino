@@ -1,36 +1,43 @@
 .container-main__page {
-  min-height: 100vh;
+  min-height: calc(100vh - 3.8rem);
   background-image: url(/img/bg1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main__page {
-  text-align: center;
-}
-
-.faq-HomePage {
-  width: 50px;
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
 }
 
 .title {
+  width: 100%;
   font-size: 4rem;
-  padding: 40px;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.question-name {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 input {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  line-height: 50px;
-  margin-top: 30px;
-  font-size: 2rem;
+  max-width: 80%;
   color: #4B0082;
   text-align: center;
-}
-
-.dino-mino__main-page {
-  max-width: 20rem;
-  align-self: flex-end;
 }
 
 .question-name {
@@ -39,18 +46,24 @@ input {
 }
 
 .dino-foot {
-  max-width: 860px;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10rem;
   align-items: center;
-  justify-content: space-around;
+}
+
+.dino-mino__main-page {
+  max-width: 20rem;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 
 .foot-print__main-page {
   width: 15rem;
-  filter: drop-shadow(15px 15px 1px rgba(60, 28, 28, 0.4));
+  filter: drop-shadow(15px 15px 1px rgba(81, 43, 43, 0.4));
 }
 
 .foot-print__main-page:hover {
@@ -61,8 +74,38 @@ input {
   margin: 70px;
 }
 
+.faq-HomePage {
+  max-width: 80px;
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+}
+
+.faq-HomePage:hover {
+  transform: scale(1.1);
+}
+
+
 @media (min-width:1400px) {
-  .dino-mino__main-page {
+  /* .dino-mino__main-page {
     margin: -5rem;
+  } */
+
+  .main__page {
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    line-height: 50px;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #4B0082;
+    text-align: center;
   }
 }

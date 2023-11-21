@@ -6,14 +6,11 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Andika', sans-serif;
-  /* font-family: 'Russo One', sans-serif; */
-  color: #4B0082;
-}
-
 body {
   min-height: 100vh;
+  /* font-family: 'Andika', sans-serif; */
+  font-family: 'Russo One', sans-serif;
+  color: #4B0082;
 }
 
 .app {

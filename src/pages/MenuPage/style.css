@@ -44,7 +44,7 @@
   padding: 1rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .main_menu img {
     max-width: 8rem;
   }

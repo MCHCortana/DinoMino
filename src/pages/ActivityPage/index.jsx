@@ -7,30 +7,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const ActivityPage = () => {
   return (
     <main className="container-activity_page">
-      <Container className="grid-activity_page">
-        <Row>
-          <Col className="activity_options">
-            {' '}
-            1 of 2
-            <Row>
-              <Col>1 of 3</Col>
-              <Col>2 of 3</Col>
-              <Col>3 of 3</Col>
+      <Container id="container--activity_page">
+        <Row style={{ height: '100%' }}>
+          {/* Left Column */}
+          <Col xs={12} md={6} className="left-column">
+            {/* First Row (2/3 of height) */}
+            <Row className="first-row--activity_page">
+              <Col style={{ backgroundColor: '#eee' }}>Content 1</Col>
+            </Row>
+
+            {/* Second Row (30% of height) */}
+            <Row className="second-row--activity_page">
+              <Col id="imgs">
+                <img
+                  className="dino-mino--activity_page"
+                  src="./img/DinoReading.png"
+                  alt="Dinosaur Dino Míno s knihou"
+                />
+              </Col>
+              <Col className="faq--activity_page">
+                <img src="./img/IconsFunctional/faq.png" alt="Pomoc" />
+              </Col>
             </Row>
           </Col>
-          <Col className="summary-activity_page">2 of 2</Col>
-        </Row>
-        <Row>
-          <Col>1 of 3</Col>
-        </Row>
-        <Row>
-          <Col xs lg="4">
-            <img
-              className="dino-mino__activitypage"
-              src="./img/DinoMinoNoShadow.png"
-            />
+
+          {/* Right Column */}
+          <Col xs={12} md={6} className="right-column--activity_page">
+            <div className="summary">Summary</div>
           </Col>
-          <Col>2 of 3</Col>
         </Row>
       </Container>
     </main>
