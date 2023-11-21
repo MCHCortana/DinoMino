@@ -55,6 +55,9 @@
   margin-right: -8rem;
 }
 
+.game_menu img:hover {
+  transform: scale(1.5);
+}
 
 @media (max-width: 500px) {
   .game_menu img {
