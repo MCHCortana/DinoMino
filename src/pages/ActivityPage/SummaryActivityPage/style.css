@@ -1,0 +1,30 @@
+.summary_activity_page {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  font-family: 'Andika', sans-serif;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary_activity_page h2 {
+  margin: 1rem;
+}
+
+.title_summary {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.summary_activity_page img {
+  max-width: 60px;
+}
+
+.activitiy_page-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}

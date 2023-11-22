@@ -1,20 +1,13 @@
 .container__game_page {
   min-height: calc(100vh - 3.8rem);
-  background-image: url(/img/bg1.png);
+  background-image: url(/img/bgWinter.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
-}
-
-.container__game_page::before {
-  background-image: url(/img/bg1.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  opacity: 0.8;
+  align-items: center;
 }
 
 .container__game_page h1 {
@@ -30,8 +23,7 @@
 }
 
 .game_menu {
-  width: 40rem;
-  max-height: 50vh;
+  width: 35rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: rgba(204, 254, 255, 0.7);

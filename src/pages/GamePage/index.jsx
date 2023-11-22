@@ -1,33 +1,28 @@
 import './style.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 export const GamePage = () => {
   return (
     <main className="container__game_page">
-      <h1 className="userName">A jdeme si hrát!</h1>
+      <h1>A jdeme si hrát!</h1>
       <img className="dino-mino__gamepage" src="./img/DinoMinoNoShadow.png" />
-      <Container className="game_menu">
-        <Row>
-          <Col md={{ span: 4, offset: 4 }}>
+      <div className="game_menu">
+        <div>
+          <Link to="/gamepage/advent">
             <img
               className="game_page--presents"
-              src="./img/IconsCalendar/presents.png"
+              src="./img/IconsCalendar/christmas-tree2.png"
+              alt="Adventní kalendář"
             />
-          </Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col>
-            <img
-              className="game_page--dino"
-              src="./img/IconsCalendar/dinosaur (1).png"
-            />
-          </Col>
-        </Row>
-      </Container>
+          </Link>
+        </div>
+        <div>
+          <img
+            className="game_page--dino"
+            src="./img/IconsCalendar/monster.png"
+          />
+        </div>
+      </div>
     </main>
   );
 };

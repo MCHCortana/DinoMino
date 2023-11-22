@@ -4,13 +4,22 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-size: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .container__menu_page h1 {
-  margin: 2%;
-  margin-bottom: 0;
-  margin-left: 15%;
+  text-align: center;
   width: 100%;
+}
+
+.menu_page-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .dino-mino__menupage {
@@ -21,6 +30,7 @@
 
 .faq-menupage {
   max-width: 100px;
+  max-height: 100px;
 }
 
 .faq-menupage:hover {
@@ -28,10 +38,10 @@
 }
 
 .main_menu {
-  width: 35rem;
+  max-width: 35rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: rgba(255, 242, 204, 0.7);
+  background-color: rgb(204, 254, 255);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -44,8 +54,15 @@
   width: 80%;
   justify-content: center;
   align-content: center;
-  gap: 1.5rem;
+}
 
+.faq-menupage {
+  max-width: 150px;
+  max-height: 150px;
+  justify-self: flex-start;
+  align-self: flex-end;
+  margin-bottom: 3rem;
+  margin-left: -5rem;
 }
 
 .main_menu img {
@@ -73,6 +90,7 @@
 
   .faq-menupage {
     max-width: 80px;
+
   }
 
   .main_menu {
