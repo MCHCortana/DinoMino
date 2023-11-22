@@ -1,0 +1,39 @@
+/* -------popup----------- */
+.popup {
+  display: flex;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background: linear-gradient(-225deg, #ffb805 0%, #f0bc37 50%, #fdd778 100%);
+  width: 90%;
+  min-height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 10px 7.5px 15px rgb(255, 180, 0), -10px 7.5px 15px rgb(255, 196, 0), -10px -7.5px 15px rgb(255, 242, 0)
+}
+
+.popup p {
+  margin: auto;
+  font-family: "Andika", sans-serif;
+  font-size: 1.5rem;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(243, 211, 105, 0.5);
+  pointer-events: none;
+  opacity: 1;
+  pointer-events: all;
+}
