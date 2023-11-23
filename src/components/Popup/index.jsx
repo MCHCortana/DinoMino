@@ -7,12 +7,12 @@ export const PopUp = ({ popCheck, location, popContent }) => {
     popCheck(false);
   };
   return (
-    <>
+    <div onClick={handleClick}>
       <div className="popup">
         {location === 'hint_activity' && <PopUpHint />}
         {location === 'xmas' && <PopUpXmas popContent={popContent} />}
       </div>
-      <div onClick={handleClick} className="overlay"></div>
-    </>
+      <div className="overlay"></div>
+    </div>
   );
 };

@@ -1,472 +1,1088 @@
 [
-  { "id": 1, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 2, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 3, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 4, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 5, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 6, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 7, "element": "s", "number": 24, "text": "", "name": "" },
-  { "id": 8, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 9, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 10, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 11, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 12, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 13, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 1,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 2,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 3,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 4,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 5,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 6,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 7,
+    "element": "s",
+    "number": 24,
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 8,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 9,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 10,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 11,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 12,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 13,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 14,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 15, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 16, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 17, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 18, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 19, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 20, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 15,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 16,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 17,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 18,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 19,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 20,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 21,
     "element": "x",
     "number": 3,
     "text": "Mrazík cení zoubky, chtěl by do chaloupky. Co dovede, to my víme. Dovnitř si ho nepustíme. Ať maluje pěkně zvenku bílé květy na okénku.",
-    "name": "Mrazík"
+    "name": "Mrazík",
+    "additional": ""
   },
-  { "id": 22, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 23, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 24, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 25, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 26, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 27, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 28, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 29, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 22,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 23,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 24,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 25,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 26,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 27,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 28,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 29,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 30,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 31, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 32, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 33, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 31,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 32,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 33,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 34,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 35,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 36, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 36,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 37,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 38, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 39, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 40, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 41, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 42, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 43, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 44, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 45, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 46, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 38,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 39,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 40,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 41,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 42,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 43,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 44,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 45,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 46,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 47,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 48,
     "element": "x",
     "number": 21,
     "text": "Vánoční stromeček zavoněl v pokoji, maminka u stolu jablíčko rozkrojí. A když ho rozkrojí, uvidím hvězdičku, co byla schovaná v červeném jablíčku.",
-    "name": "Vánoční stromeček"
+    "name": "Vánoční stromeček",
+    "additional": ""
   },
   {
     "id": 49,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 50,
     "element": "x",
     "number": 12,
     "text": "Sněhulák – to je pán, ze sněhu je udělaný. Sněhulák – to je pán, ze sněhu je udělán.",
-    "name": "Sněhulák"
+    "name": "Sněhulák",
+    "additional": ""
   },
   {
     "id": 51,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 52, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 53, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 54, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 55, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 56, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 57, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 52,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 53,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 54,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 55,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 56,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 57,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 58,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 59,
     "element": "0",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 60, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 60,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 61,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 62,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 63,
     "element": "x",
     "number": 9,
     "text": "Cukr, mouka, vajíčko, uděláme těstíčko. Na Vánoce to se ví, upečeme cukroví. Plech za plechem, to je jízda. Nejraději mám vosí hnízda.",
-    "name": "Vánoční cukroví"
+    "name": "Vánoční cukroví",
+    "additional": ""
   },
-  { "id": 64, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 64,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 65,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 66, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 66,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 67,
     "element": "0",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 68, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 69, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 70, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 68,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 69,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 70,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 71,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 72, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 73, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 74, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 72,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 73,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 74,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 75,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 76,
     "element": "x",
     "number": 13,
     "text": "Hvězdička stříbrná dopadla na zem a všechno kolem nás mění se rázem. Hvězdička stříbrná jehličím zavoní, v zavřeném pokoji zvoneček zazvoní. Hvězdička stříbrná na okno zaťuká, jaká má tajemství pro holku, pro kluka? Hvězdička stříbrná nám zase po roce přináší stromeček, přináší Vánoce.",
-    "name": "Hvězdička"
+    "name": "Hvězdička",
+    "additional": ""
   },
   {
     "id": 77,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 78,
     "element": "x",
     "number": "20",
     "text": "Usnul vrabec za komínem, tichounce tam dřímá, přilož, Jirko, ještě souček, ať mu není zima.",
-    "name": "Vrabec"
+    "name": "Vrabec",
+    "additional": ""
   },
   {
     "id": 79,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 80,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 81,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 82,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 83,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 84,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 85,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 86,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 87,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 88,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 89,
     "element": "x",
     "number": 18,
     "text": "Dva kapři se spolu přeli, kdo je lepší v rybníce. Brzy je však přerušila rozumnější bělice. Přestaňte se hádat, braši, jistě každý uvěří, že jste oba stejně dobří na vánoční večeři.",
-    "name": "Kapři"
+    "name": "Kapři",
+    "additional": ""
   },
   {
     "id": 90,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 91,
     "element": "x",
     "number": 17,
     "text": "Zima už se vdává, bílé šaty, bílá vlečka. Ženiši jsou černé vrány, svatebčané – vlčí smečka. Datel ťuká telegramy - tečka, čárka, čárka, tečka, a tak pořád dokolečka.",
-    "name": "Zima"
+    "name": "Zima",
+    "additional": ""
   },
-  { "id": 92, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 92,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 93,
     "element": "x",
     "number": 23,
     "text": "A už zase jako vloni, celý dům vanilkou voní. Maminka válí perníčky, v troubě se pečou rohlíčky. Ve vaně kapra už máme, stromek do pokoje dáme. A zítra zase po roce, budou opět Vánoce.",
-    "name": "Štědrý den"
+    "name": "Štědrý den",
+    "additional": ""
   },
-  { "id": 94, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 95, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 94,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 95,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 96,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 97,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 98, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 99, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 100, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 101, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 98,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 99,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 100,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 101,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 102,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 103,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 104,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 105,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 106, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 106,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 107,
     "element": "x",
     "number": 10,
-    "text": "Sněhulák",
-    "name": "Tři bílé koule na sobě a mrkev místo nosu. Uhlíky, knoflíky v zásobě, aby se líbil i kosům."
+    "text": "Tři bílé koule na sobě a mrkev místo nosu. Uhlíky, knoflíky v zásobě, aby se líbil i kosům.",
+    "name": "Sněhulák",
+    "additional": ""
   },
-  { "id": 108, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 108,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 109,
     "element": "0",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 110, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 111, "element": "v", "number": "", "text": "", "name": "" },
-  { "id": 112, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 110,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 111,
+    "element": "v",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 112,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 113,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 114,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 115, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 116, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 115,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 116,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 117,
     "element": "x",
     "number": 15,
     "text": "Čertíka se nebojíme, protože my nezlobíme. Když tak jenom trošinku, tatínka a maminku.",
-    "name": "Čertík"
+    "name": "Čertík",
+    "additional": ""
   },
   {
     "id": 118,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 119, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 119,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 120,
     "element": "x",
     "number": 22,
     "text": "Anděl Páně zlámal sáně, svatý David dal je spravit, svatá Eva dala dřeva, svatá Tereza dala železa, svatý Jakub dal je okut, svatý Job na ně hop, svatý Ján vozil se na nich sám.",
-    "name": "Sáně"
+    "name": "Sáně",
+    "additional": ""
   },
   {
     "id": 121,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 122, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 123, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 124, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 125, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 122,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 123,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 124,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 125,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 126,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
   {
     "id": 127,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 128, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 129, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 128,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 129,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 130,
     "element": "x",
     "number": 5,
     "text": "Kdo to klepe? Bílý pán. Mikuláš dnes přišel k nám. Anděl a čert přišli s ním, zjistit jestli nezlobím.",
-    "name": "Mikuláš"
+    "name": "Mikuláš",
+    "additional": ""
   },
-  { "id": 131, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 132, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 131,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 132,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 133,
     "element": "x",
     "number": 4,
     "text": "Mikuláši, přijď zítra k nám, písničku ti zazpívám, přines prosím trochu dobrot, můžeš je dát třeba do bot. Dáváš dárky pro radost, pro každého máš jich dost.",
-    "name": "Mikuláš"
+    "name": "Mikuláš",
+    "additional": ""
   },
-  { "id": 134, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 135, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 134,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 135,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 136,
     "element": "x",
     "number": 11,
     "text": "Bědoval vrabčák na zimu, škoda, že nemám peřinu! Zebou mě nohy, studí mě nos, protože skáču i v zimě bos.",
-    "name": "Vrabec v zimě"
+    "name": "Vrabec v zimě",
+    "additional": ""
   },
   { "id": 137, "element": "0", "number": "", "text": "", "name": "" },
   {
@@ -594,73 +1210,265 @@
     "element": "x",
     "number": 6,
     "text": "Kde se vzal, tu se vzal, Mikuláš pod okny stál, v ruce velkou berličku, na hlavě měl čepičku, z bílých vousů teplý šál, takhle, děti, vypadal!",
-    "name": "Mikuláš"
+    "name": "Mikuláš",
+    "additional": "",
+    "additional": ""
   },
-  { "id": 165, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 166, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 167, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 168, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 169, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 170, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 171, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 172, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 165,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 166,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 167,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 168,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 169,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 170,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 171,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
+  {
+    "id": 172,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": "",
+    "additional": ""
+  },
   {
     "id": 173,
     "element": "x",
     "number": 14,
     "text": "Cupy, dupy, cupy, dupy, zima stojí u chalupy. Vezmeme si rukavice, sáně, boby a čepice, vyběhneme rychle ven, na sněhu se zahřejem.",
-    "name": "Zima"
+    "name": "Zima",
+    "additional": "",
+    "additional": ""
   },
-  { "id": 174, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 175, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 174,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 175,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 176,
     "element": "x",
     "number": 2,
     "text": "Chumelí se, vítr hvízdá sýkorka se dívá  z hnízda,v zimě není jídla dost,zem je zmrzlá jako kost. Prosím pěkně milá dítka, nasypte mi do krmítka.",
-    "name": "Chumelí se, vítr hvízdá,"
+    "name": "Chumelí se, vítr hvízdá,",
+    "additional": ""
   },
-  { "id": 177, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 178, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 177,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 178,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 179,
     "element": "x",
     "number": 19,
     "text": "S mamkou máme plno práce a ta chutná, ach tak sladce. Mamka spěchá – honem, honem, cukroví už voní domem. Už jsou tady Vánoce, cinky cinky zvonek zvoní. Ve vaně se kapr honí, z mísy voní ovoce... Cinky cinky cinkylinky, už jsou tady Vánoce.",
-    "name": "Příprava cukroví"
+    "name": "Příprava cukroví",
+    "additional": ""
   },
   {
     "id": 180,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 181, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 182, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 183, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 184, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 185, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 186, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 187, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 188, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 181,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 182,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 183,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 184,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 185,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 186,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 187,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 188,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 189,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 190, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 191, "element": "0", "number": "", "text": "", "name": "" },
+  {
+    "id": 190,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 191,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
   {
     "id": 192,
     "element": "0",
     "number": "",
     "text": "",
-    "name": ""
+    "name": "",
+    "additional": ""
   },
-  { "id": 193, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 194, "element": "0", "number": "", "text": "", "name": "" },
-  { "id": 195, "element": "0", "number": "", "text": "", "name": "" }
+  {
+    "id": 193,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 194,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  },
+  {
+    "id": 195,
+    "element": "0",
+    "number": "",
+    "text": "",
+    "name": "",
+    "additional": ""
+  }
 ]
