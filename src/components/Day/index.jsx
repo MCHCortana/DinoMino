@@ -1,7 +1,7 @@
 import './style.css';
 export const Day = () => {
   return (
-    <main classNameName="box">
+    <>
       <div className="days-box">
         <div className="day-box monday">
           <p>Pondělí</p>
@@ -25,7 +25,6 @@ export const Day = () => {
           <p>Neděle</p>
         </div>
       </div>
-    </main>
+    </>
   );
 };
-

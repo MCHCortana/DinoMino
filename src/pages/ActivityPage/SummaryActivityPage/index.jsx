@@ -1,6 +1,7 @@
 import './style.css';
+import { useState } from 'react';
 
-export const SummaryActivityPage = () => {
+export const SummaryActivityPage = ({ settingActivity }) => {
   return (
     <>
       <div className="summary_activity_page">
@@ -15,6 +16,7 @@ export const SummaryActivityPage = () => {
             className="months-total"
             src="./img/IconsFunctional/season.png"
             alt="Rok má 4 roční období"
+            onClick={() => settingActivity('seasons')}
           />
         </div>
 
@@ -24,6 +26,7 @@ export const SummaryActivityPage = () => {
             className="months-total"
             src="./img/IconsFunctional/number-12.png"
             alt="Rok má 12 měsíců"
+            onClick={() => settingActivity('months')}
           />
         </div>
         <div className="activitiy_page-task">
@@ -32,6 +35,7 @@ export const SummaryActivityPage = () => {
             className="months-total"
             src="./img/IconsFunctional/week.png"
             alt="Týden má 7 dní"
+            onClick={() => settingActivity('days')}
           />
         </div>
       </div>

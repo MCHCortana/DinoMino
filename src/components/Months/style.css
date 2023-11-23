@@ -1,17 +1,6 @@
-.box {
-  font-family: 'Russo One', sans-serif;
-  color: #4B0082;
-  background-color: #bbb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
 .season {
-
   margin: auto;
+  display: flex;
 }
 
 .mounths-box {
@@ -21,8 +10,21 @@
 }
 
 .mounths {
-  width: 400px;
+  width: 90%;
   bottom: 0;
+}
+
+.season .season-summer,
+.season .season-spring,
+.season .season-autumn {
+  width: 150px;
+  margin: 0 15px 0 15px;
+}
+
+.season .season-winter {
+  width: 100px;
+  margin: 0 15px 0 15px;
+  ;
 }
 
 .mounth-box p {
@@ -35,7 +37,9 @@
 }
 
 .mounth-box p:hover {
-  font-size: 2rem;
+  background-color: #98FB98;
+  cursor: pointer;
+  border: 3px solid #2E8B57;
 }
 
 .current-mounth {
@@ -67,28 +71,5 @@
 
   100% {
     transform: translateX(0)
-  }
-}
-
-.season {
-  display: flex;
-}
-
-.season .season-summer,
-.season .season-spring,
-.season .season-autumn {
-  width: 150px;
-  margin: 0 15px 0 15px;
-}
-
-.season .season-winter {
-  width: 100px;
-  margin: 0 15px 0 15px;
-  ;
-}
-
-@media screen and (max-width: 600px) {
-  .mounths {
-    width: 200px;
   }
 }

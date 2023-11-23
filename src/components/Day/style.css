@@ -1,28 +1,15 @@
-.box {
-  font-family: 'Russo One', sans-serif;
-  color: #4B0082;
-  background-color: #f8e7c5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
 .days-box {
-  width: 460px;
+  padding: 20px;
+  width: 90%;
   margin: auto;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  box-shadow: 10px 10px 15px #bbb;
 }
 
 .day-box:hover {
-  font-size: 3rem;
-  /* animation: horizontal-shaking 300ms 30;
-  background-color: #A8A8A8;
-  color: #000; */
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
 .day-box {
@@ -63,9 +50,7 @@
 
 .sunday {
   background-color: #ffc0f9;
-
 }
-
 
 .wrong-answer {
   animation: horizontal-shaking 300ms 30;
@@ -73,27 +58,6 @@
   color: #000;
 }
 
-/* @keyframes ring {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  25% {
-    transform: rotateZ(3deg);
-  }
-
-  50% {
-    transform: rotateZ(0deg);
-  }
-
-  75% {
-    transform: rotateZ(-3deg);
-  }
-
-  100% {
-    transform: rotateZ(0deg);
-  }
-} */
 @keyframes horizontal-shaking {
   0% {
     transform: translateX(0)

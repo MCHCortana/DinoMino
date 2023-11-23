@@ -1,0 +1,68 @@
+.season-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.season-box_two {
+  margin: 5px;
+}
+
+.season-box img {
+  width: 56%;
+}
+
+.season-title {
+  border-radius: 10px;
+  padding: 5px 0 5px 0;
+}
+
+.winter {
+  background-color: #87CEEB;
+}
+
+.spring {
+  background-color: #90EE90;
+}
+
+.summer {
+  background-color: #ffd700;
+}
+
+.autumn {
+  background-color: #ffa500;
+}
+
+.season-box_two:hover {
+  font-size: 18px;
+  border: 2px solid silver;
+  cursor: pointer;
+}
+
+.wrong-answer {
+  animation: horizontal-shaking 300ms 30;
+  background-color: #A8A8A8;
+  color: #000;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(5px)
+  }
+
+  50% {
+    transform: translateX(-5px)
+  }
+
+  75% {
+    transform: translateX(5px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}

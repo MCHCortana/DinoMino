@@ -1,21 +1,18 @@
 import './style.css';
+import { Day } from './../../../components/Day';
+import { Months } from './../../../components/Months';
+import { Seasons } from './../../../components/Seasons';
+import { DefaultActivity } from './../../../components/DefaultActivity';
+import { useState } from 'react';
 
-export const DaysMonths = () => {
+export const DaysMonths = ({ learn, setLearn }) => {
   return (
     <>
       <div className="days_months">
-        <div className="year_wheel">
-          <img
-            className="year_wheel_img"
-            src="./img/seasonsWheel.png"
-            alt="Rok má 12 měsíců"
-          />
-        </div>
-        <div className="days_months_content">
-          <h2>Rok má 12 měsíců. </h2>
-          <h2>Rok má 4 roční období </h2>
-          <h2>Rok trvá od narozenin 🎂 do narozenin 🎂.</h2>
-        </div>
+        {learn === 'year' && <DefaultActivity />}
+        {learn === 'days' && <Day />}
+        {learn === 'months' && <Months />}
+        {learn === 'seasons' && <Seasons />}
       </div>
     </>
   );
