@@ -1,7 +1,6 @@
 import './style.css';
 import { useState } from 'react';
 export const Ornaments = ({ ornament, fill, number, onChoice }) => {
-  console.log(ornament);
   // [id, fillShape, number, text, name] = ornament;
 
   let fillShape = 'empty';
