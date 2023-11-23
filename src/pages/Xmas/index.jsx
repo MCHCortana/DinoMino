@@ -29,7 +29,13 @@ export const Xmas = () => {
         <img src="./img/dinoWinter2.png" />
       </div>
       <div className="christmas_tree tree_grid">
-        {popCheck && <PopUp popupTreeDec={popupTreeDec} location={'xmas'} />}
+        {popCheck && (
+          <PopUp
+            popContent={popupTreeDec}
+            popCheck={setPopCheck}
+            location={'xmas'}
+          />
+        )}
         {treeDec &&
           treeDec.map((ornament) => {
             return (
@@ -38,8 +44,6 @@ export const Xmas = () => {
                 popCheck={setPopCheck}
                 ornament={ornament}
                 onChoice={setPopUpTreeDec}
-                fill={ornament.element}
-                number={ornament.number}
               />
             );
           })}

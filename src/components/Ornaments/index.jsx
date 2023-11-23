@@ -1,19 +1,20 @@
 import './style.css';
 import { useState } from 'react';
-export const Ornaments = ({ ornament, fill, number, onChoice }) => {
-  // [id, fillShape, number, text, name] = ornament;
+export const Ornaments = ({ ornament, popCheck, onChoice }) => {
+  const { id, element, number, text, name } = ornament;
 
   let fillShape = 'empty';
-  if (fill === 's') {
+  if (element === 's') {
     fillShape = 'filled star';
-  } else if (fill === 'x') {
+  } else if (element === 'x') {
     fillShape = 'filled filledB';
-  } else if (fill === 'g') {
+  } else if (element === 'g') {
     fillShape = 'filled filledG';
   }
 
   const handleClick = () => {
     onChoice(ornament);
+    popCheck(true);
   };
 
   return (

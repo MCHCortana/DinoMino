@@ -1,7 +1,8 @@
 import './style.css';
 import { PopUpHint } from './PopUpHint';
+import { PopUpXmas } from './PopUpXmas';
 
-export const PopUp = ({ popCheck, location, popUpTreeDec }) => {
+export const PopUp = ({ popCheck, location, popContent }) => {
   const handleClick = () => {
     popCheck(false);
   };
@@ -9,7 +10,7 @@ export const PopUp = ({ popCheck, location, popUpTreeDec }) => {
     <>
       <div className="popup">
         {location === 'hint_activity' && <PopUpHint />}
-        {location === 'xmas' && <PopUpXmas popUpTreeDec={popUpTreeDec} />}
+        {location === 'xmas' && <PopUpXmas popContent={popContent} />}
       </div>
       <div onClick={handleClick} className="overlay"></div>
     </>

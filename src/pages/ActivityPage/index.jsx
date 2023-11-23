@@ -6,16 +6,14 @@ import { PopUp } from '../../components/Popup';
 import { useState } from 'react';
 
 export const ActivityPage = () => {
-  const [popHintCheck, setPopHintCheck] = useState(false);
+  const [popCheck, setPopCheck] = useState(false);
   const handleClickHint = () => {
     setPopHintCheck(true);
   };
 
   return (
     <main className="container-activity_page">
-      {popHintCheck && (
-        <PopUp popupHintCheck={setPopHintCheck} location={'hint_activity'} />
-      )}
+      {popCheck && <PopUp popCheck={setPopCheck} location={'hint_activity'} />}
       {/* Left Column */}
       <div className="left-column">
         <div className="container_days_months">
