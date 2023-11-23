@@ -1,4 +1,4 @@
-.days_months {
+/* .days_months {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -8,9 +8,9 @@
 
   justify-content: center;
   align-items: center;
-}
+} */
 
-/* .days_months h2 {
+.days_months h2 {
   margin-top: 1rem;
   font-size: 1.8rem;
 
@@ -27,4 +27,4 @@
 
 .year_wheel_img:hover {
   transform: rotate(180deg);
-} */
+}

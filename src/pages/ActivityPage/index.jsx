@@ -3,12 +3,18 @@ import './style.css';
 import { SummaryActivityPage } from './SummaryActivityPage';
 import { DaysMonths } from './DaysMonths';
 import { PopupHint } from '../../components/PopupHint';
+
 import { useState } from 'react';
 
 export const ActivityPage = () => {
   const [popHintCheck, setPopHintCheck] = useState(false);
+  const [learn, setLearn] = useState('year');
+
   const handleClickHint = () => {
     setPopHintCheck(true);
+  };
+  const handleClickDay = () => {
+    setPopDay(true);
   };
 
   return (
@@ -17,13 +23,13 @@ export const ActivityPage = () => {
       {/* Left Column */}
       <div className="left-column">
         <div className="container_days_months">
-          <DaysMonths />
+          <DaysMonths learn={learn} />
         </div>
       </div>
 
       {/* Right Column */}
       <div className="summary">
-        <SummaryActivityPage />
+        <SummaryActivityPage settingActivity={setLearn} />
         <div className="second-row--activity_page">
           <div className="imgs_activity_page">
             <div className="faq--activity_page">
