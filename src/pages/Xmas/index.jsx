@@ -12,18 +12,15 @@ export const Xmas = () => {
 
   useEffect(() => {
     const fetchOrnamentData = async () => {
-      const response = await fetch('http://localhost:4000/api/xmas');
+      const response = await fetch('./api/xmas.json');
       if (!response.ok) {
-        console.log('je to v háji, nefunguje to');
+        console.log('Nemůžu nčíst data');
       }
       const data = await response.json();
-      console.log(data);
-      setTreeDec(data.result);
+      setTreeDec(data);
     };
     fetchOrnamentData();
   }, []);
-
-  console.log(treeDec);
 
   return (
     <main className="xmas_tree-container">
