@@ -7,6 +7,8 @@ import { useState } from 'react';
 
 export const ActivityPage = () => {
   const [popCheck, setPopCheck] = useState(false);
+  const [learn, setLearn] = useState('year');
+
   const handleClickHint = () => {
     setPopHintCheck(true);
   };

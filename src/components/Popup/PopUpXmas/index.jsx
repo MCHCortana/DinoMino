@@ -1,3 +1,10 @@
 export const PopUpXmas = ({ popupTreeDec }) => {
-  return <p>"funguji"</p>;
+  return (
+    <>
+      Dnes je{' '}
+      <i>
+        <strong>{toUpperCase('Den teprve přijde z day js. ')}</strong>
+      </i>
+    </>
+  );
 };
