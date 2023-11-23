@@ -2,8 +2,9 @@ import './style.css';
 import { Ornaments } from '../../components/Ornaments';
 import { PopUp } from './../../components/Popup/';
 import { useEffect, useState } from 'react';
+
 export const Xmas = () => {
-  const [treeDec, setTreeDec] = useState(' ');
+  const [treeDec, setTreeDec] = useState(null);
 
   const [popupTreeDec, setPopUpTreeDec] = useState(null);
 
@@ -11,13 +12,17 @@ export const Xmas = () => {
 
   useEffect(() => {
     const fetchOrnamentData = async () => {
-      const response = await fetch('http://localhost:4000/api/xmasOrnaments');
+      const response = await fetch('http://localhost:4000/api/xmas');
+      if (!response.ok) {
+        console.log('je to v háji, nefunguje to');
+      }
       const data = await response.json();
       console.log(data);
       setTreeDec(data.result);
     };
-    fetchRoomData();
+    fetchOrnamentData();
   }, []);
+
   console.log(treeDec);
 
   return (
@@ -27,16 +32,20 @@ export const Xmas = () => {
         <img src="./img/dinoWinter2.png" />
       </div>
       <div className="christmas_tree tree_grid">
-        {popCheck && <PopUp popupTreeDec={treeDec} location={'xmas'} />}
-        {treeDec.map((ornament) => {
-          return (
-            <Ornaments
-              popCheck={setPopCheck}
-              fill={ornament.element}
-              number={ornament.number}
-            />
-          );
-        })}
+        {popCheck && <PopUp popupTreeDec={popupTreeDec} location={'xmas'} />}
+        {treeDec &&
+          treeDec.map((ornament) => {
+            return (
+              <Ornaments
+                key={ornament.id}
+                popCheck={setPopCheck}
+                ornament={ornament}
+                onChoice={setPopUpTreeDec}
+                fill={ornament.element}
+                number={ornament.number}
+              />
+            );
+          })}
       </div>
     </main>
   );

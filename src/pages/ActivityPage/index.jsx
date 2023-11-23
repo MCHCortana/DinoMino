@@ -14,7 +14,7 @@ export const ActivityPage = () => {
   return (
     <main className="container-activity_page">
       {popHintCheck && (
-        <PopUp popupHintCheck={setPopHintCheck} location={'activity_page'} />
+        <PopUp popupHintCheck={setPopHintCheck} location={'hint_activity'} />
       )}
       {/* Left Column */}
       <div className="left-column">

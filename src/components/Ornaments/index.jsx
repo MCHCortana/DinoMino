@@ -1,6 +1,9 @@
 import './style.css';
 import { useState } from 'react';
-export const Ornaments = ({ fill, number }) => {
+export const Ornaments = ({ ornament, fill, number, onChoice }) => {
+  console.log(ornament);
+  // [id, fillShape, number, text, name] = ornament;
+
   let fillShape = 'empty';
   if (fill === 's') {
     fillShape = 'filled star';
@@ -11,16 +14,11 @@ export const Ornaments = ({ fill, number }) => {
   }
 
   const handleClick = () => {
-    setPopHintCheck(true);
+    onChoice(ornament);
   };
 
   return (
-    <div
-      onClick={handleClick}
-      className={fillShape}
-      popHintCheck={setPopHintCheck}
-      location={'xmas'}
-    >
+    <div onClick={handleClick} className={fillShape} location={'xmas'}>
       <h3>{number}</h3>
     </div>
   );
