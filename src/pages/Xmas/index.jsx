@@ -1,215 +1,51 @@
 import './style.css';
 import { Ornaments } from '../../components/Ornaments';
+import { PopUp } from './../../components/Popup/';
+import { useEffect, useState } from 'react';
+
 export const Xmas = () => {
-  const treeDec = [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 's', number: 24 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 3 },
-    ,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 1 },
-    0,
-    { element: 'x', number: 12 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 14 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 19 },
-    0,
-    0,
-    { element: 'x', number: 22 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 13 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 18 },
-    { element: 'x', number: 3 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 11 },
-    0,
-    's',
-    0,
-    { element: 'x', number: 9 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 10 },
-    { element: 'x', number: 5 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 15 },
-    0,
-    { element: 'x', number: 4 },
-    0,
-    's',
-    0,
-    0,
-    { element: 'x', number: 16 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 8 },
-    0,
-    0,
-    { element: 'x', number: 16 },
-    { element: 'x', number: 22 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    's',
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 2 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    { element: 'x', number: 21 },
-    0,
-    's',
-    { element: 'x', number: 7 },
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-  ];
-  const colors = ['filledB', 'filledG', 'filledPink'];
+  const [treeDec, setTreeDec] = useState(null);
+
+  const [popupTreeDec, setPopUpTreeDec] = useState(null);
+
+  const [popCheck, setPopCheck] = useState(false);
+
+  useEffect(() => {
+    const fetchOrnamentData = async () => {
+      const response = await fetch('http://localhost:4000/api/xmas');
+      if (!response.ok) {
+        console.log('je to v háji, nefunguje to');
+      }
+      const data = await response.json();
+      console.log(data);
+      setTreeDec(data.result);
+    };
+    fetchOrnamentData();
+  }, []);
+
+  console.log(treeDec);
+
   return (
     <main className="xmas_tree-container">
       <div className="advent_calendar">
         <h2>Adventní kalendář</h2>
-        <img src="./img/dinoWinter.png" />
+        <img src="./img/dinoWinter2.png" />
       </div>
       <div className="christmas_tree tree_grid">
-        {treeDec.map((ornament) => {
-          return <Ornaments fill={ornament.element} number={ornament.number} />;
-        })}
+        {popCheck && <PopUp popupTreeDec={popupTreeDec} location={'xmas'} />}
+        {treeDec &&
+          treeDec.map((ornament) => {
+            return (
+              <Ornaments
+                key={ornament.id}
+                popCheck={setPopCheck}
+                ornament={ornament}
+                onChoice={setPopUpTreeDec}
+                fill={ornament.element}
+                number={ornament.number}
+              />
+            );
+          })}
       </div>
     </main>
   );

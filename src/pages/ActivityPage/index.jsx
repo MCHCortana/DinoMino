@@ -2,8 +2,7 @@ import './style.css';
 
 import { SummaryActivityPage } from './SummaryActivityPage';
 import { DaysMonths } from './DaysMonths';
-import { PopupHint } from '../../components/PopupHint';
-
+import { PopUp } from '../../components/Popup';
 import { useState } from 'react';
 
 export const ActivityPage = () => {
@@ -19,7 +18,9 @@ export const ActivityPage = () => {
 
   return (
     <main className="container-activity_page">
-      {popHintCheck && <PopupHint popupHintCheck={setPopHintCheck} />}
+      {popHintCheck && (
+        <PopUp popupHintCheck={setPopHintCheck} location={'hint_activity'} />
+      )}
       {/* Left Column */}
       <div className="left-column">
         <div className="container_days_months">
