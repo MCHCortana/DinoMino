@@ -10,8 +10,17 @@ export const Ornaments = ({ fill, number }) => {
     fillShape = 'filled filledG';
   }
 
+  const handleClick = () => {
+    setPopHintCheck(true);
+  };
+
   return (
-    <div className={fillShape}>
+    <div
+      onClick={handleClick}
+      className={fillShape}
+      popHintCheck={setPopHintCheck}
+      location={'xmas'}
+    >
       <h3>{number}</h3>
     </div>
   );
