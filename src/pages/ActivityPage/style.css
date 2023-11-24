@@ -54,3 +54,11 @@
 .faq--activity_page img:hover {
   transform: scale(1.1);
 }
+
+.sumary-print img {
+  width: 4rem;
+}
+
+.sumary-print img:hover {
+  cursor: pointer;
+}

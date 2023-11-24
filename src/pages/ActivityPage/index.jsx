@@ -4,21 +4,27 @@ import { SummaryActivityPage } from './SummaryActivityPage';
 import { DaysMonths } from './DaysMonths';
 import { PopUp } from '../../components/Popup';
 import { useState } from 'react';
+// import { PopUpSummaryPrint } from '../../components/Popup/PopUpSummaryPrint';
 
 export const ActivityPage = () => {
   const [popCheck, setPopCheck] = useState(false);
   const [learn, setLearn] = useState('year');
+  const [popUpSumaryPrint, setPopUpSumaryPrint] = useState(false);
 
   const handleClickHint = () => {
-    setPopHintCheck(true);
+    setPopCheck(true);
   };
-  const handleClickDay = () => {
-    setPopDay(true);
+
+  const handleClichPrint = () => {
+    setPopUpSumaryPrint(true);
   };
 
   return (
     <main className="container-activity_page">
       {popCheck && <PopUp popCheck={setPopCheck} location={'hint_activity'} />}
+      {popUpSumaryPrint && (
+        <PopUp popUpSumaryPrint={setPopUpSumaryPrint} location={'pop_print'} />
+      )}
       {/* Left Column */}
       <div className="left-column">
         <div className="container_days_months">
@@ -44,6 +50,14 @@ export const ActivityPage = () => {
                 src="./img/DinoReading.png"
                 alt="Dinosaur Dino Míno s knihou"
               />
+            </div>
+
+            <div className="sumary-print">
+              <img
+                src="./img/IconsFunctional/printer (1).png"
+                alt="Printer"
+                onClick={handleClichPrint}
+              ></img>
             </div>
           </div>
         </div>
