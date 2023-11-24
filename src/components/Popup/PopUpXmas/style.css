@@ -1,12 +1,28 @@
 .popup_xmas {
   font-family: "Andika", "Ruso One";
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .popup_xmas h2 {
   font-size: 2rem;
 }
 
+.popup_xmas div,
+.popup_xmas a {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .coloring {
-  width: 20%
+  width: 30%;
+  border-radius: 1rem;
 }
