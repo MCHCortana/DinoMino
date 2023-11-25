@@ -1,39 +1,51 @@
+import dayjs from 'dayjs';
 import './style.css';
 
-export const PopUpXmas = ({ popContent }) => {
+export const PopUpXmas = ({ popContent, day }) => {
   const { id, element, number, text, name } = popContent;
   return (
     <div className="popup_xmas">
-      <h2>
-        Dnes je{}
-        <i>
-          <strong>{'Den teprve přijde z day js. '.toUpperCase()}</strong>
-        </i>
-      </h2>
-      {24 - number !== 0 && <h2>Do Štědrého dne zbývá {24 - number}.</h2>}
-      {number % 7 === 0 && number / 7 !== 1 && (
-        <h2>To jsou {number / 7} týdny.</h2>
-      )}
-      {number % 7 === 0 && number / 7 === 1 && (
-        <h2>Ježíšek přijde už za jeden týden.</h2>
-      )}
-      {24 - number === 0 && (
-        <>
-          <h2>Dnes je ŠTĚDRÝ DEN</h2>
-          <img src="./img/IconsCalendar/music-notes.png" alt="Noty" />
-        </>
-      )}
-      <h1>Říkanka dne:</h1>
-      <h2>{text}</h2>
-      <div>
-        <h2>🎁Omalovánka k vytisknutí.🎁</h2>
-        <a href={`./img/coloring/omalovanky${number.toString()}.jpg`}>
-          <img
-            className="coloring"
-            src={`./img/coloring/omalovanky${number.toString()}.jpg`}
-            alt="Omalovánka ke stažení"
-          />
-        </a>
+      <div className="popup_xmas_general">
+        <div className="xmas_dates">
+          <h2>
+            Dnes je
+            <i>
+              <strong> {day}. prosince</strong>
+            </i>
+          </h2>
+          {24 - number !== 0 && (
+            <h2>Do Štědrého dne zbývá {24 - number} dní.</h2>
+          )}
+          {number % 7 === 0 && number / 7 !== 1 && (
+            <h2>To jsou {number / 7} týdny.</h2>
+          )}
+          {number % 7 === 0 && number / 7 === 1 && (
+            <h2>Ježíšek přijde už za jeden týden.</h2>
+          )}
+        </div>
+        <div className="ryhmes">
+          {24 - number === 0 ? <h1>VESELÉ VÁNOCE</h1> : <h1>Říkanka dne:</h1>}
+          {24 - number === 0 && (
+            <div className="audio">
+              <h2>Dnes je ŠTĚDRÝ DEN</h2>
+              <img src="./img/IconsCalendar/music-notes.png" alt="Noty" />
+              <audio controls>
+                <source src="./audio/01Vanoce.mp3" type="audio/mpeg" />{' '}
+              </audio>
+            </div>
+          )}
+          <h3>{text}</h3>
+        </div>
+        <div className="coloring_div">
+          <a href={`./img/coloring/omalovanky${number.toString()}.jpg`}>
+            <h3>🎁 Omalovánka ke stažení. 🎁</h3>
+            <img
+              className="coloring"
+              src={`./img/coloring/omalovanky${number.toString()}.jpg`}
+              alt="Omalovánka ke stažení"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

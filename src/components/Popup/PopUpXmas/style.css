@@ -2,7 +2,6 @@
   font-family: "Andika", "Ruso One";
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -12,17 +11,54 @@
   font-size: 2rem;
 }
 
-.popup_xmas div,
-.popup_xmas a {
+.popup_xmas_general {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.coloring_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+}
+
+.ryhmes {
+  width: 30%;
+}
+
+.coloring_div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.coloring_div h2 {
+  max-width: 40%;
 }
 
 .coloring {
-  width: 30%;
-  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  border-radius: 2rem;
+  max-height: 30vh;
+}
+
+.audio {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio img {
+  width: 60px;
 }

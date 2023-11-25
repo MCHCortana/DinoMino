@@ -1,6 +1,6 @@
 import './style.css';
-import { useState } from 'react';
-export const Ornaments = ({ ornament, popCheck, onChoice }) => {
+
+export const Ornaments = ({ ornament, popCheck, onChoice, day }) => {
   const { id, element, number, text, name } = ornament;
 
   let fillShape = 'empty';
@@ -18,8 +18,13 @@ export const Ornaments = ({ ornament, popCheck, onChoice }) => {
   };
 
   return (
-    <div onClick={handleClick} className={fillShape} location={'xmas'}>
+    <button
+      onClick={handleClick}
+      className={fillShape}
+      location={'xmas'}
+      // disabled={day !== number && true}
+    >
       <h3>{number}</h3>
-    </div>
+    </button>
   );
 };

@@ -27,7 +27,7 @@ export const PopUpSummaryPrint = () => {
         <div className="print">
           <img
             className="print-icon"
-            src="./img/IconsFunctional/printer (1).png"
+            src="./img/IconsFunctional/printer3.png"
             alt="Printer"
             onClick={() => {
               window.print();

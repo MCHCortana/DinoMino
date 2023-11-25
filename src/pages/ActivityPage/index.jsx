@@ -4,6 +4,7 @@ import { SummaryActivityPage } from './SummaryActivityPage';
 import { DaysMonths } from './DaysMonths';
 import { PopUp } from '../../components/Popup';
 import { useState } from 'react';
+import dayjs from 'dayjs';
 // import { PopUpSummaryPrint } from '../../components/Popup/PopUpSummaryPrint';
 
 export const ActivityPage = () => {
@@ -54,7 +55,7 @@ export const ActivityPage = () => {
 
             <div className="sumary-print">
               <img
-                src="./img/IconsFunctional/printer (1).png"
+                src="./img/IconsFunctional/printer3.png"
                 alt="Printer"
                 onClick={handleClichPrint}
               ></img>

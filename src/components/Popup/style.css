@@ -6,12 +6,12 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
   border-radius: 10px;
   z-index: 10;
   background: linear-gradient(-225deg, #ffb805 0%, #f0bc37 50%, #fdd778 100%);
   width: 90%;
   min-height: 70%;
+  padding: 1rem;
   flex-direction: column;
   justify-content: center;
   align-content: center;
