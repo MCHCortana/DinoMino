@@ -8,7 +8,7 @@ export const Seasons = () => {
             <div className="season-winter_content">
               <h2 className="season-title winter">Zima</h2>
 
-              <img src="./img/3 (1).png" alt="Winter" />
+              <img src="./img/seasonWinter.png" alt="Winter" />
             </div>
           </div>
         </div>
@@ -17,7 +17,7 @@ export const Seasons = () => {
           <div className="season-spring">
             <div className="season-spring_content">
               <h2 className="season-title spring">Jaro</h2>
-              <img src="./img/4 (1).png" alt="Spring" />
+              <img src="./img/seasonSpring.png" alt="Spring" />
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ export const Seasons = () => {
           <div className="season-summer">
             <div className="season-summer_content">
               <h2 className="season-title summer">Léto</h2>
-              <img src="./img/5.png" alt="Summer" />
+              <img src="./img/seasonSummer.png" alt="Summer" />
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ export const Seasons = () => {
           <div className="season-autumn">
             <div className="season-autumn_content">
               <h2 className="season-title autumn">Podzim</h2>
-              <img src="./img/2 (1).png" alt="Autumn" />
+              <img src="./img/seasonFall.png" alt="Autumn" />
             </div>
           </div>
         </div>

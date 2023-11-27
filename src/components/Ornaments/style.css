@@ -1,3 +1,14 @@
+.christmas_tree button {
+  background-color: transparent;
+  border: 0;
+
+}
+
+.christmas_tree button h3 {
+  text-align: center;
+  margin: auto;
+}
+
 .empty {
   width: 50px;
   height: 50px;
@@ -20,6 +31,7 @@
   font-size: 2rem;
   margin: auto;
   margin-top: 1rem;
+  color: #4B0082;
 }
 
 .filledB {
@@ -39,5 +51,34 @@
 
 .star h3 {
   margin: auto;
-  /* margin-top: 1.5rem; */
+  color: #4B0082
+    /* margin-top: 1.5rem; */
+}
+
+.shake_it_baby {
+  animation: horizontal-shaking 300ms 30;
+  background-color: #A8A8A8;
+}
+
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(5px)
+  }
+
+  50% {
+    transform: translateX(-5px)
+  }
+
+  75% {
+    transform: translateX(5px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
 }

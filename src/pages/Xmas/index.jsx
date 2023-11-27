@@ -2,6 +2,7 @@ import './style.css';
 import { Ornaments } from '../../components/Ornaments';
 import { PopUp } from './../../components/Popup/';
 import { useEffect, useState } from 'react';
+import dayjs from 'dayjs';
 
 export const Xmas = () => {
   const [treeDec, setTreeDec] = useState(null);
@@ -9,6 +10,10 @@ export const Xmas = () => {
   const [popupTreeDec, setPopUpTreeDec] = useState(null);
 
   const [popCheck, setPopCheck] = useState(false);
+
+  const day = dayjs().date();
+
+  console.log(day);
 
   useEffect(() => {
     const fetchOrnamentData = async () => {
@@ -34,6 +39,7 @@ export const Xmas = () => {
             popContent={popupTreeDec}
             popCheck={setPopCheck}
             location={'xmas'}
+            day={day}
           />
         )}
         {treeDec &&
@@ -41,6 +47,7 @@ export const Xmas = () => {
             return (
               <Ornaments
                 key={ornament.id}
+                day={day}
                 popCheck={setPopCheck}
                 ornament={ornament}
                 onChoice={setPopUpTreeDec}

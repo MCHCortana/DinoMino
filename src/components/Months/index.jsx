@@ -13,13 +13,21 @@ export const Months = () => {
           </div>
         </div>
         <div className="winter-img">
-          <img className="season-winter" src="./img/3 (1).png" alt="Winter" />
+          <img
+            className="season-winter"
+            src="./img/seasonWinter.png"
+            alt="Winter"
+          />
         </div>
       </div>
 
       <div className="season">
         <div className="spring-img">
-          <img className="season-spring" src="./img/4 (1).png" alt="Spring" />
+          <img
+            className="season-spring"
+            src="./img/seasonSpring.png"
+            alt="Spring"
+          />
         </div>
         <div className="mounths">
           <div className="mounth-box march">
@@ -47,13 +55,21 @@ export const Months = () => {
           </div>
         </div>
         <div className="summer-img">
-          <img className="season-summer" src="./img/5.png" alt="Summer" />
+          <img
+            className="season-summer"
+            src="./img/seasonSummer.png"
+            alt="Summer"
+          />
         </div>
       </div>
 
       <div className="season">
         <div className="autumn-img">
-          <img className="season-autumn" src="./img/2 (1).png" alt="Autumn" />
+          <img
+            className="season-autumn"
+            src="./img/seasonFall.png"
+            alt="Autumn"
+          />
         </div>
         <div className="mounths">
           <div className="mounth-box september">
@@ -75,7 +91,11 @@ export const Months = () => {
           </div>
         </div>
         <div className="winter-img">
-          <img className="season-winter" src="./img/3 (1).png" alt="Winter" />
+          <img
+            className="season-winter"
+            src="./img/seasonWinter.png"
+            alt="Winter"
+          />
         </div>
       </div>
     </div>

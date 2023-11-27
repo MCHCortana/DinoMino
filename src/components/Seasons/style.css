@@ -2,14 +2,19 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.447);
+  border-radius: 1rem;
 }
 
 .season-box_two {
   margin: 5px;
+  background-color: rgba(255, 255, 255, 0.447);
+  border-radius: 1rem;
 }
 
 .season-box img {
   width: 56%;
+
 }
 
 .season-title {
