@@ -42,41 +42,26 @@ export const IconCarousel = () => {
     'dog.png',
     'paint-palette.png',
     'walking.png',
+    'doctor.png',
   ];
   const [obr, setObr] = useState(0);
 
   return (
     <>
       <div className="carousel">
-        <button
-          // onClick={() => {
-          //   iconList < iconList.length - 1 ? setObr(iconList[] 1) : setObr(0);
-          // }}
-          className="carousel__predchozi"
-          aria-label="předchozí"
-        >
-          ←
-        </button>
         {iconList.map((icon) => {
           return (
-            <div className="carousel__media">
-              <img
-                className="carousel__image"
-                src={`./img/IconsCalendar/${icon}`}
-                alt={icon}
-              />
+            <div key={iconList.indexOf(icon)} className="carousel__media">
+              <button>
+                <img
+                  className="carousel__image"
+                  src={`./img/IconsCalendar/${icon}`}
+                  alt={icon}
+                />
+              </button>
             </div>
           );
         })}
-        <button
-          onClick={() => {
-            obr === 0 ? setObr(4) : setObr(obr - 1);
-          }}
-          className="carousel__dalsi"
-          aria-label="další"
-        >
-          →
-        </button>
       </div>
     </>
   );
