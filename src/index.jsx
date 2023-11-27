@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element: <Xmas />,
       },
       {
-        path: '/monster',
+        path: '/Monster',
         element: <Monster />,
       },
     ],
