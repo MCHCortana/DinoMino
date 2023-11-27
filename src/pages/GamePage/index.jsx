@@ -17,10 +17,13 @@ export const GamePage = () => {
           </Link>
         </div>
         <div>
-          <img
-            className="game_page--dino"
-            src="./img/IconsCalendar/monster.png"
-          />
+          <Link to="/monster">
+            <img
+              className="game_page--dino"
+              src="./img/IconsCalendar/monster.png"
+              alt="Drag and Drop game"
+            />
+          </Link>
         </div>
       </div>
     </main>
