@@ -6,6 +6,7 @@ import { PopUpSummaryPrint } from './PopUpSummaryPrint';
 export const PopUp = ({ popCheck, location, popContent, popUpSumaryPrint }) => {
   const handleClick = () => {
     popCheck(false);
+    // popUpSumaryPrint(false);
   };
   return (
     <div onClick={handleClick}>
