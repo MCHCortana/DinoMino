@@ -6,6 +6,7 @@ import { MenuPage } from './pages/MenuPage';
 import { GamePage } from './pages/GamePage';
 import { ErrorPage } from './pages/ErrorPage';
 import { ActivityPage } from './pages/ActivityPage';
+import { PlannerPage } from './pages/PlannerPage';
 import { Xmas } from './pages/Xmas';
 import { Monster } from './pages/Monster';
 import './global.css';
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
         path: '/activitypage',
         element: <ActivityPage />,
       },
+      { path: '/plannerpage', element: <PlannerPage /> },
       {
         path: '/gamepage',
         element: <GamePage />,

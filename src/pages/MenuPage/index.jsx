@@ -25,11 +25,13 @@ export const MenuPage = () => {
               </Link>
             </div>
             <div>
-              <img
-                className="menu_page--planner"
-                src="./img/IconsFunctional/planner.png"
-                alt="Plánovač"
-              />
+              <Link to="/plannerpage">
+                <img
+                  className="menu_page--planner"
+                  src="./img/IconsFunctional/planner.png"
+                  alt="Plánovač"
+                />
+              </Link>
             </div>
           </div>
           <div>
