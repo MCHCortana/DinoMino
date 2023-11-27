@@ -22,19 +22,21 @@ export const PopUpXmas = ({ popContent, day }) => {
           {number % 7 === 0 && number / 7 === 1 && (
             <h2>Ježíšek přijde už za jeden týden.</h2>
           )}
-        </div>
-        <div className="ryhmes">
-          {24 - number === 0 ? <h1>VESELÉ VÁNOCE</h1> : <h1>Říkanka dne:</h1>}
-          {24 - number === 0 && (
-            <div className="audio">
-              <h2>Dnes je ŠTĚDRÝ DEN</h2>
-              <img src="./img/IconsCalendar/music-notes.png" alt="Noty" />
-              <audio controls>
-                <source src="./audio/01Vanoce.mp3" type="audio/mpeg" />{' '}
-              </audio>
-            </div>
-          )}
-          <h3>{text}</h3>
+
+          <div className="ryhmes">
+            {24 - number === 0 ? <h2>VESELÉ VÁNOCE</h2> : <h2>Říkanka dne:</h2>}
+            {24 - number === 0 && (
+              <div className="audio">
+                <h2>Dnes je </h2>
+                <h2>ŠTĚDRÝ DEN</h2>
+                <img src="./img/IconsCalendar/music-notes.png" alt="Noty" />
+                <audio controls>
+                  <source src="./audio/01Vanoce.mp3" type="audio/mpeg" />{' '}
+                </audio>
+              </div>
+            )}
+            <h3>{text}</h3>
+          </div>
         </div>
         <div className="coloring_div">
           <a href={`./img/coloring/omalovanky${number.toString()}.jpg`}>

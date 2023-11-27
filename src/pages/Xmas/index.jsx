@@ -29,19 +29,19 @@ export const Xmas = () => {
 
   return (
     <main className="xmas_tree-container">
+      {popCheck && (
+        <PopUp
+          popContent={popupTreeDec}
+          popCheck={setPopCheck}
+          location={'xmas'}
+          day={day}
+        />
+      )}
       <div className="advent_calendar">
         <h2>Adventní kalendář</h2>
         <img src="./img/dinoWinter2.png" />
       </div>
       <div className="christmas_tree tree_grid">
-        {popCheck && (
-          <PopUp
-            popContent={popupTreeDec}
-            popCheck={setPopCheck}
-            location={'xmas'}
-            day={day}
-          />
-        )}
         {treeDec &&
           treeDec.map((ornament) => {
             return (

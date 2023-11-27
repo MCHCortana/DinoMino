@@ -12,11 +12,17 @@
 }
 
 .popup_xmas_general {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.xmas_dates {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 3rem;
 }
 
 .coloring_div {
@@ -26,9 +32,6 @@
   align-items: center;
 }
 
-.ryhmes {
-  width: 30%;
-}
 
 .coloring_div a {
   display: flex;
@@ -38,6 +41,15 @@
   text-decoration: none;
 }
 
+.rhymes {
+  display: flex;
+  flex-direction: column;
+}
+
+.audio {
+  display: flex;
+  flex-direction: column;
+}
 
 .coloring_div h2 {
   max-width: 40%;
