@@ -15,6 +15,7 @@ export const PopUp = ({
       return popUpSumaryPrint(false);
     }
     popCheck(false);
+    // popUpSumaryPrint(false);
   };
 
   return (

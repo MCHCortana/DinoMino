@@ -7,6 +7,7 @@ import { GamePage } from './pages/GamePage';
 import { ErrorPage } from './pages/ErrorPage';
 import { ActivityPage } from './pages/ActivityPage';
 import { Xmas } from './pages/Xmas';
+import { Monster } from './pages/Monster';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/xmas',
         element: <Xmas />,
+      },
+      {
+        path: '/monster',
+        element: <Monster />,
       },
     ],
   },
