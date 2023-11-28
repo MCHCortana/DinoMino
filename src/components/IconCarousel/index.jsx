@@ -1,7 +1,8 @@
 import './style.css';
 import { useState } from 'react';
+import { PopUp } from './../../components/Popup';
 
-export const IconCarousel = ({ onAddingPlan }) => {
+export const IconCarousel = ({ onAddingPlan, setActivityForDay }) => {
   const iconList = [
     'angel.png',
     'exercise.png',
@@ -44,13 +45,14 @@ export const IconCarousel = ({ onAddingPlan }) => {
     'walking.png',
     'doctor.png',
   ];
-  const [obr, setObr] = useState(0);
+
   const handleClick = (e) => {
     const addingImg = e.target.src.split(
       'http://localhost:5173/img/IconsCalendar/',
     );
     onAddingPlan && onAddingPlan.activities.push(addingImg[1]);
-    onAddingPlan.activities.length >= 3 && alert('sorry víc nee');
+    setActivityForDay(null);
+    console.log(onAddingPlan.activities.length);
   };
   return (
     <>

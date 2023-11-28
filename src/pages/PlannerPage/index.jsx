@@ -1,9 +1,10 @@
 import './style.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { DayPlan } from './../../components/DayPlan';
 import { IconCarousel } from '../../components/IconCarousel';
+import { PopUp } from '../../components/Popup';
 
 export const PlannerPage = () => {
   const [weekDays, setData] = useState([
@@ -15,8 +16,9 @@ export const PlannerPage = () => {
     { id: 'saturday', dayName: 'sobota', activities: [] },
     { id: 'sunday', dayName: 'neděle', activities: [] },
   ]);
-  const [activityForDay, setActivityForDay] = useState();
-  console.log('tady mám uložené, který den upravuji', activityForDay);
+  const [activityForDay, setActivityForDay] = useState(null);
+  const [tooManyActivities, setTooManyActivities] = useState(false);
+
   return (
     <main className="container__planner_page">
       <div className="planner_page_action_container">
@@ -24,17 +26,25 @@ export const PlannerPage = () => {
         <img src="./img/IconsFunctional/remove.png" alt="remove_activity" />
       </div>
       <div className="planner_days">
+        {/* potřeba upravit zavírání poUpu na víc jak 3 aktivity */}
+        {tooManyActivities && (
+          <PopUp popCheck={setTooManyActivities} location="alert" />
+        )}
         {weekDays.map((day) => {
           return (
             <DayPlan
               key={day.id}
               day={day}
               setActivityForDay={setActivityForDay}
+              setTooManyActivities={setTooManyActivities}
             />
           );
         })}
       </div>
-      <IconCarousel onAddingPlan={activityForDay} />
+      <IconCarousel
+        onAddingPlan={activityForDay}
+        setActivityForDay={setActivityForDay}
+      />
     </main>
   );
 };

@@ -1,13 +1,12 @@
 import './style.css';
 
-import { useEffect, useState } from 'react';
-
 import { PlannerActivity } from './../../components/PlannerActivity';
 
-export const DayPlan = ({ day, setActivityForDay }) => {
-  console.log('Tady nastavuji všechny dny', day);
+export const DayPlan = ({ day, setActivityForDay, setTooManyActivities }) => {
+  // console.log('Tady nastavuji všechny dny', day);
   const handleAdd = () => {
     setActivityForDay(day);
+    day.activities.length === 3 && setTooManyActivities(true);
   };
   return (
     <>
@@ -18,7 +17,7 @@ export const DayPlan = ({ day, setActivityForDay }) => {
         <div className={`day_planner ${day.id}`}>
           <h2>{day.dayName}</h2>
         </div>
-        <PlannerActivity day={day} />
+        <PlannerActivity day={day.activities} />
       </div>
     </>
   );
