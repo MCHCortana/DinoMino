@@ -1,6 +1,18 @@
 import './style.css';
 
-export const Months = () => {
+export const Months = ({
+  LEDEN,
+  ÚNOR,
+  BŘEZEN,
+  KVĚTEN,
+  ČERVEN,
+  ČERVRNRC,
+  SRPEN,
+  ŽÁŘÍ,
+  ŘIJEN,
+  LISTOPAD,
+  PROSINEC,
+}) => {
   return (
     <div className="mounths-box">
       <div className="season">
