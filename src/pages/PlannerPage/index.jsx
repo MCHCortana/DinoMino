@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { DayPlan } from './../../components/DayPlan';
 import { IconCarousel } from '../../components/IconCarousel';
 import { PopUp } from '../../components/Popup';
+import { FunctionalDivPlannerPage } from './../../components/FunctionalDivPlannerPage';
 
 export const PlannerPage = () => {
   const [weekDays, setData] = useState([
@@ -21,10 +22,7 @@ export const PlannerPage = () => {
 
   return (
     <main className="container__planner_page">
-      <div className="planner_page_action_container">
-        <img src="./img/IconsFunctional/printer.png" alt="print_planner" />
-        <img src="./img/IconsFunctional/remove.png" alt="remove_activity" />
-      </div>
+      <FunctionalDivPlannerPage />
       <div className="planner_days">
         {/* potřeba upravit zavírání poUpu na víc jak 3 aktivity */}
         {tooManyActivities && (

@@ -1,0 +1,6 @@
+.planner_page_action_container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0 2rem 0 2rem;
+}

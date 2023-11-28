@@ -11,13 +11,6 @@
   gap: 5%;
 }
 
-.planner_page_action_container {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  padding: 0 2rem 0 2rem;
-}
-
 .planner_days {
   padding: 2rem;
   padding-top: 1rem;
