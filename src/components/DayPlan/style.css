@@ -25,13 +25,3 @@
 .adding_button img {
   max-width: 64px;
 }
-
-.activities {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.activities img {
-  max-width: 64px;
-}

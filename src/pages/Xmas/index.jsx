@@ -19,8 +19,6 @@ export const Xmas = () => {
 
   const day = dayjs().date();
 
-  console.log(day);
-
   useEffect(() => {
     const fetchOrnamentData = async () => {
       const response = await fetch('./api/xmasButtons.json');

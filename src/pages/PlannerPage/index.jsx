@@ -15,8 +15,8 @@ export const PlannerPage = () => {
     { id: 'saturday', dayName: 'sobota', activities: [] },
     { id: 'sunday', dayName: 'neděle', activities: [] },
   ]);
-  const [adding, setAdd] = useState(false);
-
+  const [activityForDay, setActivityForDay] = useState();
+  console.log('tady mám uložené, který den upravuji', activityForDay);
   return (
     <main className="container__planner_page">
       <div className="planner_page_action_container">
@@ -25,10 +25,16 @@ export const PlannerPage = () => {
       </div>
       <div className="planner_days">
         {weekDays.map((day) => {
-          return <DayPlan key={day.id} day={day} />;
+          return (
+            <DayPlan
+              key={day.id}
+              day={day}
+              setActivityForDay={setActivityForDay}
+            />
+          );
         })}
       </div>
-      <IconCarousel />
+      <IconCarousel onAddingPlan={activityForDay} />
     </main>
   );
 };

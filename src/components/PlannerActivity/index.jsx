@@ -1,11 +1,31 @@
+import { useEffect } from 'react';
 import './style.css';
 
-export const PlannerActivity = ({ activity }) => {
-  return (
-    <div>
-      {/* {delete && <button><img src="./img/remove.png " /> </button>} */}
+export const PlannerActivity = ({ day }) => {
+  console.log('Planner Activity', day, 'délka pole aktivit', day.activities);
+  const handleChoiceActivity = () => {};
 
-      <img src={activity.src} alt={activity.alt} />
+  return (
+    <div className="activities">
+      {/* {delete && <button><img src="./img/remove.png " /> </button>} */}
+      {day.activities.length === 0 && (
+        <>
+          <img src="./img/IconsFunctional/square.png" />
+          <img src="./img/IconsFunctional/square.png" />
+          <img src="./img/IconsFunctional/square.png" />
+        </>
+      )}
+      {day.activities.map((activity) => {
+        console.log(activity);
+        return (
+          <img
+            key={day.activities.indexOf(activity)}
+            onClick={handleChoiceActivity}
+            src={`./img/IconsCalendar/${activity}`}
+            alt={activity}
+          />
+        );
+      })}
     </div>
   );
 };

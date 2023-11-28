@@ -1,7 +1,7 @@
 import './style.css';
 import { useState } from 'react';
 
-export const IconCarousel = () => {
+export const IconCarousel = ({ onAddingPlan }) => {
   const iconList = [
     'angel.png',
     'exercise.png',
@@ -45,14 +45,20 @@ export const IconCarousel = () => {
     'doctor.png',
   ];
   const [obr, setObr] = useState(0);
-
+  const handleClick = (e) => {
+    const addingImg = e.target.src.split(
+      'http://localhost:5173/img/IconsCalendar/',
+    );
+    onAddingPlan && onAddingPlan.activities.push(addingImg[1]);
+    onAddingPlan.activities.length >= 3 && alert('sorry víc nee');
+  };
   return (
     <>
       <div className="carousel">
         {iconList.map((icon) => {
           return (
             <div key={iconList.indexOf(icon)} className="carousel__media">
-              <button>
+              <button onClick={handleClick}>
                 <img
                   className="carousel__image"
                   src={`./img/IconsCalendar/${icon}`}
