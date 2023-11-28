@@ -34,11 +34,12 @@
 .imgs_activity_page {
   display: flex;
   justify-content: flex-end;
+  z-index: 5;
 
 }
 
 .dino-mino--activity_page {
-  max-width: 250px;
+  max-width: 200px;
   margin-top: -10rem;
   margin-left: 3rem;
   filter: drop-shadow(1px 10px 1px rgba(93, 27, 27, 0.4));

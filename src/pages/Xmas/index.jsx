@@ -1,6 +1,8 @@
 import './style.css';
 import { Ornaments } from '../../components/Ornaments';
 import { PopUp } from './../../components/Popup/';
+import { XmasTreeButtons } from './../../components/XmasTreeButtons';
+
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 
@@ -11,15 +13,19 @@ export const Xmas = () => {
 
   const [popCheck, setPopCheck] = useState(false);
 
+  const [ornament, setOrnament] = useState(null);
+
+  const [clickedDay, setClickedDay] = useState(null);
+
   const day = dayjs().date();
 
   console.log(day);
 
   useEffect(() => {
     const fetchOrnamentData = async () => {
-      const response = await fetch('./api/xmas.json');
+      const response = await fetch('./api/xmasButtons.json');
       if (!response.ok) {
-        console.log('Nemůžu nčíst data');
+        console.log('Nemůžu načíst data');
       }
       const data = await response.json();
       setTreeDec(data);
@@ -34,6 +40,7 @@ export const Xmas = () => {
           popContent={popupTreeDec}
           popCheck={setPopCheck}
           location={'xmas'}
+          clickedDay={clickedDay}
           day={day}
         />
       )}
@@ -41,8 +48,15 @@ export const Xmas = () => {
         <h2>Adventní kalendář</h2>
         <img src="./img/dinoWinter2.png" />
       </div>
-      <div className="christmas_tree tree_grid">
-        {treeDec &&
+      {/* <div className="christmas_tree tree_grid"> */}
+      <XmasTreeButtons
+        tree={treeDec}
+        popCheck={setPopCheck}
+        ornament={setOrnament}
+        onChoice={setPopUpTreeDec}
+        clickedDay={setClickedDay}
+      />
+      {/* {treeDec &&
           treeDec.map((ornament) => {
             return (
               <Ornaments
@@ -53,8 +67,8 @@ export const Xmas = () => {
                 onChoice={setPopUpTreeDec}
               />
             );
-          })}
-      </div>
+          })} */}
+      {/* </div> */}
     </main>
   );
 };

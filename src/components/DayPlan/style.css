@@ -1,1 +1,37 @@
+.day_planner {
 
+  width: 100%;
+}
+
+.planner_one_day {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.planner_one_day h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.adding_button {
+  background-color: aquamarine;
+  border-radius: 1rem;
+  border: none;
+}
+
+.adding_button img {
+  max-width: 64px;
+}
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activities img {
+  max-width: 64px;
+}
