@@ -2,7 +2,12 @@ import './style.css';
 
 import { PlannerActivity } from './../../components/PlannerActivity';
 
-export const DayPlan = ({ day, setActivityForDay, setTooManyActivities }) => {
+export const DayPlan = ({
+  day,
+  setActivityForDay,
+  setTooManyActivities,
+  onDeleting,
+}) => {
   // console.log('Tady nastavuji všechny dny', day);
   const handleAdd = () => {
     setActivityForDay(day);
@@ -17,7 +22,7 @@ export const DayPlan = ({ day, setActivityForDay, setTooManyActivities }) => {
         <div className={`day_planner ${day.id}`}>
           <h2>{day.dayName}</h2>
         </div>
-        <PlannerActivity day={day.activities} />
+        <PlannerActivity onDeleting={onDeleting} day={day.activities} />
       </div>
     </>
   );

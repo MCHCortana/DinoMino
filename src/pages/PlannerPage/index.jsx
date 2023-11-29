@@ -8,6 +8,7 @@ import { PopUp } from '../../components/Popup';
 import { FunctionalDivPlannerPage } from './../../components/FunctionalDivPlannerPage';
 
 export const PlannerPage = () => {
+  // musí tady být useState - neměním proměnou, ale prvky v proměnné, nemusel by tedy být useState
   const [weekDays, setData] = useState([
     { id: 'monday', dayName: 'pondělí', activities: [] },
     { id: 'tuesday', dayName: 'úterý', activities: [] },
@@ -18,19 +19,24 @@ export const PlannerPage = () => {
     { id: 'sunday', dayName: 'neděle', activities: [] },
   ]);
   const [activityForDay, setActivityForDay] = useState(null);
+
+  // Může tohle být jako další položka ve weekdays? why not? deleting taky? - jednodušší předání props - předám den.deleting a nemusím deklarovat novou proměnnou. Bude mít nová dlekarace nějaký vliv, kromě toho, že budeu předávat hodně props?
+
   const [tooManyActivities, setTooManyActivities] = useState(false);
+  const [deleting, setDeleting] = useState(true);
 
   return (
     <main className="container__planner_page">
-      <FunctionalDivPlannerPage />
+      <FunctionalDivPlannerPage onDeleting={setDeleting} />
+
       <div className="planner_days">
-        {/* potřeba upravit zavírání poUpu na víc jak 3 aktivity */}
         {tooManyActivities && (
           <PopUp popCheck={setTooManyActivities} location="alert" />
         )}
         {weekDays.map((day) => {
           return (
             <DayPlan
+              onDeleting={deleting}
               key={day.id}
               day={day}
               setActivityForDay={setActivityForDay}

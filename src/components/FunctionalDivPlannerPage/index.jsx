@@ -1,12 +1,12 @@
 import './style.css';
 
-export const FunctionalDivPlannerPage = () => {
+export const FunctionalDivPlannerPage = (onDeleting) => {
   const handlePrint = () => {
     window.print();
   };
 
   const handleClick = () => {
-    setDelete(true);
+    onDeleting(true);
   };
 
   return (

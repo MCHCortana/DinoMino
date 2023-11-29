@@ -13,7 +13,7 @@ export const Xmas = () => {
 
   const [popCheck, setPopCheck] = useState(false);
 
-  const [ornament, setOrnament] = useState(null);
+  // const [ornament, setOrnament] = useState(null);
 
   const [clickedDay, setClickedDay] = useState(null);
 

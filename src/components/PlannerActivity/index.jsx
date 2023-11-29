@@ -1,13 +1,23 @@
-import { useEffect } from 'react';
 import './style.css';
 
-export const PlannerActivity = ({ day }) => {
-  // console.log('Planner Activity', day);
-  const handleChoiceActivity = () => {};
+import { useState, useEffect } from 'react';
+
+export const PlannerActivity = ({ day, onDeleting }) => {
+  console.log('Planner Activity', day);
+
+  // const [dayActivity, setDayActivity] = useState();
+  // useEffect(() => {
+  //   setDayActivity(day.activities);
+  // }, [day.activities]);
+
+  // console.log(dayActivity);
+  const handleDelete = (e) => {
+    console.log(activities.indexOf(e.target));
+    // day.activity.filter((activity !== e.target.value))
+  };
 
   return (
     <div className="activities">
-      {/* {delete && <button><img src="./img/remove.png " /> </button>} */}
       {day.length === 0 && (
         <>
           <img src="./img/IconsFunctional/square.png" />
@@ -17,13 +27,19 @@ export const PlannerActivity = ({ day }) => {
       )}
       {day.map((activity) => {
         console.log(activity);
+
         return (
-          <img
-            key={day.indexOf(activity)}
-            onClick={handleChoiceActivity}
-            src={`./img/IconsCalendar/${activity}`}
-            alt={activity}
-          />
+          <div className="delete_button" key={day.indexOf(activity)}>
+            {onDeleting && (
+              <button onClick={handleDelete} className="delete_button--button">
+                <img
+                  className="delete_button--img"
+                  src="./img/IconsFunctional/remove.png "
+                />{' '}
+              </button>
+            )}
+            <img src={`./img/IconsCalendar/${activity}`} alt={activity} />
+          </div>
         );
       })}
     </div>
