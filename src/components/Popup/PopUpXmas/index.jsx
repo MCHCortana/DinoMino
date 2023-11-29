@@ -3,7 +3,7 @@ import './style.css';
 
 export const PopUpXmas = ({ popContent, day }) => {
   const { id, element, number, text, name } = popContent;
-
+  console.log('number ze stromku', number);
   return (
     <div className="popup_xmas">
       <div className="popup_xmas_general">
@@ -26,7 +26,6 @@ export const PopUpXmas = ({ popContent, day }) => {
               {number % 7 === 0 && number / 7 === 1 && (
                 <h2>Ježíšek přijde už za jeden týden.</h2>
               )}
-
               <div className="ryhmes">
                 {24 - number === 0 ? (
                   <h2>VESELÉ VÁNOCE</h2>

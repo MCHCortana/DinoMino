@@ -5,28 +5,22 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
+  gap: 15%;
 }
 
-.advent_calendar {
+.advent_calendar_dino {
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
-  justify-content: space-between;
-  justify-self: flex-start;
+  justify-content: flex-end;
 }
 
-.advent_calendar h2 {
-  padding: 2rem;
-  font-size: 3rem;
-}
-
-
-.advent_calendar img {
+.advent_calendar_dino img {
   margin-top: -5rem;
   max-width: 300px;
   transform: scaleX(-1);
 }
 
+/* 
 .christmas_tree {
   background-image: url(/img/xmas/treeNoDec.png);
   background-repeat: no-repeat;
@@ -35,9 +29,10 @@
   grid-template-columns: repeat(14, 1fr);
   column-gap: 0;
   row-gap: 0;
-}
+  justify-self: center;
+} */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
   .advent_calendar img,
   .advent_calendar {
@@ -46,6 +41,7 @@
 
   .xmas_tree-container {
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    gap: 0;
   }
 }
