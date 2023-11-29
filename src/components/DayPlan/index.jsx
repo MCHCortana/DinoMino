@@ -8,7 +8,7 @@ export const DayPlan = ({
   setTooManyActivities,
   onDeleting,
 }) => {
-  // console.log('Tady nastavuji všechny dny', day);
+  console.log('Tady nastavuji všechny dny', day);
   const handleAdd = () => {
     setActivityForDay(day);
     day.activities.length === 3 && setTooManyActivities(true);
@@ -22,7 +22,24 @@ export const DayPlan = ({
         <div className={`day_planner ${day.id}`}>
           <h2>{day.dayName}</h2>
         </div>
-        <PlannerActivity onDeleting={onDeleting} day={day.activities} />
+        <div className="activities">
+          {day.activities.length === 0 && (
+            <>
+              <img src="./img/IconsFunctional/square.png" />
+              <img src="./img/IconsFunctional/square.png" />
+              <img src="./img/IconsFunctional/square.png" />
+            </>
+          )}
+          {day.activities.map((dayActivity) => {
+            return (
+              <PlannerActivity
+                key={dayActivity + day.dayName}
+                onDeleting={onDeleting}
+                activity={dayActivity}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

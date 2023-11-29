@@ -26,7 +26,7 @@
   max-width: 60px;
 }
 
-.delete_button {
+.one_activity {
   display: flex;
   flex-wrap: wrap;
 }
@@ -43,4 +43,5 @@
 
 .delete_button--button .delete_button--img {
   max-width: 2rem;
+  z-index: 5;
 }
