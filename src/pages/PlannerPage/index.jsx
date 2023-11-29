@@ -2,10 +2,10 @@ import './style.css';
 
 import { useEffect, useState } from 'react';
 
-import { DayPlan } from './../../components/DayPlan';
-import { IconCarousel } from '../../components/IconCarousel';
+import { DayPlan } from './DayPlan';
+import { IconCarousel } from './IconCarousel';
 import { PopUp } from '../../components/Popup';
-import { FunctionalDivPlannerPage } from './../../components/FunctionalDivPlannerPage';
+import { FunctionalDivPlannerPage } from './FunctionalDivPlannerPage';
 
 export const PlannerPage = () => {
   // musí tady být useState - neměním proměnou, ale prvky v proměnné, nemusel by tedy být useState

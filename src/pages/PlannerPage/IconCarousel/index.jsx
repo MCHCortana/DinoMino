@@ -1,6 +1,4 @@
 import './style.css';
-import { useState } from 'react';
-import { PopUp } from './../../components/Popup';
 
 export const IconCarousel = ({ onAddingPlan, setActivityForDay }) => {
   const iconList = [

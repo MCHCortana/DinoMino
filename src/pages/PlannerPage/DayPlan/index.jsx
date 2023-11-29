@@ -1,6 +1,6 @@
 import './style.css';
 
-import { PlannerActivity } from './../../components/PlannerActivity';
+import { PlannerActivity } from '../PlannerActivity';
 
 export const DayPlan = ({
   day,
