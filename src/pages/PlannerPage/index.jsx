@@ -9,7 +9,7 @@ import { FunctionalDivPlannerPage } from './FunctionalDivPlannerPage';
 
 export const PlannerPage = () => {
   // musí tady být useState - neměním proměnou, ale prvky v proměnné, nemusel by tedy být useState
-  const [weekDays, setData] = useState([
+  const [weekDays, setWeekDays] = useState([
     { id: 'monday', dayName: 'pondělí', activities: [] },
     { id: 'tuesday', dayName: 'úterý', activities: [] },
     { id: 'wednesday', dayName: 'středa', activities: [] },
@@ -20,14 +20,16 @@ export const PlannerPage = () => {
   ]);
   const [activityForDay, setActivityForDay] = useState(null);
 
-  // Může tohle být jako další položka ve weekdays? why not? deleting taky? - jednodušší předání props - předám den.deleting a nemusím deklarovat novou proměnnou. Bude mít nová dlekarace nějaký vliv, kromě toho, že budeu předávat hodně props?
-
   const [tooManyActivities, setTooManyActivities] = useState(false);
-  const [deleting, setDeleting] = useState(true);
+  const [onDeleting, setDeleting] = useState(false);
 
   return (
     <main className="container__planner_page">
-      <FunctionalDivPlannerPage onDeleting={setDeleting} />
+      <FunctionalDivPlannerPage
+        onDeleting={setDeleting}
+        deleting={onDeleting}
+        onClearing={setWeekDays}
+      />
 
       <div className="planner_days">
         {tooManyActivities && (
@@ -36,19 +38,21 @@ export const PlannerPage = () => {
         {weekDays.map((day) => {
           return (
             <DayPlan
-              onDeleting={deleting}
               key={day.id}
               day={day}
+              onDeleting={onDeleting}
               setActivityForDay={setActivityForDay}
               setTooManyActivities={setTooManyActivities}
             />
           );
         })}
       </div>
-      <IconCarousel
-        onAddingPlan={activityForDay}
-        setActivityForDay={setActivityForDay}
-      />
+      {activityForDay && (
+        <IconCarousel
+          onAddingPlan={activityForDay}
+          setActivityForDay={setActivityForDay}
+        />
+      )}
     </main>
   );
 };
