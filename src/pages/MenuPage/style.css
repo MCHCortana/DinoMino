@@ -74,17 +74,46 @@
   transform: scale(1.5);
 }
 
-@media (max-width: 800px) {
-  .main_menu img {
-    max-width: 5rem;
-  }
-
-  .dino-mino__menupage {
-    max-width: 150px;
-    margin: auto;
+@media (max-width: 1050px) {
+  .faq-menupage {
+    display: none;
   }
 
   .container__menu_page h1 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 860px) {
+
+
+  .dino-mino__menupage {
+    margin-left: 0;
+  }
+
+  .container__menu_page h1 {
+    font-size: 3rem;
+  }
+
+  .dino-mino__menupage {
+    max-width: 200px;
+  }
+
+  .main_menu {
+    max-width: 30rem;
+    height: 30rem;
+  }
+
+  .main_menu img {
+    max-width: 10rem;
+  }
+
+  /* 
+  .main_menu img {
+    max-width: 8rem;
+  } */
+
+  /* .container__menu_page h1 {
     font-size: 1.5rem;
   }
 
@@ -95,5 +124,5 @@
 
   .main_menu {
     gap: 0;
-  }
+  }  */
 }

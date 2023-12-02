@@ -51,7 +51,7 @@
 @media screen and (max-width: 860px) {
   .planner_days {
     flex-wrap: nowrap;
-    min-width: 500px;
+
 
   }
 }
