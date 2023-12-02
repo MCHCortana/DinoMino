@@ -43,21 +43,16 @@ export const ActivityPage = () => {
                 alt="Pomoc"
               />
             </div>
-            <div className="dino--activity_page">
-              <img
-                className="dino-mino--activity_page"
-                src="./img/DinoReading.png"
-                alt="Dinosaur Dino Míno s knihou"
-              />
-            </div>
 
-            <div className="sumary-print">
+            <div className="tisk-sumary__activity">
               <img
                 src="./img/IconsFunctional/printer3.png"
                 alt="Printer"
                 onClick={handleClichPrint}
               ></img>
             </div>
+
+            <div className="sumary-print"></div>
           </div>
         </div>
       </div>
