@@ -44,11 +44,13 @@ export const FunctionalDivPlannerPage = ({
             alt="remove activity finished"
           />
         )}
-        <img
-          onClick={handleBigDeleteClick}
-          src="./img/IconsFunctional/remove.png"
-          alt="remove activity"
-        />
+        {!deleting && (
+          <img
+            onClick={handleBigDeleteClick}
+            src="./img/IconsFunctional/remove.png"
+            alt="remove activity"
+          />
+        )}
         <img
           onClick={handleAllDeleteClick}
           src="./img/IconsFunctional/dust.png"

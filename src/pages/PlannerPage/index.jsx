@@ -21,7 +21,7 @@ export const PlannerPage = () => {
   const [activityForDay, setActivityForDay] = useState(null);
   const [tooManyActivities, setTooManyActivities] = useState(false);
   const [onDeleting, setDeleting] = useState(false);
-  console.log('activity for day Planner Page', activityForDay);
+
   return (
     <main className="container__planner_page">
       <FunctionalDivPlannerPage
@@ -39,16 +39,20 @@ export const PlannerPage = () => {
             <DayPlan
               key={day.id}
               day={day}
+              setWeekDays={setWeekDays}
               onDeleting={onDeleting}
               setActivityForDay={setActivityForDay}
               setTooManyActivities={setTooManyActivities}
+              endDeleting={setDeleting}
             />
           );
         })}
       </div>
-      {activityForDay && (
+      {!!activityForDay && (
         <IconCarousel
-          onAddingPlan={activityForDay}
+          weekDays={weekDays}
+          setWeekDays={setWeekDays}
+          activityForDay={activityForDay}
           setActivityForDay={setActivityForDay}
         />
       )}

@@ -1,19 +1,23 @@
 import './style.css';
 
-import { useState, useEffect } from 'react';
-
 export const PlannerActivity = ({
   activity,
   onDeleting,
-  indexOnDelete,
-  index,
-  onPhysicalDelete,
+  setWeekDays,
+  whichDay,
+  indexToDelete,
 }) => {
-  console.log('Planner Activity', activity);
-  console.log('planner actvivit - index', index);
   const handleClick = () => {
-    onPhysicalDelete(true);
-    indexOnDelete(index);
+    setWeekDays((prevState) => {
+      console.log('prev state', prevState);
+      let newState = [...prevState];
+      const dayIndex = newState.findIndex((day) => {
+        return whichDay === day.dayName;
+      });
+      let newDay = newState[dayIndex];
+      newDay.activities.splice(indexToDelete, 1);
+      return newState;
+    });
   };
 
   return (

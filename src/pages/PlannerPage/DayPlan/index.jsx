@@ -9,24 +9,14 @@ export const DayPlan = ({
   onDeleting,
   setActivityForDay,
   setTooManyActivities,
-  onAddingPlan,
+  setWeekDays,
+  endDeleting,
 }) => {
-  const [physicalyDelete, setPhysicalyDelete] = useState(false);
-  const [index, setIndex] = useState(null);
-  console.log('DayPlan Day activities', day.activities);
   const handleAdd = () => {
-    onAddingPlan;
-    setActivityForDay(day);
-    day.activities.length === 4 && setTooManyActivities(true);
+    endDeleting(false);
+    setActivityForDay(day.dayName);
+    day.activities.length === 3 && setTooManyActivities(true);
   };
-  physicalyDelete &&
-    day.activities.map((activity) => {
-      if (index === day.activities.indexOf(activity)) {
-        day.activities.splice(index, 1);
-      }
-      setPhysicalyDelete(false);
-      setIndex(null);
-    });
 
   return (
     <>
@@ -43,19 +33,20 @@ export const DayPlan = ({
               <img src="/img/IconsFunctional/square.png" />
               <img src="/img/IconsFunctional/square.png" />
               <img src="/img/IconsFunctional/square.png" />
-              <img src="/img/IconsFunctional/square.png" />
             </>
           )}
           {day.activities.map((dayActivity, index) => {
-            console.log('DayPlan', dayActivity);
+            const idKey = self.crypto.randomUUID();
+            console.log('day', day);
             return (
               <PlannerActivity
-                key={dayActivity}
+                key={idKey}
+                whichDay={day.dayName}
                 onDeleting={onDeleting}
-                onPhysicalDelete={setPhysicalyDelete}
                 activity={dayActivity}
-                indexOnDelete={setIndex}
-                index={index}
+                setWeekDays={setWeekDays}
+                indexToDelete={index}
+                setIndexToDelete={setActivityForDay}
               />
             );
           })}
