@@ -37,7 +37,7 @@ export const PopUpSummaryPrint = () => {
 
     fetchData();
   }, []);
-  // console.log(setMonthData);
+  console.log(monthData);
 
   const getDataForCurrentMonth = () => {
     const currentMonthData = monthData.find(
