@@ -21,7 +21,7 @@ export const PlannerPage = () => {
   const [activityForDay, setActivityForDay] = useState(null);
   const [tooManyActivities, setTooManyActivities] = useState(false);
   const [onDeleting, setDeleting] = useState(false);
-
+  console.log('activity for day Planner Page', activityForDay);
   return (
     <main className="container__planner_page">
       <FunctionalDivPlannerPage
@@ -35,7 +35,6 @@ export const PlannerPage = () => {
           <PopUp popCheck={setTooManyActivities} location="alert" />
         )}
         {weekDays.map((day) => {
-          console.log('Planner Page activity', day);
           return (
             <DayPlan
               key={day.id}
