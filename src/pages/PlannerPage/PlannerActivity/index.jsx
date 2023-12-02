@@ -22,11 +22,11 @@ export const PlannerActivity = ({
         <button onClick={handleClick} className="delete_button--button">
           <img
             className="delete_button--img"
-            src="./img/IconsFunctional/remove.png "
+            src="img/IconsFunctional/remove.png "
           />{' '}
         </button>
       )}
-      <img src={`./img/IconsCalendar/${activity}`} alt={activity} />
+      <img src={`img/IconsCalendar/${activity}`} alt={activity} />
     </div>
   );
 };

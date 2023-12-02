@@ -61,7 +61,7 @@ export const IconCarousel = ({ onAddingPlan, setActivityForDay }) => {
               <button onClick={handleClick}>
                 <img
                   className="carousel__image"
-                  src={`./img/IconsCalendar/${icon}`}
+                  src={`/img/IconsCalendar/${icon}`}
                   alt={icon}
                 />
               </button>

@@ -40,10 +40,10 @@ export const DayPlan = ({
         <div className="activities">
           {day.activities.length === 0 && (
             <>
-              <img src="./img/IconsFunctional/square.png" />
-              <img src="./img/IconsFunctional/square.png" />
-              <img src="./img/IconsFunctional/square.png" />
-              <img src="./img/IconsFunctional/square.png" />
+              <img src="/img/IconsFunctional/square.png" />
+              <img src="/img/IconsFunctional/square.png" />
+              <img src="/img/IconsFunctional/square.png" />
+              <img src="/img/IconsFunctional/square.png" />
             </>
           )}
           {day.activities.map((dayActivity, index) => {
