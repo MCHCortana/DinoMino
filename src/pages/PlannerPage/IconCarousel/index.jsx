@@ -45,11 +45,9 @@ export const IconCarousel = ({ onAddingPlan, setActivityForDay }) => {
   ];
 
   const handleClick = (e) => {
-    const addingImg = e.target.src.split(
-      'http://localhost:5173/img/IconsCalendar/',
-    );
+    const addingImg = e.target.src.split('/');
     console.log('IconCarousel adding img', addingImg);
-    onAddingPlan && onAddingPlan.activities.push(addingImg[1]);
+    onAddingPlan && onAddingPlan.activities.push(addingImg[5]);
     setActivityForDay(null);
     console.log(onAddingPlan.activities.length);
   };
