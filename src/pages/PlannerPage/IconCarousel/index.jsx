@@ -1,7 +1,10 @@
 import './style.css';
-import { useState } from 'react';
 
-export const IconCarousel = () => {
+export const IconCarousel = ({
+  activityForDay,
+  setActivityForDay,
+  setWeekDays,
+}) => {
   const iconList = [
     'angel.png',
     'exercise.png',
@@ -44,18 +47,33 @@ export const IconCarousel = () => {
     'walking.png',
     'doctor.png',
   ];
-  const [obr, setObr] = useState(0);
 
+  const handleClick = (e) => {
+    const addingImg = e.target.src.split('/');
+
+    setWeekDays((prevState) => {
+      let newState = [...prevState];
+      const dayIndex = newState.findIndex((day) => {
+        return day.dayName === activityForDay;
+      });
+      let newDay = newState[dayIndex];
+      setActivityForDay(null);
+      newDay.activities.push(addingImg[5]);
+      newState[dayIndex] = newDay;
+
+      return newState;
+    });
+  };
   return (
     <>
       <div className="carousel">
         {iconList.map((icon) => {
           return (
             <div key={iconList.indexOf(icon)} className="carousel__media">
-              <button>
+              <button onClick={handleClick}>
                 <img
                   className="carousel__image"
-                  src={`./img/IconsCalendar/${icon}`}
+                  src={`/img/IconsCalendar/${icon}`}
                   alt={icon}
                 />
               </button>

@@ -1,5 +1,12 @@
 [
   {
+    "id": 0,
+    "element": "x",
+    "number": "24",
+    "text": "",
+    "additional": ""
+  },
+  {
     "id": 1,
     "element": "x",
     "number": "3",

@@ -2,11 +2,13 @@ import './style.css';
 
 import { useState } from 'react';
 
-import { DayPlan } from './../../components/DayPlan';
-import { IconCarousel } from '../../components/IconCarousel';
+import { DayPlan } from './DayPlan';
+import { IconCarousel } from './IconCarousel';
+import { PopUp } from '../../components/Popup';
+import { FunctionalDivPlannerPage } from './FunctionalDivPlannerPage';
 
 export const PlannerPage = () => {
-  const [weekDays, setData] = useState([
+  const [weekDays, setWeekDays] = useState([
     { id: 'monday', dayName: 'pondělí', activities: [] },
     { id: 'tuesday', dayName: 'úterý', activities: [] },
     { id: 'wednesday', dayName: 'středa', activities: [] },
@@ -15,20 +17,45 @@ export const PlannerPage = () => {
     { id: 'saturday', dayName: 'sobota', activities: [] },
     { id: 'sunday', dayName: 'neděle', activities: [] },
   ]);
-  const [adding, setAdd] = useState(false);
+
+  const [activityForDay, setActivityForDay] = useState(null);
+  const [tooManyActivities, setTooManyActivities] = useState(false);
+  const [onDeleting, setDeleting] = useState(false);
 
   return (
     <main className="container__planner_page">
-      <div className="planner_page_action_container">
-        <img src="./img/IconsFunctional/printer.png" alt="print_planner" />
-        <img src="./img/IconsFunctional/remove.png" alt="remove_activity" />
-      </div>
+      <FunctionalDivPlannerPage
+        onDeleting={setDeleting}
+        deleting={onDeleting}
+        onClearing={setWeekDays}
+      />
+
       <div className="planner_days">
+        {tooManyActivities && (
+          <PopUp popCheck={setTooManyActivities} location="alert" />
+        )}
         {weekDays.map((day) => {
-          return <DayPlan key={day.id} day={day} />;
+          return (
+            <DayPlan
+              key={day.id}
+              day={day}
+              setWeekDays={setWeekDays}
+              onDeleting={onDeleting}
+              setActivityForDay={setActivityForDay}
+              setTooManyActivities={setTooManyActivities}
+              endDeleting={setDeleting}
+            />
+          );
         })}
       </div>
-      <IconCarousel />
+      {!!activityForDay && (
+        <IconCarousel
+          weekDays={weekDays}
+          setWeekDays={setWeekDays}
+          activityForDay={activityForDay}
+          setActivityForDay={setActivityForDay}
+        />
+      )}
     </main>
   );
 };

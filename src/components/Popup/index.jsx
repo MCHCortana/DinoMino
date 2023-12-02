@@ -1,6 +1,7 @@
 import './style.css';
 import { PopUpHint } from './PopUpHint';
 import { PopUpXmas } from './PopUpXmas';
+import { PopUpAlert } from './PopupAlert';
 import { PopUpSummaryPrint } from './PopUpSummaryPrint';
 
 export const PopUp = ({
@@ -26,6 +27,7 @@ export const PopUp = ({
         {location === 'pop_print' && (
           <PopUpSummaryPrint popUpSumaryPrint={popUpSumaryPrint} />
         )}
+        {location === 'alert' && <PopUpAlert />}
       </div>
       <div className="overlay"></div>
     </div>
