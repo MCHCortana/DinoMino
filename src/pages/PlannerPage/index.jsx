@@ -35,6 +35,7 @@ export const PlannerPage = () => {
           <PopUp popCheck={setTooManyActivities} location="alert" />
         )}
         {weekDays.map((day) => {
+          console.log('Planner Page activity', day);
           return (
             <DayPlan
               key={day.id}

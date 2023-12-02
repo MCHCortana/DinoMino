@@ -13,7 +13,7 @@ export const DayPlan = ({
 }) => {
   const [physicalyDelete, setPhysicalyDelete] = useState(false);
   const [index, setIndex] = useState(null);
-
+  console.log('DayPlan Day activity', day.activities);
   const handleAdd = () => {
     onAddingPlan;
     setActivityForDay(day);
@@ -47,6 +47,7 @@ export const DayPlan = ({
             </>
           )}
           {day.activities.map((dayActivity, index) => {
+            console.log('DayPlan', activity);
             return (
               <PlannerActivity
                 key={dayActivity}
