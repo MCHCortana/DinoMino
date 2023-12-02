@@ -1,33 +1,141 @@
 import './style.css';
-import dayjs from 'dayjs';
+import { useRef } from 'react';
 
-export const Day = () => {
-  const currentDay = dayjs().format('dddd').toLowerCase();
+export const Day = ({ currentDay }) => {
+  const mondayRef = useRef();
+  const tuesdayRef = useRef();
+  const wednesdayRef = useRef();
+  const thursdayRef = useRef();
+  const fridayRef = useRef();
+  const saturdayRef = useRef();
+  const sundayRef = useRef();
+
+  const removeAllClasses = () => {
+    mondayRef.current.classList.remove('right-answer__day');
+    tuesdayRef.current.classList.remove('right-answer__day');
+    wednesdayRef.current.classList.remove('right-answer__day');
+    thursdayRef.current.classList.remove('right-answer__day');
+    fridayRef.current.classList.remove('right-answer__day');
+    saturdayRef.current.classList.remove('right-answer__day');
+    sundayRef.current.classList.remove('right-answer__day');
+
+    mondayRef.current.classList.remove('wrong-answer__day');
+    tuesdayRef.current.classList.remove('wrong-answer__day');
+    wednesdayRef.current.classList.remove('wrong-answer__day');
+    thursdayRef.current.classList.remove('wrong-answer__day');
+    fridayRef.current.classList.remove('wrong-answer__day');
+    saturdayRef.current.classList.remove('wrong-answer__day');
+    sundayRef.current.classList.remove('wrong-answer__day');
+  };
+
+  const handleClickMonday = () => {
+    removeAllClasses();
+    if (currentDay === 'Monday') {
+      mondayRef.current.classList.add('right-answer__day');
+    } else {
+      mondayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+
+  const handleClickTuesday = () => {
+    removeAllClasses();
+    if (currentDay === 'Tuesday') {
+      tuesdayRef.current.classList.add('right-answer__day');
+    } else {
+      tuesdayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+  const handleClickWednesday = () => {
+    removeAllClasses();
+    if (currentDay === 'Wednesday') {
+      wednesdayRef.current.classList.add('right-answer__day');
+    } else {
+      wednesdayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+  const handleClickThursday = () => {
+    removeAllClasses();
+    if (currentDay === 'Thursday ') {
+      thursdayRef.current.classList.add('right-answer__day');
+    } else {
+      thursdayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+  const handleClickFriday = () => {
+    removeAllClasses();
+    if (currentDay === 'Friday') {
+      fridayRef.current.classList.add('right-answer__day');
+    } else {
+      fridayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+  const handleClickSaturday = () => {
+    removeAllClasses();
+    if (currentDay === 'Saturday') {
+      saturdayRef.current.classList.add('right-answer__day');
+    } else {
+      saturdayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+  const handleClickSunday = () => {
+    removeAllClasses();
+    if (currentDay === 'Sunday') {
+      sundayRef.current.classList.add('right-answer__day');
+    } else {
+      sundayRef.current.classList.add('wrong-answer__day');
+    }
+  };
+
   return (
     <>
       <div className="days-box">
-        {/* <div className={`day-box ${currentDay}`}>
-          <p>{currentDay.charAt(0).toUpperCase() + currentDay.slice(1)}</p>
-        </div> */}
-        <div className="day-box monday">
+        <div
+          className="day-box monday"
+          ref={mondayRef}
+          onClick={handleClickMonday}
+        >
           <p>Pondělí</p>
         </div>
-        <div className="day-box tuesday">
+        <div
+          className="day-box tuesday"
+          ref={tuesdayRef}
+          onClick={handleClickTuesday}
+        >
           <p>Úterý</p>
         </div>
-        <div className="day-box wednesday">
+        <div
+          className="day-box wednesday"
+          ref={wednesdayRef}
+          onClick={handleClickWednesday}
+        >
           <p>Středa</p>
         </div>
-        <div className="day-box thursday">
+        <div
+          className="day-box thursday"
+          ref={thursdayRef}
+          onClick={handleClickThursday}
+        >
           <p>Čtvrtek</p>
         </div>
-        <div className="day-box friday">
+        <div
+          className="day-box friday"
+          ref={fridayRef}
+          onClick={handleClickFriday}
+        >
           <p>Pátek</p>
         </div>
-        <div className="day-box saturday">
+        <div
+          className="day-box saturday"
+          ref={saturdayRef}
+          onClick={handleClickSaturday}
+        >
           <p>Sobota</p>
         </div>
-        <div className="day-box sunday">
+        <div
+          className="day-box sunday"
+          ref={sundayRef}
+          onClick={handleClickSunday}
+        >
           <p>Neděle</p>
         </div>
       </div>

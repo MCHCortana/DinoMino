@@ -4,8 +4,6 @@ import { SummaryActivityPage } from './SummaryActivityPage';
 import { DaysMonths } from './DaysMonths';
 import { PopUp } from '../../components/Popup';
 import { useState } from 'react';
-import dayjs from 'dayjs';
-// import { PopUpSummaryPrint } from '../../components/Popup/PopUpSummaryPrint';
 
 export const ActivityPage = () => {
   const [popCheck, setPopCheck] = useState(false);
