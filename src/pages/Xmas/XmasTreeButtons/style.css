@@ -45,10 +45,11 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  filter: drop-shadow(24px 13px 25px #ecc046);
 }
 
 .xmas {
-  background-color: #2E8B57;
+  background-color: #2e8b56d5;
 }
 
 .xmas_green {
@@ -72,25 +73,50 @@
 }
 
 .xmas_red {
-  background: radial-gradient(circle at 100px 100px, #cc0000, #ffe0e0);
-  box-shadow: inset 0 0 18px #ffe0e0,
-    inset 6px 0 18px #ff6666,
-    inset -6px 0 18px #cc3333,
-    inset 6px 0 30px #ff3333,
-    inset -6px 0 30px #cc0000,
-    0 0 18px #ff6666, -4px 0 18px #cc3333, 4px 0 18px #cc0000;
+  background: radial-gradient(circle at 100px 100px, #ff7f00, #f7efef);
+  box-shadow: inset 0 0 18px #ffffff,
+    inset 6px 0 18px #ff7f00,
+    inset -6px 0 18px #e66200,
+    inset 6px 0 30px #cc5900,
+    inset -6px 0 30px #b24c00,
+    0 0 18px #ff7f00, -4px 0 18px #e66200, 4px 0 18px #b24c00;
+
+}
+
+.xmas_cherry {
+  background: radial-gradient(circle at 100px 100px, #ff0040, #f7efef);
+  box-shadow: inset 0 0 18px #ffffff,
+    inset 6px 0 18px #ff0040,
+    inset -6px 0 18px #dc0032,
+    inset 6px 0 30px #b3002d,
+    inset -6px 0 30px #990023,
+    0 0 18px #ff0040, -4px 0 18px #dc0032, 4px 0 18px #990023;
+
+}
+
+.xmas_blue--dark {
+  background: radial-gradient(circle at 100px 100px, #001f3f, #f7efef);
+  box-shadow: inset 0 0 18px #ffffff,
+    inset 6px 0 18px #003366,
+    inset -6px 0 18px #001a33,
+    inset 6px 0 30px #001a33,
+    inset -6px 0 30px #003366,
+    0 0 18px #003366, -4px 0 18px #001a33, 4px 0 18px #001a33;
+}
+
+.xmas_white {
+  background: radial-gradient(circle at 100px 100px, #ffffff, #f7efef);
+  box-shadow: inset 0 0 18px #ffffff,
+    inset 6px 0 18px #e0e0e0,
+    inset -6px 0 18px #d1d1d1,
+    inset 6px 0 30px #c0c0c0,
+    inset -6px 0 30px #a9a9a9,
+    0 0 18px #e0e0e0, -4px 0 18px #d1d1d1, 4px 0 18px #a9a9a9;
 }
 
 #xmas_brown {
   border-radius: 0%;
   background: #8b4513c7;
-
-  /* box-shadow: inset 0 0 18px #D2B48C,
-    inset 6px 0 18px #8B4513,
-    inset -6px 0 18px #A52A2A,
-    inset 6px 0 30px #A52A2A,
-    inset -6px 0 30px #8B4513,
-    0 0 18px #8B4513, -4px 0 18px #A52A2A, 4px 0 18px #8B4513; */
 }
 
 .tree button:hover {

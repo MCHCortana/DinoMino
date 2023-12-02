@@ -1,6 +1,6 @@
 import './style.css';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { DayPlan } from './DayPlan';
 import { IconCarousel } from './IconCarousel';
@@ -8,7 +8,6 @@ import { PopUp } from '../../components/Popup';
 import { FunctionalDivPlannerPage } from './FunctionalDivPlannerPage';
 
 export const PlannerPage = () => {
-  // musí tady být useState - neměním proměnou, ale prvky v proměnné, nemusel by tedy být useState
   const [weekDays, setWeekDays] = useState([
     { id: 'monday', dayName: 'pondělí', activities: [] },
     { id: 'tuesday', dayName: 'úterý', activities: [] },
@@ -18,8 +17,8 @@ export const PlannerPage = () => {
     { id: 'saturday', dayName: 'sobota', activities: [] },
     { id: 'sunday', dayName: 'neděle', activities: [] },
   ]);
-  const [activityForDay, setActivityForDay] = useState(null);
 
+  const [activityForDay, setActivityForDay] = useState(null);
   const [tooManyActivities, setTooManyActivities] = useState(false);
   const [onDeleting, setDeleting] = useState(false);
 

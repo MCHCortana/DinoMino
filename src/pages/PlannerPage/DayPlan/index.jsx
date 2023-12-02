@@ -17,7 +17,7 @@ export const DayPlan = ({
   const handleAdd = () => {
     onAddingPlan;
     setActivityForDay(day);
-    day.activities.length === 3 && setTooManyActivities(true);
+    day.activities.length === 4 && setTooManyActivities(true);
   };
   physicalyDelete &&
     day.activities.map((activity) => {
@@ -40,6 +40,7 @@ export const DayPlan = ({
         <div className="activities">
           {day.activities.length === 0 && (
             <>
+              <img src="./img/IconsFunctional/square.png" />
               <img src="./img/IconsFunctional/square.png" />
               <img src="./img/IconsFunctional/square.png" />
               <img src="./img/IconsFunctional/square.png" />

@@ -35,4 +35,5 @@
   pointer-events: none;
   opacity: 1;
   pointer-events: all;
+  z-index: 6;
 }
