@@ -68,11 +68,11 @@ input {
 
 .foot-print__main-page {
   width: 15rem;
-  filter: drop-shadow(15px 15px 1px rgba(81, 43, 43, 0.4));
 }
 
 .foot-print__main-page:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .foot-print__main-page {
@@ -92,6 +92,7 @@ input {
 
 .sweep-HomePage:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 

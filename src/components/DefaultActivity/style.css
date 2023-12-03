@@ -27,4 +27,5 @@
 
 .year_wheel_img:hover {
   transform: rotate(180deg);
+  cursor: pointer;
 }

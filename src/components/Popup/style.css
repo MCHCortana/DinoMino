@@ -17,6 +17,14 @@
   box-shadow: 10px 7.5px 15px rgb(255, 180, 0), -10px 7.5px 15px rgb(255, 196, 0), -10px -7.5px 15px rgb(255, 242, 0)
 }
 
+.popup>.info-tutorial {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .popup p {
   margin: auto;
   font-family: "Andika", sans-serif;
@@ -38,8 +46,14 @@
   z-index: 6;
 }
 
+@media screen and (max-width: 1100px) {
+  .popup>.info-tutorial {
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .popup {
-    width: 90%;
+    width: 80%;
   }
 }

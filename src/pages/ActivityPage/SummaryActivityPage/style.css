@@ -31,8 +31,7 @@
 
 .summary_activity_page img:hover {
   cursor: pointer;
-
-  /* max-width: 70px; */
+  transform: scale(1.4);
 }
 
 .activitiy_page-task {

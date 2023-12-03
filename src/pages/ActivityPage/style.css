@@ -60,6 +60,7 @@
 
 .faq--activity_page img:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .sumary-print img {
@@ -68,6 +69,14 @@
 
 .sumary-print img:hover {
   cursor: pointer;
+  transform: scale(1.4);
+
+}
+
+.tisk-sumary__activity:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+
 }
 
 
