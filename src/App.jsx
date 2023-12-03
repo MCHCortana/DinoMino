@@ -5,12 +5,13 @@ import { Footer } from './components/Footer';
 
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TouchBackend } from 'react-dnd-touch-backend';
 
 export const App = () => {
   return (
     <>
       <Header />
-      <DndProvider backend={HTML5Backend}>
+      <DndProvider backend={TouchBackend}>
         <Outlet />
       </DndProvider>
       <Footer />
