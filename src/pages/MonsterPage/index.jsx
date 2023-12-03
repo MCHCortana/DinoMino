@@ -11,16 +11,15 @@ export const MonsterPage = ({ hideSourceOnDrag }) => {
   const ItemTypes = {
     BOX: 'box',
   };
-  console.log(bodyPartsImport);
 
   const [bodyParts, setBodyParts] = useState(bodyPartsImport);
-  const handlePrint = () => {
-    const printContent = document.querySelector('.monster-container__box');
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write(printContent.innerHTML);
-    printWindow.document.close();
-    printWindow.print();
-  };
+  // const handlePrint = () => {
+  //   const printContent = document.querySelector('.monster-container__box');
+  //   const printWindow = window.open('', '_blank');
+  //   printWindow.document.write(printContent.innerHTML);
+  //   printWindow.document.close();
+  //   printWindow.print();
+  // };
 
   const moveBox = useCallback(
     (id, left, top) => {
