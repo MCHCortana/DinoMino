@@ -25,3 +25,9 @@
 .adding_button img {
   max-width: 64px;
 }
+
+@media screen and (max-width: 860px) {
+  .planner_one_day h2 {
+    font-size: 1.5rem;
+  }
+}

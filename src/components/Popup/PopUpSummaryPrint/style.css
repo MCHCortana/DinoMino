@@ -19,3 +19,7 @@
 .print-icon {
   width: 4rem;
 }
+
+.sumary-container audio {
+  margin-top: 10px;
+}

@@ -69,3 +69,24 @@
 .sumary-print img:hover {
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 860px) {
+  .container-activity_page {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-column,
+  .summary {
+    width: 80%;
+  }
+
+  .left-column {
+    margin-top: 20px;
+  }
+
+  .summary {
+    margin-bottom: 40px;
+  }
+}

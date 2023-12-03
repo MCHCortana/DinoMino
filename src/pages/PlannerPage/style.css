@@ -45,3 +45,13 @@
   max-width: 2rem;
   z-index: 5;
 }
+
+
+
+@media screen and (max-width: 860px) {
+  .planner_days {
+    flex-wrap: nowrap;
+
+
+  }
+}

@@ -4,25 +4,28 @@ import 'dayjs/locale/cs';
 import React, { useState, useEffect } from 'react';
 
 export const PopUpSummaryPrint = () => {
-  const [monthData, setMonthData] = useState([]);
+  const [monthData, setMonthData] = useState(null);
+  const [seasonsData, setSeasonsData] = useState(null);
 
   dayjs.locale('cs');
   const currentDay = dayjs().format('dddd');
   const currentMonth = dayjs().format('MMMM');
+  // console.log(currentMonth);
 
   const currentSeason = () => {
-    const currentMonth = dayjs().month();
+    const currentMonth = dayjs().month() + 1;
 
-    if (currentMonth >= 2 && currentMonth <= 4) {
+    if (currentMonth >= 3 && currentMonth <= 5) {
       return 'Jaro';
-    } else if (currentMonth >= 5 && currentMonth <= 7) {
+    } else if (currentMonth >= 6 && currentMonth <= 8) {
       return 'Léto';
-    } else if (currentMonth >= 8 && currentMonth <= 10) {
+    } else if (currentMonth >= 9 && currentMonth <= 11) {
       return 'Podzim';
     } else {
       return 'Zima';
     }
   };
+  console.log(currentSeason);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,55 +37,66 @@ export const PopUpSummaryPrint = () => {
         console.error('Chyba při načítání dat', error);
       }
     };
-
     fetchData();
   }, []);
-  // console.log(setMonthData);
 
-  const getDataForCurrentMonth = () => {
-    const currentMonthData = monthData.find(
-      (item) => Object.keys(item)[0] === currentMonth,
-    );
-    return currentMonthData
-      ? currentMonthData[currentMonth]
-      : 'Žádná básnička k dispozici.';
+  const getDataMonthPoem = () => {
+    return monthData.find((month) => month.monthName === currentMonth).poem;
+  };
+  const getDataMonthAudio = () => {
+    return monthData.find((month) => month.monthName === currentMonth).audio;
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('./api/rocniobdobi.json');
+        const data = await response.json();
+        setSeasonsData(data);
+      } catch (error) {
+        console.error('Chyba při načítání dat', error);
+      }
+    };
+    fetchData();
+  }, []);
+  const getDataSeasonPoem = () => {
+    return seasonsData.find((season) => season.name === currentSeason()).poem;
+  };
+  const getDataSeasonAudio = () => {
+    return seasonsData.find((season) => season.name === currentSeason()).audio;
   };
 
   return (
     <>
       <div className="sumary-container">
         <p>Rok má 365 dní</p>
-        <h3>Rok má 4 ročni období.Teď je {currentSeason()}</h3>
+        <h3>Rok má 4 ročni období.</h3>
         <div className="sumary-winter">
-          <h2>{currentSeason()}</h2>
-          <p>Kreslím si, jak padá sníh</p>
-          <p>na pole a na cesty.</p>
-          <p>Sněhuláka kreslím též</p>
-          <p>bez kabátu bez vesty.</p>
+          <h2>Teď je: {currentSeason()}</h2>
+          <p>{seasonsData && getDataSeasonPoem()}</p>
+          <div className="audio_hint">
+            <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
+            <audio controls>
+              <source
+                src={seasonsData && getDataSeasonAudio()}
+                type="audio/mpeg"
+              />{' '}
+            </audio>
+          </div>
         </div>
 
-        {/* <h3>Rok Má 12 měsíců. Teď máme: {currentMonth}</h3>
-
-        <div className="sumary-winter">
-          {/* {monthsData.map((monthData) => { */}
-        {/* if (Object.keys(monthData)[0] === currentMonth) {
-              return ( */}
-        {/* <div key={currentMonth} className="sumary-winter">
-            <h2>{currentMonth}</h2>
-            <p>Za prosince končí rok,</p>
-            <p>do nového už jen krok.</p>
-            <p>V prosinci jsou Vánoce,</p>
-            <p>přesně jednou po roce.</p>
-          </div>
-          {/* );
-            }
-            
-          })} */}
-        <h3>Rok Má 12 měsíců. Teď máme: {currentMonth}</h3>
-        <div className="sumary-winter">
-          <div key={currentMonth} className="sumary-winter">
-            <h2>{currentMonth}</h2>
-            <p>{getDataForCurrentMonth()}</p>
+        <h3>Rok Má 12 měsíců.</h3>
+        <div key={currentMonth} className="sumary-winter">
+          <h2>Teď máme: {currentMonth}</h2>
+          <p>{monthData && getDataMonthPoem()}</p>
+          <div className="audio_hint">
+            <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
+            <audio controls>
+              <source
+                src={monthData && getDataMonthAudio()}
+                type="audio/mpeg"
+              />{' '}
+            </audio>
           </div>
         </div>
         <h3>Týden má 7 dní, dnes je: {currentDay}</h3>
