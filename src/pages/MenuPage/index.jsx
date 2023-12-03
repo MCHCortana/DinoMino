@@ -1,11 +1,19 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
+import { osloveni } from './osloveni';
 
 export const MenuPage = () => {
+  const [userName, setUserName] = useState('');
+  useEffect(() => {
+    const data = window.localStorage.getItem('userName');
+    console.log(data);
+    setUserName(data);
+  }, []);
   return (
     <main className="container__menu_page">
-      <h1 className="userName">Ahoj Martínku!</h1>
+      <h1 className="userName">Ahoj {osloveni(userName)}</h1>
       <img
         className="faq-menupage"
         src="./img/IconsFunctional/faq.png"

@@ -1,6 +1,6 @@
 import './style.css';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { DayPlan } from './DayPlan';
 import { IconCarousel } from './IconCarousel';
@@ -17,6 +17,16 @@ export const PlannerPage = () => {
     { id: 'saturday', dayName: 'sobota', activities: [] },
     { id: 'sunday', dayName: 'neděle', activities: [] },
   ]);
+
+  useEffect(() => {
+    const data = window.localStorage.getItem('weekDays');
+    console.log(data);
+    setWeekDays(JSON.parse(data));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('weekDays', JSON.stringify(weekDays));
+  }, [weekDays]);
 
   const [activityForDay, setActivityForDay] = useState(null);
   const [tooManyActivities, setTooManyActivities] = useState(false);

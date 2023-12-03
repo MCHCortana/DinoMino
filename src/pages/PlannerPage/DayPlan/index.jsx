@@ -1,6 +1,6 @@
 import './style.css';
 
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 import { PlannerActivity } from '../PlannerActivity';
 
@@ -17,7 +17,6 @@ export const DayPlan = ({
     setActivityForDay(day.dayName);
     day.activities.length === 3 && setTooManyActivities(true);
   };
-
   return (
     <>
       <div className="planner_one_day">
@@ -37,7 +36,6 @@ export const DayPlan = ({
           )}
           {day.activities.map((dayActivity, index) => {
             const idKey = self.crypto.randomUUID();
-            console.log('day', day);
             return (
               <PlannerActivity
                 key={idKey}

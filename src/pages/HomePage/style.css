@@ -79,14 +79,18 @@ input {
   margin: 70px;
 }
 
-.faq-HomePage {
+.sweep-HomePage {
+  border-radius: 3px;
+  background-color: antiquewhite;
   max-width: 80px;
   position: absolute;
   bottom: 2rem;
   right: 1rem;
+  padding: 1rem;
 }
 
-.faq-HomePage:hover {
+
+.sweep-HomePage:hover {
   transform: scale(1.1);
 }
 

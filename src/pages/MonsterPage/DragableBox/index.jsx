@@ -19,7 +19,7 @@ export const DragableBox = ({
     BOX: 'box',
   };
 
-  const [{ isDragging }, drag, preview] = useDrag(
+  const [{ isDragging }, drag] = useDrag(
     () => ({
       type: ItemTypes.BOX,
       item: { id, left, top },

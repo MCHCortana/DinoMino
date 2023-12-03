@@ -19,11 +19,14 @@ const MyPreview = () => {
     return null;
   }
   const { itemType, item, style } = preview;
+
   const bodyPart = bodyPartsImport[item.id].element;
+  console.log(style);
   return (
     <img
       src={bodyPart.props.src}
       alt={bodyPart.props.className}
+      className={bodyPart.props.className}
       style={style}
     />
   );
