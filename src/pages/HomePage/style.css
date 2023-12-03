@@ -24,13 +24,7 @@
   text-align: center;
 }
 
-.question-name {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 
 input {
   background-color: rgba(255, 255, 255, 0.5);
@@ -43,6 +37,14 @@ input {
   font-size: 2rem;
   color: #4B0082;
   text-align: center;
+}
+
+.question-name {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .question-name {

@@ -4,11 +4,17 @@
 }
 
 .planner_one_day {
+  padding-top: 0.5rem;
+  border-radius: 1rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+.active-day {
+  background-color: #54d9fe;
 }
 
 .planner_one_day h2 {

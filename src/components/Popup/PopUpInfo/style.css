@@ -1,3 +1,12 @@
+.info-tutorial {
+  display: flex;
+  width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .info-tutorial img {
   width: 400px;
   height: 400px;

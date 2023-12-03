@@ -4,6 +4,7 @@ import { PopUpXmas } from './PopUpXmas';
 import { PopUpAlert } from './PopupAlert';
 import { PopUpSummaryPrint } from './PopUpSummaryPrint';
 import { PopUpInfo } from './PopUpInfo';
+import { PopUpEnterName } from './PopupEnterName';
 
 export const PopUp = ({
   popCheck,
@@ -11,7 +12,6 @@ export const PopUp = ({
   popContent,
   popUpSumaryPrint,
   day,
-  popInfo,
 }) => {
   const handleClick = () => {
     if (location === 'pop_print') {
@@ -19,11 +19,6 @@ export const PopUp = ({
     }
     popCheck(false);
     // popUpSumaryPrint(false);
-  };
-  const handleClickInfo = () => {
-    if (location === '') {
-      return popInfo(false);
-    }
   };
 
   return (
@@ -36,7 +31,8 @@ export const PopUp = ({
           <PopUpSummaryPrint popUpSumaryPrint={popUpSumaryPrint} />
         )}
         {location === 'alert' && <PopUpAlert />}
-        {location === 'popupinfo' && <PopUpInfo popInfo={popInfo} />}
+        {location === 'popupinfo' && <PopUpInfo />}
+        {location === 'enterName' && <PopUpEnterName />}
       </div>
       <div className="overlay"></div>
     </div>

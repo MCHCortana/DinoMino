@@ -36,6 +36,11 @@ export const FunctionalDivPlannerPage = ({
         src="./img/IconsFunctional/printer.png"
         alt="print_planner"
       />
+      <img
+        // onClick={handleClickOpenInfo}
+        className="link-menu"
+        src="./img/IconsFunctional/faq.png"
+      />
       <div className="deleting_div">
         {deleting && (
           <img

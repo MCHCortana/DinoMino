@@ -11,15 +11,21 @@ export const DayPlan = ({
   setTooManyActivities,
   setWeekDays,
   endDeleting,
+  activityForDay,
 }) => {
   const handleAdd = () => {
     endDeleting(false);
     setActivityForDay(day.dayName);
     day.activities.length === 3 && setTooManyActivities(true);
   };
+
   return (
     <>
-      <div className="planner_one_day">
+      <div
+        className={`planner_one_day ${
+          activityForDay === day.dayName && 'active-day'
+        }`}
+      >
         <button className="adding_button" onClick={handleAdd}>
           <img src="./img/IconsFunctional/plus.png" alt="add-button" />
         </button>
