@@ -7,8 +7,8 @@
 }
 
 body {
-  min-height: 100vh;
-  /* font-family: 'Andika', sans-serif; */
+  /* min-height: 100vh; */
+  min-height: 100svh;
   font-family: 'Russo One', sans-serif;
   color: #4B0082;
 }
