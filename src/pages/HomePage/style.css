@@ -38,6 +38,11 @@ input {
   max-width: 80%;
   color: #4B0082;
   text-align: center;
+  line-height: 50px;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #4B0082;
+  text-align: center;
 }
 
 .question-name {
@@ -86,26 +91,17 @@ input {
 }
 
 
-@media (min-width:1400px) {
-  /* .dino-mino__main-page {
-    margin: -5rem;
-  } */
-
-  .main__page {
-    min-height: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 860px) {
+  .dino-foot {
+    flex-direction: column;
   }
 
-  input {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    line-height: 50px;
-    margin-top: 30px;
-    font-size: 2rem;
-    color: #4B0082;
-    text-align: center;
+  .foot-print__main-page {
+    margin: 0 0 30px;
   }
+
+  .dino-mino__main-page {
+    align-self: initial;
+  }
+
 }
