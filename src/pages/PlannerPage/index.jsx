@@ -48,14 +48,14 @@ export const PlannerPage = () => {
           );
         })}
       </div>
-      {!!activityForDay && (
-        <IconCarousel
-          weekDays={weekDays}
-          setWeekDays={setWeekDays}
-          activityForDay={activityForDay}
-          setActivityForDay={setActivityForDay}
-        />
-      )}
+      {/* {!!activityForDay && ( */}
+      <IconCarousel
+        weekDays={weekDays}
+        setWeekDays={setWeekDays}
+        activityForDay={activityForDay}
+        setActivityForDay={setActivityForDay}
+      />
+      {/* )} */}
     </main>
   );
 };
