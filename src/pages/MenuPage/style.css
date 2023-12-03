@@ -80,23 +80,15 @@
   }
 }
 
-@media (max-width: 960px) {
-  /* .container__menu_page {
-    min-height: 100dvh
-  } */
+@media (max-width: 860px) {
+  .menu_page-content {
+    flex-direction: column;
 
-  /* .dino-mino__menupage {
+  }
+
+  .dino-mino__menupage {
     margin-left: 0;
-    max-width: 250px;
-  } */
-
-  /* .main_menu {
-    max-width: 30rem;
-    height: 30rem;
-  } */
-
-  .main_menu img {
-    max-width: 10rem;
+    align-self: initial;
   }
 
 }
