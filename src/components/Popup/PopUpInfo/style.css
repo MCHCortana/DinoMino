@@ -1,0 +1,7 @@
+.info-tutorial img {
+  width: 400px;
+  height: 400px;
+  justify-content: space-between;
+  border-radius: 50px;
+  margin: 10px;
+}

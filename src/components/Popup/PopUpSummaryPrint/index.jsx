@@ -25,7 +25,6 @@ export const PopUpSummaryPrint = () => {
       return 'Zima';
     }
   };
-  console.log(currentSeason);
 
   useEffect(() => {
     const fetchData = async () => {

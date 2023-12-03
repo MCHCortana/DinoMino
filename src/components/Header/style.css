@@ -2,7 +2,6 @@ header {
   margin: 0;
   height: 3.5rem;
   background-color: rgb(204, 254, 255);
-  opacity: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +19,8 @@ a .link-menu {
   padding-top: 3px;
 }
 
-header img,
+header img:hover,
 header a:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }

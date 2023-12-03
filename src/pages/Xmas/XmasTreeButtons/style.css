@@ -121,6 +121,7 @@
 
 .tree button:hover {
   transform: scale(2, 2);
+  cursor: pointer;
 }
 
 .xmasbutton--star {
