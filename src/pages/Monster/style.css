@@ -1,20 +1,19 @@
 .monster-container {
   background-color: #FFF8DC;
   width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
+  min-height: calc(100vh - 4.6rem);
 }
 
-.monster-container__title {
-  text-align: center;
-
+.monster-container__box {
+  margin: auto;
+  margin-top: 2rem;
+  width: 95%;
+  min-height: 70vh;
+  border: 3px solid #FFD700;
+  border-radius: 2rem;
+  position: relative;
 }
-
-.monster-container__title img {
-  width: 150px;
-  height: auto;
-}
-
 
 .monster-container .monster_2 {
   width: 100px;
@@ -51,15 +50,6 @@
 
 .monster-container__set .body {
   width: 150px;
-}
-
-.monster-container__box {
-  margin-top: 2rem;
-  width: 48%;
-  height: 70vh;
-  border: 3px solid #FFD700;
-  border-radius: 2rem;
-  position: relative;
 }
 
 .monster-container__box .print-icon {

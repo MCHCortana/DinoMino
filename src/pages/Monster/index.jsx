@@ -1,6 +1,272 @@
 import './style.css';
+import { useDrop } from 'react-dnd';
+import { useState, useCallback } from 'react';
+import update from 'immutability-helper';
 
-export const Monster = () => {
+import { MonsterTitle } from './MonsterTitle';
+import { DragableBox } from './DragableBox';
+
+export const Monster = ({ hideSourceOnDrag }) => {
+  const ItemTypes = {
+    BOX: 'box',
+  };
+
+  const [bodyParts, setBodyParts] = useState({
+    a: {
+      left: 2,
+      top: 3,
+      element: <img className="eyes" src="./img/Monster/oko_1.png" alt="Oko" />,
+    },
+    b: {
+      left: 80,
+      top: 3,
+      element: <img className="eyes" src="./img/Monster/oko_2.png" alt="Oko" />,
+    },
+    c: {
+      left: 160,
+      top: 0,
+      element: <img className="eyes" src="./img/Monster/oko_3.png" alt="Oko" />,
+    },
+    d: {
+      left: 240,
+      top: 0,
+      element: <img className="eyes" src="./img/Monster/oko_4.png" alt="Oko" />,
+    },
+    e: {
+      left: 320,
+      top: 0,
+      element: <img className="eyes" src="./img/Monster/oko_5.png" alt="Oko" />,
+    },
+    f: {
+      left: 360,
+      top: 0,
+      element: <img className="eyes" src="./img/Monster/oko_6.png" alt="Oko" />,
+    },
+    g: {
+      left: 420,
+      top: 0,
+      element: <img className="eyes" src="./img/Monster/oko_7.png" alt="Oko" />,
+      height: '',
+    },
+    h: {
+      left: 500,
+      top: 0,
+      element: <img className="eyes" src="./img/Monster/oko_8.png" alt="Oko" />,
+    },
+    i: {
+      left: 580,
+      top: 0,
+      element: <img className="holy" src="./img/Monster/holy.png" alt="Holy" />,
+    },
+    j: {
+      left: 2,
+      top: 80,
+      element: (
+        <img className="leg" src="./img/Monster/noha_5.png" alt="Noha" />
+      ),
+    },
+    k: {
+      left: 90,
+      top: 80,
+      element: (
+        <img className="leg" src="./img/Monster/noha_3.png" alt="Noha" />
+      ),
+    },
+    l: {
+      left: 180,
+      top: 80,
+      element: (
+        <img className="leg" src="./img/Monster/noha_2.png" alt="Noha" />
+      ),
+    },
+    m: {
+      left: 270,
+      top: 80,
+      element: (
+        <img className="leg" src="./img/Monster/noha_6.png" alt="Noha" />
+      ),
+    },
+    n: {
+      left: 360,
+      top: 80,
+      element: (
+        <img className="leg" src="./img/Monster/noha_4.png" alt="Noha" />
+      ),
+    },
+    o: {
+      left: 450,
+      top: 80,
+      element: (
+        <img className="leg" src="./img/Monster/noha_1.png" alt="Noha" />
+      ),
+    },
+    p: {
+      left: 540,
+      top: 80,
+      element: (
+        <img className="wing" src="./img/Monster/kridlo_1.png" alt="Křidlo" />
+      ),
+    },
+    q: {
+      left: 630,
+      top: 80,
+      element: (
+        <img className="wing" src="./img/Monster/kridlo_5.png" alt="Křidlo" />
+      ),
+    },
+    r: {
+      left: 2,
+      top: 190,
+      element: (
+        <img className="wing" src="./img/Monster/kridlo_3.png" alt="Křidlo" />
+      ),
+    },
+    s: {
+      left: 90,
+      top: 190,
+      element: (
+        <img className="wing" src="./img/Monster/kridlo_2.png" alt="Křidlo" />
+      ),
+    },
+    t: {
+      left: 180,
+      top: 190,
+      element: (
+        <img className="wing" src="./img/Monster/kridlo_6.png" alt="Křidlo" />
+      ),
+    },
+    u: {
+      left: 300,
+      top: 190,
+      element: (
+        <img className="wing" src="./img/Monster/kridlo_4.png" alt="Křidlo" />
+      ),
+    },
+    v: {
+      left: 400,
+      top: 190,
+      element: (
+        <img className="arm" src="./img/Monster/ruce_1.png" alt="Ruce" />
+      ),
+    },
+    w: {
+      left: 480,
+      top: 190,
+      element: (
+        <img className="arm" src="./img/Monster/ruce_4.png" alt="Ruce" />
+      ),
+    },
+    x: {
+      left: 570,
+      top: 190,
+      element: (
+        <img className="arm" src="./img/Monster/ruce_2.png" alt="Ruce" />
+      ),
+    },
+    y: {
+      left: 660,
+      top: 190,
+      element: (
+        <img className="arm" src="./img/Monster/ruce_5.png" alt="Ruce" />
+      ),
+    },
+    z: {
+      left: 2,
+      top: 280,
+      element: (
+        <img className="arm" src="./img/Monster/ruce_3.png" alt="Ruce" />
+      ),
+    },
+    aa: {
+      left: 90,
+      top: 280,
+      element: (
+        <img className="arm" src="./img/Monster/ruce_6.png" alt="Ruce" />
+      ),
+    },
+    ab: {
+      left: 180,
+      top: 280,
+      element: (
+        <img className="horn" src="./img/Monster/rohy_1.png" alt="Rohy" />
+      ),
+    },
+    ac: {
+      left: 240,
+      top: 280,
+      element: (
+        <img className="horn" src="./img/Monster/rohy_2.png" alt="Rohy" />
+      ),
+    },
+    ad: {
+      left: 320,
+      top: 280,
+      element: (
+        <img className="horn" src="./img/Monster/rohy_3.png" alt="Rohy" />
+      ),
+    },
+    ae: {
+      left: 400,
+      top: 280,
+      element: (
+        <img className="horn" src="./img/Monster/rohy_4.png" alt="Rohy" />
+      ),
+    },
+    af: {
+      left: 480,
+      top: 280,
+      element: (
+        <img className="tail" src="./img/Monster/ocas_2.png" alt="Ocas" />
+      ),
+    },
+    ag: {
+      left: 600,
+      top: 280,
+      element: (
+        <img className="tail" src="./img/Monster/ocas_1.png" alt="Ocas" />
+      ),
+    },
+    ah: {
+      left: 2,
+      top: 400,
+      element: (
+        <img className="tail" src="./img/Monster/ocas_3.png" alt="Ocas" />
+      ),
+    },
+    ai: {
+      left: 150,
+      top: 400,
+      element: (
+        <img
+          className="monster_body"
+          src="./img/Monster/telo_1.png"
+          alt="Tělo"
+        />
+      ),
+    },
+    aj: {
+      left: 300,
+      top: 400,
+      element: (
+        <img
+          className="monster_body"
+          src="./img/Monster/telo_2.png"
+          alt="Tělo"
+        />
+      ),
+    },
+    ak: {
+      left: 450,
+      top: 400,
+      element: (
+        <img
+          className="monster_body"
+          src="./img/Monster/telo_3.png"
+          alt="Tělo"
+        />
+      ),
+    },
+  });
   const handlePrint = () => {
     const printContent = document.querySelector('.monster-container__box');
     const printWindow = window.open('', '_blank');
@@ -8,79 +274,60 @@ export const Monster = () => {
     printWindow.document.close();
     printWindow.print();
   };
+
+  const moveBox = useCallback(
+    (id, left, top) => {
+      setBodyParts(
+        update(bodyParts, {
+          [id]: {
+            $merge: { left, top },
+          },
+        }),
+      );
+    },
+    [bodyParts, setBodyParts],
+  );
+
+  const [, drop] = useDrop(
+    () => ({
+      accept: ItemTypes.BOX,
+      drop(item, monitor) {
+        const delta = monitor.getDifferenceFromInitialOffset();
+        const left = Math.round(item.left + delta.x);
+        const top = Math.round(item.top + delta.y);
+        moveBox(item.id, left, top);
+        return undefined;
+      },
+    }),
+    [moveBox],
+  );
+
   return (
     <main className="monster-container">
-      <div className="monster-container__title">
-        <img src="./img/Monster/mon.png" alt="Mon"></img>
-        <img src="./img/Monster/ster.png" alt="Ster"></img>
+      <MonsterTitle />
+      <div ref={drop} className="monster-container__box">
+        {Object.keys(bodyParts).map((key) => {
+          const { left, top, element, height } = bodyParts[key];
+
+          return (
+            <DragableBox
+              key={key}
+              id={key}
+              left={left}
+              top={top}
+              height={height}
+              hideSourceOnDrag={hideSourceOnDrag}
+            >
+              {element}
+            </DragableBox>
+          );
+        })}
         <img
-          className="monster_2"
-          src="./img/Monster/monster_2.png"
-          alt="Monster"
+          className="print-icon"
+          src="./img/IconsFunctional/printer3.png"
+          alt="Printer"
+          onClick={handlePrint}
         ></img>
-        <img src="./img/Monster/set.png" alt="Set"></img>
-      </div>
-      <div className="monster-container__fields">
-        <div className="monster-container__set">
-          <div className="set-eyes">
-            <img src="./img/Monster/oko_1.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_2.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_3.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_4.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_5.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_6.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_7.png" alt="Oko"></img>
-            <img src="./img/Monster/oko_8.png" alt="Oko"></img>
-            <img src="./img/Monster/nimb.png" alt="Nimb"></img>
-          </div>
-
-          <img src="./img/Monster/noha_5.png" alt="Noha"></img>
-          <img src="./img/Monster/noha_3.png" alt="Noha"></img>
-          <img src="./img/Monster/noha_2.png" alt="Noha"></img>
-          <img src="./img/Monster/noha_6.png" alt="Noha"></img>
-          <img src="./img/Monster/noha_4.png" alt="Noha"></img>
-
-          <img src="./img/Monster/noha_1.png" alt="Noha"></img>
-
-          <img src="./img/Monster/kridlo_1.png" alt="Křidlo"></img>
-          <img src="./img/Monster/kridlo_5.png" alt="Křidlo"></img>
-          <img src="./img/Monster/kridlo_3.png" alt="Křidlo"></img>
-          <img src="./img/Monster/kridlo_2.png" alt="Křidlo"></img>
-          <img src="./img/Monster/kridlo_6.png" alt="Křidlo"></img>
-          <img src="./img/Monster/kridlo_4.png" alt="Křidlo"></img>
-
-          <img src="./img/Monster/ruce_1.png" alt="Ruce"></img>
-          <img src="./img/Monster/ruce_4.png" alt="Ruce"></img>
-          <img src="./img/Monster/ruce_2.png" alt="Ruce"></img>
-          <img src="./img/Monster/ruce_5.png" alt="Ruce"></img>
-          <img src="./img/Monster/ruce_3.png" alt="Ruce"></img>
-          <img src="./img/Monster/ruce_6.png" alt="Ruce"></img>
-
-          <div className="set-corners">
-            <img src="./img/Monster/rohy_1.png" alt="Rohy"></img>
-            <img src="./img/Monster/rohy_2.png" alt="Rohy"></img>
-            <img src="./img/Monster/rohy_3.png" alt="Rohy"></img>
-            <img src="./img/Monster/rohy_4.png" alt="Rohy"></img>
-          </div>
-
-          <div className="set-tail">
-            <img src="./img/Monster/ocas_2.png" alt="Ocas"></img>
-            <img src="./img/Monster/ocas_1.png" alt="Ocas"></img>
-            <img src="./img/Monster/ocas_3.png" alt="Ocas"></img>
-          </div>
-
-          <img className="body" src="./img/Monster/telo_1.png" alt="Tělo"></img>
-          <img className="body" src="./img/Monster/telo_2.png" alt="Tělo"></img>
-          <img className="body" src="./img/Monster/telo_3.png" alt="Tělo"></img>
-        </div>
-        <div className="monster-container__box">
-          <img
-            className="print-icon"
-            src="./img/IconsFunctional/printer3.png"
-            alt="Printer"
-            onClick={handlePrint}
-          ></img>
-        </div>
       </div>
     </main>
   );
