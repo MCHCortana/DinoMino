@@ -72,8 +72,8 @@ export const MonsterPage = ({ hideSourceOnDrag }) => {
           className="print-icon"
           src="./img/IconsFunctional/printer3.png"
           alt="Printer"
-          onClick={handlePrint}
-        ></img>
+          // onClick={handlePrint}
+        />
       </div>
     </main>
   );

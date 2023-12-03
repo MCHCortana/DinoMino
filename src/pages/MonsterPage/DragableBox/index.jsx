@@ -19,7 +19,7 @@ export const DragableBox = ({
     BOX: 'box',
   };
 
-  const [{ isDragging }, drag] = useDrag(
+  const [{ isDragging }, drag, preview] = useDrag(
     () => ({
       type: ItemTypes.BOX,
       item: { id, left, top },
@@ -32,15 +32,18 @@ export const DragableBox = ({
   if (isDragging && hideSourceOnDrag) {
     return <div ref={drag} />;
   }
+  console.log(children.props.src);
 
   return (
-    <div
-      ref={drag}
-      className="dragable-box"
-      style={{ ...style, left, top, height }}
-      data-testid="box"
-    >
-      {children}
-    </div>
+    <>
+      <div
+        ref={drag}
+        className="dragable-box"
+        style={{ ...style, left, top, height }}
+        data-testid="box"
+      >
+        {children}
+      </div>
+    </>
   );
 };
