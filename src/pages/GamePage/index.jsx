@@ -17,7 +17,7 @@ export const GamePage = () => {
           </Link>
         </div>
         <div>
-          <Link to="/monster">
+          <Link to="/monsterpage">
             <img
               className="game_page--dino"
               src="./img/IconsCalendar/monster.png"
