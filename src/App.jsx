@@ -25,7 +25,7 @@ const MyPreview = () => {
       src={bodyPart.props.src}
       alt={bodyPart.props.className}
       className={bodyPart.props.className}
-      style={style}
+      style={{ ...style, opacity: 'g0.6' }}
     />
   );
 };
