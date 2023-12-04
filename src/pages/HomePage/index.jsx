@@ -10,9 +10,9 @@ export const HomePage = () => {
   const [userName, setUserName] = useState('');
   const [userNameEnter, setUserNameEnter] = useState(false);
   const handleNameDeleteClick = () => {
-    confirm('Určitě chcete smazat uloženého uživtale') && setUserName('');
+    confirm('Určitě chcete smazat uloženého uživatele') && setUserName('');
   };
-  console.log('user name Enter', userNameEnter);
+
   const onImageClick = () => {
     setPopCheck(true);
   };
