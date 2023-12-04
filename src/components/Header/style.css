@@ -7,6 +7,17 @@ header {
   align-items: center;
 }
 
+.mid_sec_menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid_sec_menu a {
+  margin: 0;
+}
+
 header img,
 header a {
   height: 90%;

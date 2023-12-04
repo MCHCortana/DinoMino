@@ -25,8 +25,6 @@
   text-align: center;
 }
 
-
-
 input {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -82,22 +80,37 @@ input {
   margin: 70px;
 }
 
-.sweep-HomePage {
-  border-radius: 3px;
-  background-color: antiquewhite;
-  max-width: 80px;
+.how_to--home_page {
+  background-color: rgba(187, 223, 255, 0.765);
+  border-radius: 3rem;
   position: absolute;
   bottom: 2rem;
-  right: 1rem;
+  left: 1rem;
   padding: 1rem;
+  text-align: right;
 }
 
+.how_to--home_page div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+}
+
+.how_to--home_page .sweep-HomePage {
+  border-radius: 3px;
+  max-width: 80px;
+}
 
 .sweep-HomePage:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
   cursor: pointer;
 }
 
+.faq-HomePage {
+  border-radius: 3px;
+  max-width: 80px;
+}
 
 @media (max-width: 860px) {
   .dino-foot {

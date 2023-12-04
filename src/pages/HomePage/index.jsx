@@ -7,20 +7,9 @@ import { PopUp } from './../../components/Popup';
 
 export const HomePage = () => {
   const [popCheck, setPopCheck] = useState(false);
+  const [popCheckHT, setPopCheckHT] = useState(false);
   const [userName, setUserName] = useState('');
   const [userNameEnter, setUserNameEnter] = useState(false);
-  const handleNameDeleteClick = () => {
-    confirm('Určitě chcete smazat uloženého uživatele') && setUserName('');
-  };
-
-  const onImageClick = () => {
-    setPopCheck(true);
-  };
-
-  const handleChange = (e) => {
-    setUserNameEnter(true);
-    setUserName(e.target.value);
-  };
 
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
@@ -31,9 +20,26 @@ export const HomePage = () => {
     window.localStorage.setItem('userName', userName);
   }, [userName]);
 
+  const handleNameDeleteClick = () => {
+    confirm('Určitě chcete smazat uloženého uživatele') && setUserName('');
+  };
+
+  const onImageClick = () => {
+    setPopCheck(true);
+  };
+  const handleOpenHowTo = () => {
+    setPopCheckHT(true);
+  };
+
+  const handleChange = (e) => {
+    setUserNameEnter(true);
+    setUserName(e.target.value);
+  };
+
   return (
     <main className="container-main__page">
       {popCheck && <PopUp location={'enterName'} popCheck={setPopCheck} />}
+      {popCheckHT && <PopUp location={'popupinfo'} popCheck={setPopCheckHT} />}
       <div className="main__page">
         <h1 className="title">Můj první plánovač</h1>
         <div className="question-name">
@@ -73,12 +79,26 @@ export const HomePage = () => {
           )}
         </div>
       </div>
-      <img
-        className="sweep-HomePage "
-        onClick={handleNameDeleteClick}
-        src="./img/IconsFunctional/dust.png"
-        alt="remove activity"
-      />
+      <div className="how_to--home_page">
+        <div>
+          <img
+            className="sweep-HomePage "
+            onClick={handleNameDeleteClick}
+            src="./img/IconsFunctional/dust.png"
+            alt="remove activity"
+          />
+          <h2> Smazat uložené jméno</h2>
+        </div>
+        <div>
+          <img
+            className="faq-HomePage"
+            onClick={handleOpenHowTo}
+            src="./img/IconsFunctional/faq.png"
+            alt="nápověda"
+          />
+          <h2> Nápověda</h2>
+        </div>
+      </div>
     </main>
   );
 };

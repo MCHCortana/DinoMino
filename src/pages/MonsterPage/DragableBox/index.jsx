@@ -32,7 +32,6 @@ export const DragableBox = ({
   if (isDragging && hideSourceOnDrag) {
     return <div ref={drag} />;
   }
-  console.log(children.props.src);
 
   return (
     <>

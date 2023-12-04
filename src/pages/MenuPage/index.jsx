@@ -14,7 +14,7 @@ export const MenuPage = () => {
   }, []);
   return (
     <>
-      <Header />
+      <Header menuPage={true} />
       <main className="container__menu_page">
         <h1 className="userName">Ahoj {osloveni(userName)}</h1>
         <img
