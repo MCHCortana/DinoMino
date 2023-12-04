@@ -10,9 +10,9 @@ export const HomePage = () => {
   const [userName, setUserName] = useState('');
   const [userNameEnter, setUserNameEnter] = useState(false);
   const handleNameDeleteClick = () => {
-    confirm('Určitě chcete smazat uloženého uživtale') && setUserName('');
+    confirm('Určitě chcete smazat uloženého uživatele') && setUserName('');
   };
-  console.log('user name Enter', userNameEnter);
+
   const onImageClick = () => {
     setPopCheck(true);
   };
@@ -24,7 +24,6 @@ export const HomePage = () => {
 
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
-    console.log(data);
     setUserName(data);
   }, []);
 
@@ -43,7 +42,11 @@ export const HomePage = () => {
             <input
               onChange={handleChange}
               type="text"
-              placeholder={userName === '' ? 'Jak se jmenuješ?' : userName}
+              placeholder={
+                userName === '' || userName === null
+                  ? 'Jak se jmenuješ?'
+                  : userName
+              }
               className="custom-input"
               value={userName !== '' ? userName : ''}
             ></input>
@@ -54,7 +57,7 @@ export const HomePage = () => {
             className="dino-mino__main-page"
             src="./img/DinoMinoNoShadow.png"
           />
-          {userName === '' ? (
+          {userName === '' || userName === null ? (
             <img
               onClick={onImageClick}
               className="foot-print__main-page"

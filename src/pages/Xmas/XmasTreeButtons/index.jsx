@@ -8,19 +8,28 @@ export const XmasTreeButtons = ({
   day,
 }) => {
   const handleClick = (e) => {
-    tree.map((ornament) => {
-      //Pouzn.:v případě odkomentování této sekce, je možné klikat  pouze na správný den měsíce Prosince - ADVENTNÍ kalendář, z důvodu hodnocení funčnosti a odevzávání projektu, je tato část zakomentováná, aby uživatel mohl vidět celou sekci. Při IRL požívání nutno odkomentovat
+    const banka = e.target.textContent;
+    const emptyBanka = {
+      id: 0,
+      element: 'x',
+      number: '',
+      text: '',
+      additional: '',
+    };
 
-      //Pozn.: odpočet do štědrého dne se odvozuje od čísla, na adventním kalendáři, a funguje tedy při odkomentování sekce. Při zakomentování této sekce je funkce odpočtu omezena.
-
-      // if (ornament.number !== day.toString()) {
-      // } else ..............tady je nutné ještě spojit řádek a vytvořit else if
-      if (ornament.number === e.target.textContent) {
-        onChoice(ornament);
-        popCheck(true);
-        clickedDay(ornament.number);
-      }
-    });
+    if (Number(banka) <= day) {
+      tree.map((ornament) => {
+        if (ornament.number === e.target.textContent) {
+          onChoice(ornament);
+          popCheck(true);
+          clickedDay(ornament.number);
+        }
+      });
+    } else {
+      onChoice(emptyBanka);
+      popCheck(true);
+      clickedDay(day);
+    }
   };
 
   return (

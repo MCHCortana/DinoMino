@@ -9,7 +9,6 @@ export const PlannerActivity = ({
 }) => {
   const handleClick = () => {
     setWeekDays((prevState) => {
-      console.log('prev state', prevState);
       let newState = [...prevState];
       const dayIndex = newState.findIndex((day) => {
         return whichDay === day.dayName;

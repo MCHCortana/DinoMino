@@ -8,7 +8,8 @@
 }
 
 .popup_xmas h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .popup_xmas_general {
@@ -44,6 +45,12 @@
 .rhymes {
   display: flex;
   flex-direction: column;
+}
+
+.rhymes h3 {
+  padding-top: 1rem;
+  line-height: 2rem;
+  font-size: 1.8rem;
 }
 
 .audio {
