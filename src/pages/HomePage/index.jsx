@@ -57,7 +57,7 @@ export const HomePage = () => {
             className="dino-mino__main-page"
             src="./img/DinoMinoNoShadow.png"
           />
-          {userName === '' ? (
+          {userName === '' || userName === null ? (
             <img
               onClick={onImageClick}
               className="foot-print__main-page"
