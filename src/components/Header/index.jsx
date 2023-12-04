@@ -32,7 +32,7 @@ export const Header = () => {
           src="./img/IconsFunctional/footPrintMain.png"
         />
       </Link>
-      {userName === '' ? (
+      {userName === '' || userName === null ? (
         <img
           onClick={onImageClick}
           className="link-menu"

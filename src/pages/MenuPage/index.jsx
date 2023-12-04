@@ -13,7 +13,9 @@ export const MenuPage = () => {
   }, []);
   return (
     <main className="container__menu_page">
-      <h1 className="userName">Ahoj {userName !== '' && osloveni(userName)}</h1>
+      <h1 className="userName">
+        Ahoj {userName !== '' || (userName !== null && osloveni(userName))}!
+      </h1>
       <img
         className="faq-menupage"
         src="./img/IconsFunctional/faq.png"
