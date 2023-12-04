@@ -1,7 +1,5 @@
 import './style.css';
 
-import { useEffect } from 'react';
-
 import { PlannerActivity } from '../PlannerActivity';
 
 export const DayPlan = ({

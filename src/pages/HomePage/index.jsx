@@ -24,7 +24,6 @@ export const HomePage = () => {
 
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
-    console.log(data);
     setUserName(data);
   }, []);
 
@@ -43,7 +42,7 @@ export const HomePage = () => {
             <input
               onChange={handleChange}
               type="text"
-              placeholder={userName === '' ? 'Jak se jmenuješ?' : userName}
+              placeholder={!!userName === '' ? 'Jak se jmenuješ?' : userName}
               className="custom-input"
               value={userName !== '' ? userName : ''}
             ></input>
