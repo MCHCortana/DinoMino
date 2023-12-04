@@ -3,7 +3,7 @@ import { bodyPartsImport } from './bodyPartsImport';
 import { useDrop } from 'react-dnd';
 import { useState, useCallback } from 'react';
 import update from 'immutability-helper';
-
+import { Header } from './../../components/Header';
 import { MonsterTitle } from './MonsterTitle';
 import { DragableBox } from './DragableBox';
 
@@ -49,32 +49,35 @@ export const MonsterPage = ({ hideSourceOnDrag }) => {
   );
 
   return (
-    <main className="monster-container">
-      <MonsterTitle />
-      <div ref={drop} className="monster-container__box">
-        {Object.keys(bodyParts).map((key) => {
-          const { left, top, element, height } = bodyParts[key];
+    <>
+      <Header />
+      <main className="monster-container">
+        <MonsterTitle />
+        <div ref={drop} className="monster-container__box">
+          {Object.keys(bodyParts).map((key) => {
+            const { left, top, element, height } = bodyParts[key];
 
-          return (
-            <DragableBox
-              key={key}
-              id={key}
-              left={left}
-              top={top}
-              height={height}
-              hideSourceOnDrag={hideSourceOnDrag}
-            >
-              {element}
-            </DragableBox>
-          );
-        })}
-        <img
-          className="print-icon"
-          src="./img/IconsFunctional/printer3.png"
-          alt="Printer"
-          // onClick={handlePrint}
-        />
-      </div>
-    </main>
+            return (
+              <DragableBox
+                key={key}
+                id={key}
+                left={left}
+                top={top}
+                height={height}
+                hideSourceOnDrag={hideSourceOnDrag}
+              >
+                {element}
+              </DragableBox>
+            );
+          })}
+          <img
+            className="print-icon"
+            src="./img/IconsFunctional/printer3.png"
+            alt="Printer"
+            // onClick={handlePrint}
+          />
+        </div>
+      </main>
+    </>
   );
 };

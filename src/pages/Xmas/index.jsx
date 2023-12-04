@@ -1,5 +1,5 @@
 import './style.css';
-
+import { Header } from './../../components/Header';
 import { PopUp } from './../../components/Popup/';
 import { XmasTreeButtons } from './XmasTreeButtons';
 
@@ -30,26 +30,29 @@ export const Xmas = () => {
   }, []);
 
   return (
-    <main className="xmas_tree-container">
-      {popCheck && (
-        <PopUp
-          popContent={popupTreeDec}
+    <>
+      <Header />
+      <main className="xmas_tree-container">
+        {popCheck && (
+          <PopUp
+            popContent={popupTreeDec}
+            popCheck={setPopCheck}
+            location={'xmas'}
+            clickedDay={clickedDay}
+            day={day}
+          />
+        )}
+        <div className="advent_calendar_dino">
+          <img src="./img/dinoWinter2.png" />
+        </div>
+        <XmasTreeButtons
+          tree={treeDec}
           popCheck={setPopCheck}
-          location={'xmas'}
-          clickedDay={clickedDay}
+          onChoice={setPopUpTreeDec}
+          clickedDay={setClickedDay}
           day={day}
         />
-      )}
-      <div className="advent_calendar_dino">
-        <img src="./img/dinoWinter2.png" />
-      </div>
-      <XmasTreeButtons
-        tree={treeDec}
-        popCheck={setPopCheck}
-        onChoice={setPopUpTreeDec}
-        clickedDay={setClickedDay}
-        day={day}
-      />
-    </main>
+      </main>
+    </>
   );
 };
