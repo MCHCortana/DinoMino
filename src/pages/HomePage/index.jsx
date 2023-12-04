@@ -42,7 +42,11 @@ export const HomePage = () => {
             <input
               onChange={handleChange}
               type="text"
-              placeholder={!!userName === '' ? 'Jak se jmenuješ?' : userName}
+              placeholder={
+                userName === '' || userName === null
+                  ? 'Jak se jmenuješ?'
+                  : userName
+              }
               className="custom-input"
               value={userName !== '' ? userName : ''}
             ></input>
