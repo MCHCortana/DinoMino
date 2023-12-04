@@ -5,6 +5,7 @@ import { PopUpAlert } from './PopupAlert';
 import { PopUpSummaryPrint } from './PopUpSummaryPrint';
 import { PopUpInfo } from './PopUpInfo';
 import { PopUpEnterName } from './PopupEnterName';
+import { PopuoHowToMenu } from './PopupHowToMenu';
 
 export const PopUp = ({
   popCheck,
@@ -33,6 +34,7 @@ export const PopUp = ({
         {location === 'alert' && <PopUpAlert />}
         {location === 'popupinfo' && <PopUpInfo />}
         {location === 'enterName' && <PopUpEnterName />}
+        {location === 'howToMenuPage' && <PopuoHowToMenu />}
       </div>
       <div className="overlay"></div>
     </div>

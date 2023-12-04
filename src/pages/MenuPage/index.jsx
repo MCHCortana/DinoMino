@@ -1,23 +1,34 @@
-import React from 'react';
+import './style.css';
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './style.css';
+
 import { osloveni } from './osloveni';
 import { Header } from './../../components/Header';
+import { PopUp } from '../../components/Popup';
 
 export const MenuPage = () => {
   const [userName, setUserName] = useState('');
+  const [popCheckMenuPage, setPopCheckMenuPage] = useState(false);
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
-    console.log(data);
     setUserName(data);
   }, []);
+
+  const handleHowToClick = () => {
+    setPopCheckMenuPage(true);
+  };
+
   return (
     <>
-      <Header menuPage={true} />
+      {popCheckMenuPage && (
+        <PopUp location="howToMenuPage" popCheck={setPopCheckMenuPage} />
+      )}
+      <Header menuPageLink={true} />
       <main className="container__menu_page">
         <h1 className="userName">Ahoj {osloveni(userName)}</h1>
         <img
+          onClick={handleHowToClick}
           className="faq-menupage"
           src="./img/IconsFunctional/faq.png"
           alt="FAQ"
@@ -37,6 +48,7 @@ export const MenuPage = () => {
                     alt="Kalendář"
                   />
                 </Link>
+                <h2>Pojď se učit</h2>
               </div>
               <div>
                 <Link to="/plannerpage">
@@ -46,6 +58,7 @@ export const MenuPage = () => {
                     alt="Plánovač"
                   />
                 </Link>
+                <h2>Plánovač</h2>
               </div>
             </div>
             <div>
@@ -56,6 +69,7 @@ export const MenuPage = () => {
                   alt="Hry"
                 />
               </Link>
+              <h2>Hry</h2>
             </div>
           </div>
         </div>

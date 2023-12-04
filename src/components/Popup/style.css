@@ -62,11 +62,11 @@
   z-index: 6;
 }
 
-@media screen and (max-width: 1100px) {
+/* @media screen and (max-width: 1100px) {
   .popup>.info-tutorial {
     flex-wrap: wrap;
   }
-}
+} */
 
 @media screen and (max-width: 860px) {
   .popup {

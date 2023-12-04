@@ -1,10 +1,28 @@
 import './style.css';
 
-export const PopUpInfo = () => {
+export const PopuoHowToMenu = () => {
   return (
-    <div className="info-tutorial">
-      <h1>Jak používat Můj první plánovač</h1>
-      <div className="legenda">
+    <div className="how_to_menu">
+      <h1>Co všechno můžeš dělat?</h1>
+      <div>
+        <img
+          className="how_to_menu--img"
+          src="/img/info3.gif"
+          alt="Vyber si aktivitu"
+        />
+      </div>
+      <div className="activities_options">
+        <div className="activities_options-one">
+          <img
+            className="activities_options-img"
+            src="/img/IconsFunctional/calendar.png"
+            alt="Ikona kalendář"
+          />
+          <h2>Učíme se DNY, MĚSÍCE</h2>
+        </div>
+      </div>
+
+      {/* <div className="legenda">
         <h2>Legenda</h2>
         <div className="legenda_row">
           <div className="legenda--div">
@@ -33,14 +51,7 @@ export const PopUpInfo = () => {
           </div>
         </div>
         <div className="legenda_row">
-          <div className="legenda--div">
-            <img
-              className="legenda--img"
-              src="/img/IconsFunctional/calendar.png"
-              alt="Ikona kalendář"
-            />
-            <h2>Učíme se DNY, MĚSÍCE</h2>
-          </div>
+          
           <div className="legenda--div">
             <img
               className="legenda--img"
@@ -68,10 +79,8 @@ export const PopUpInfo = () => {
           <img src="/img/info2.gif" alt="Dej packu" />
         </div>
 
-        <div className="info-tutorial_three">
-          <img src="/img/info3.gif" alt="Vyber si aktivitu" />
-        </div>
-      </div>
+        
+  </div>*/}
     </div>
   );
 };

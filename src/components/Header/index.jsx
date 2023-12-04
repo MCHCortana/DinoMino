@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { PopUp } from '../../components/Popup';
 
-export const Header = ({ menuPage }) => {
+export const Header = ({ menuPageLink, gamePageLink }) => {
   const [popCheck, setPopCheck] = useState(false);
   const handleClickOpenInfo = () => {
     setPopCheck(true);
@@ -26,17 +26,19 @@ export const Header = ({ menuPage }) => {
         />
       </Link>
       <div className="mid_sec_menu">
-        {!menuPage && (
+        {!menuPageLink && (
           <Link to="/menupage">
             <img className="link-menu" src="./img/IconsFunctional/menu.png" />
           </Link>
         )}
-        <Link to="/gamepage">
-          <img
-            className="link-menu-puzzle"
-            src="./img/IconsFunctional/puzzle.png"
-          />
-        </Link>
+        {!gamePageLink && (
+          <Link to="/gamepage">
+            <img
+              className="link-menu-puzzle"
+              src="./img/IconsFunctional/puzzle.png"
+            />
+          </Link>
+        )}
       </div>
 
       <img

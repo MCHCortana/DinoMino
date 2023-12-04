@@ -1,0 +1,26 @@
+.how_to_menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.how_to_menu h1 {
+  width: 100%;
+}
+
+
+.how_to_menu--img {
+  max-width: 350px;
+  border-radius: 3rem;
+}
+
+.activities_options-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem
+}
+
+.activities_options-img {
+  max-width: 80px;
+}

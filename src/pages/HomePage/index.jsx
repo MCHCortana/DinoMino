@@ -80,19 +80,17 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="how_to--home_page">
-        <div>
+        <div onClick={handleNameDeleteClick}>
           <img
             className="sweep-HomePage "
-            onClick={handleNameDeleteClick}
             src="./img/IconsFunctional/dust.png"
             alt="remove activity"
           />
           <h2> Smazat uložené jméno</h2>
         </div>
-        <div>
+        <div onClick={handleOpenHowTo}>
           <img
             className="faq-HomePage"
-            onClick={handleOpenHowTo}
             src="./img/IconsFunctional/faq.png"
             alt="nápověda"
           />

@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+.container__game_page a {
+  text-decoration: none;
+}
+
 .dino-mino__gamepage {
   max-width: 300px;
   align-self: flex-end;
@@ -41,9 +45,8 @@
   margin-top: -80%;
 }
 
-.game_page--presents {
-  margin-bottom: -40%;
-  margin-right: -8rem;
+.game_page--h2 {
+  font-size: 1.5rem;
 }
 
 .game_menu img:hover {
