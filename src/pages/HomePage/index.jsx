@@ -13,7 +13,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
-    userName !== '' || (userName !== null && setUserName(data));
+    (data !== '' || data !== null) && setUserName(data);
   }, []);
 
   useEffect(() => {
