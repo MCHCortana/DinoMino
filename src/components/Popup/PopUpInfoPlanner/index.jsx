@@ -17,14 +17,6 @@ export const PopUpInfoPlanner = () => {
               <h2>Nápověda</h2>
             </div>
             <div className="legenda--planner">
-              <img
-                className="legenda--img"
-                src="/img/IconsFunctional/dust.png"
-                alt="Ikona smaznání uloženého jména"
-              />
-              <h2>Vymazat plán na celý den/tyden</h2>
-            </div>
-            <div className="legenda--planner">
               <button className="adding_button">
                 <img
                   src="./img/IconsFunctional/plus.png"
@@ -32,15 +24,31 @@ export const PopUpInfoPlanner = () => {
                   className="cross"
                 />
               </button>
-              <h2>Přidat další obrázek</h2>
+              <h2>Přidat aktivitu/obrázek</h2>
             </div>
-          </div>
-          <div className="legenda--planner">
-            <img
-              src="./img/IconsFunctional/printer.png"
-              alt="print_planner"
-            ></img>
-            <h2>Vytisknout plán</h2>
+            <div className="legenda--planner">
+              <img
+                src="./img/IconsFunctional/remove.png"
+                alt="remove activity"
+              ></img>
+              <h2>Vymazat jednu aktivitu/obrázek</h2>
+            </div>
+            <div className="legenda--planner">
+              <img
+                className="legenda--img"
+                src="/img/IconsFunctional/dust.png"
+                alt="Ikona smaznání uloženého jména"
+              />
+              <h2>Vymazat plán na celý den/tyden</h2>
+            </div>
+
+            <div className="legenda--planner">
+              <img
+                src="./img/IconsFunctional/printer.png"
+                alt="print_planner"
+              ></img>
+              <h2>Vytisknout plán</h2>
+            </div>
           </div>
           <div className="legenda_row"></div>
         </div>
