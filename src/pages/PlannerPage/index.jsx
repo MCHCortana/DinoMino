@@ -19,8 +19,7 @@ export const PlannerPage = () => {
 
   useEffect(() => {
     const data = window.localStorage.getItem('weekDays');
-    (data !== '' || data !== null) && console.log(data);
-    setWeekDays(JSON.parse(data));
+    (data !== '' || data !== null) && setWeekDays(JSON.parse(data));
   }, []);
 
   useEffect(() => {
