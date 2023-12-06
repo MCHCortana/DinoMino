@@ -1,7 +1,8 @@
 import './style.css';
 import { useRef } from 'react';
+import { PopUp } from '../../components/Popup';
 
-export const Day = ({ currentDay }) => {
+export const Day = ({ currentDay, learning, popCheck, setPopCheck }) => {
   const mondayRef = useRef();
   const tuesdayRef = useRef();
   const wednesdayRef = useRef();
@@ -27,7 +28,11 @@ export const Day = ({ currentDay }) => {
     saturdayRef.current.classList.remove('wrong-answer__day');
     sundayRef.current.classList.remove('wrong-answer__day');
   };
-
+  const learningDays = () => {
+    if (learning) {
+      setPopCheck(true);
+    }
+  };
   const handleClickMonday = () => {
     removeAllClasses();
     if (currentDay === 'Monday') {
@@ -88,7 +93,10 @@ export const Day = ({ currentDay }) => {
 
   return (
     <>
-      <div className="days-box">
+      {learning && popCheck && (
+        <PopUp popCheck={setPopCheck} location={'days_activity_days'} />
+      )}
+      <div onClick={learningDays} className="days-box">
         <div
           className="day-box monday"
           ref={mondayRef}

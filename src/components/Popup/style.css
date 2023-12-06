@@ -7,7 +7,6 @@
   z-index: 10;
   border-radius: 2rem;
   background: linear-gradient(-225deg, rgb(60, 225, 225) 0%, rgb(165, 255, 255) 50%, rgb(187, 255, 255) 100%);
-  ;
   /* background-color: rgb(60, 225, 225); */
   padding: 1rem;
 
@@ -16,30 +15,6 @@
     -10px -7.5px 15px rgb(60, 225, 225);
 
 }
-
-/* .popup {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
-  position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  border-radius: 10px;
-  z-index: 10;
-  background: linear-gradient(-225deg, #ffb805 0%, #f0bc37 50%, #fdd778 100%);
-  padding: 1rem;
-  box-shadow: 10px 7.5px 15px rgb(255, 180, 0), -10px 7.5px 15px rgb(255, 196, 0), -10px -7.5px 15px rgb(255, 242, 0)
-} */
-
-/* .popup>.info-tutorial {
-  display: flex;
-  max-width: 80%;
-  margin: auto;
-  align-items: center;
-  justify-content: space-around;
-} */
 
 .popup p {
   margin: auto;

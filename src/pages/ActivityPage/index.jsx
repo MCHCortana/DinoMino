@@ -4,11 +4,14 @@ import { SummaryActivityPage } from './SummaryActivityPage';
 import { DaysMonths } from './DaysMonths';
 import { PopUp } from '../../components/Popup';
 import { useState } from 'react';
+import { DefaultActivity } from './DefaultActivity';
 
 export const ActivityPage = () => {
   const [popCheck, setPopCheck] = useState(false);
-  const [learn, setLearn] = useState('year');
+  const [learn, setLearn] = useState('');
   const [popUpSumaryPrint, setPopUpSumaryPrint] = useState(false);
+
+  const [learning, setLearning] = useState(null);
 
   const handleClickHint = () => {
     setPopCheck(true);
@@ -18,50 +21,96 @@ export const ActivityPage = () => {
     setPopUpSumaryPrint(true);
   };
 
+  const handleClickLearning = () => {
+    setLearning(true);
+  };
+
+  const handleClickWhatDay = () => {
+    setLearning(false);
+  };
+
   return (
     <>
       <Header />
       <main className="container-activity_page">
-        {popCheck && (
-          <PopUp popCheck={setPopCheck} location={'hint_activity'} />
-        )}
         {popUpSumaryPrint && (
           <PopUp
             popUpSumaryPrint={setPopUpSumaryPrint}
             location={'pop_print'}
           />
         )}
+        <div className="imgs_activity_page">
+          <div className="learning_days-months">
+            <h2>Učení</h2>
+            <img
+              onClick={handleClickLearning}
+              src="/img/IconsFunctional/calendar.png"
+              alt="ikona kalendář - učení"
+            />
+          </div>
+
+          <div className="whatDay">
+            <h2>Cvičení</h2>
+            <img
+              onClick={handleClickWhatDay}
+              src="/img/IconsFunctional/question-mark.png"
+              alt="ikona cvičení"
+            />
+          </div>
+          {/* <div className="faq--activity_page">
+            <img
+              onClick={handleClickHint}
+              src="./img/IconsFunctional/faq.png"
+              alt="Pomoc"
+            />
+          </div> */}
+        </div>
         {/* Left Column */}
         <div className="left-column">
           <div className="container_days_months">
-            <DaysMonths learn={learn} />
+            {(learning || learning === null) && (
+              <DefaultActivity learning={setLearning} learn={setLearn} />
+            )}
+            {learning === false && <DaysMonths learn={learn} />}
+            {(learning || learning === null) && (
+              <img
+                className="dinosaurus_asking"
+                src="/img/dinoAsking.png"
+                alt="Dino míno se učí"
+              />
+            )}
           </div>
         </div>
 
         {/* Right Column */}
         <div className="summary">
-          <SummaryActivityPage settingActivity={setLearn} />
-          <div className="second-row--activity_page">
-            <div className="imgs_activity_page">
-              <div className="faq--activity_page">
-                <img
-                  onClick={handleClickHint}
-                  src="./img/IconsFunctional/faq.png"
-                  alt="Pomoc"
-                />
+          {(learning === null || !learning) && (
+            <>
+              <SummaryActivityPage
+                learning={setLearning}
+                settingActivity={setLearn}
+              />
+              <div className="second-row--activity_page">
+                <div className="tisk-sumary__activity"></div>
+                <div className="sumary-print">
+                  <img
+                    src="./img/IconsFunctional/printer3.png"
+                    alt="Printer"
+                    onClick={handleClichPrint}
+                  />
+                </div>
               </div>
-
-              <div className="tisk-sumary__activity">
-                <img
-                  src="./img/IconsFunctional/printer3.png"
-                  alt="Printer"
-                  onClick={handleClichPrint}
-                ></img>
-              </div>
-
-              <div className="sumary-print"></div>
-            </div>
-          </div>
+            </>
+          )}
+          {/* Komponenta DaysMonths pro učení měsíců */}
+          {learning && (
+            <DaysMonths
+              popCheck={popCheck}
+              setPopCheck={setPopCheck}
+              learning={learning}
+              learn={learn}
+            />
+          )}
         </div>
       </main>
     </>

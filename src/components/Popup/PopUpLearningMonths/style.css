@@ -1,0 +1,7 @@
+.learning_months {
+  align-self: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
