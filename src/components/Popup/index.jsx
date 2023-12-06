@@ -1,5 +1,5 @@
 import './style.css';
-import { PopUpHint } from './PopUpHint';
+import { PopUpLearningDays } from './PopUpLearningDays';
 import { PopUpXmas } from './PopUpXmas';
 import { PopUpAlert } from './PopupAlert';
 import { PopUpSummaryPrint } from './PopUpSummaryPrint';
@@ -8,6 +8,8 @@ import { PopUpEnterName } from './PopupEnterName';
 import { PopuoHowToMenu } from './PopupHowToMenu';
 import { PopUpInfoPlanner } from './PopUpInfoPlanner';
 import { PopUpInfoGame } from './PopUpInfoGame';
+import { PopUpLearningMonths } from './PopUpLearningMonths';
+import { PopUpLearningSeasons } from './PopUpLearningSeasons';
 
 export const PopUp = ({
   popCheck,
@@ -15,6 +17,8 @@ export const PopUp = ({
   popContent,
   popUpSumaryPrint,
   day,
+  learningMonth,
+  learningSeason,
 }) => {
   const handleClick = () => {
     if (location === 'pop_print') {
@@ -28,7 +32,13 @@ export const PopUp = ({
     <div onClick={handleClick}>
       {' '}
       <div className="popup">
-        {location === 'hint_activity' && <PopUpHint />}
+        {location === 'days_activity_days' && <PopUpLearningDays />}
+        {location === 'days_activity_months' && (
+          <PopUpLearningMonths learningMonth={learningMonth} />
+        )}
+        {location === 'days_activity_seasons' && (
+          <PopUpLearningSeasons learningSeason={learningSeason} />
+        )}
         {location === 'xmas' && <PopUpXmas day={day} popContent={popContent} />}
         {location === 'pop_print' && (
           <PopUpSummaryPrint popUpSumaryPrint={popUpSumaryPrint} />

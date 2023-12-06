@@ -1,21 +1,30 @@
 import './style.css';
 
-export const SummaryActivityPage = ({ settingActivity }) => {
+export const SummaryActivityPage = ({ settingActivity, learning }) => {
+  const handleClickSeasons = () => {
+    settingActivity('seasons');
+    learning(false);
+  };
+
+  const handleClickMonths = () => {
+    learning(false);
+    settingActivity('months');
+  };
+
+  const handleClickDays = () => {
+    learning(false);
+    settingActivity('days');
+  };
   return (
     <>
       <div className="summary_activity_page">
-        <div className="title_summary">
-          <h2>Rok, měsíc a den?</h2>
-          <h3>Už je znáš?</h3>
-        </div>
-
         <div className="activitiy_page-task">
           <h3>Jaké máme roční období?</h3>
           <img
             className="months-total"
             src="./img/IconsFunctional/season.png"
             alt="Rok má 4 roční období"
-            onClick={() => settingActivity('seasons')}
+            onClick={handleClickSeasons}
           />
         </div>
 
@@ -25,7 +34,7 @@ export const SummaryActivityPage = ({ settingActivity }) => {
             className="months-total"
             src="./img/IconsFunctional/number-12.png"
             alt="Rok má 12 měsíců"
-            onClick={() => settingActivity('months')}
+            onClick={handleClickMonths}
           />
         </div>
         <div className="activitiy_page-task">
@@ -34,7 +43,7 @@ export const SummaryActivityPage = ({ settingActivity }) => {
             className="months-total"
             src="./img/IconsFunctional/week.png"
             alt="Týden má 7 dní"
-            onClick={() => settingActivity('days')}
+            onClick={handleClickDays}
           />
         </div>
       </div>

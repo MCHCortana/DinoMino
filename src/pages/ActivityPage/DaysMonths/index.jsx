@@ -1,12 +1,11 @@
 import './style.css';
+import { DefaultActivity } from '../DefaultActivity';
 import { Day } from './../../../components/Day';
 import { Months } from './../../../components/Months';
 import { Seasons } from './../../../components/Seasons';
-import { DefaultActivity } from './../../../components/DefaultActivity';
-// import { useState } from 'react';
 import dayjs from 'dayjs';
 
-export const DaysMonths = ({ learn, setLearn }) => {
+export const DaysMonths = ({ learn, learning, popCheck, setPopCheck }) => {
   const currentDay = dayjs().format('dddd');
   const currentMonth = dayjs().month();
 
@@ -27,10 +26,54 @@ export const DaysMonths = ({ learn, setLearn }) => {
   return (
     <>
       <div className="days_months">
-        {learn === 'year' && <DefaultActivity />}
-        {learn === 'days' && <Day currentDay={currentDay} />}
-        {learn === 'months' && <Months currentMonth={currentMonth} />}
-        {learn === 'seasons' && <Seasons season={currentSeason} />}
+        {learn === '' && !learning && (
+          <>
+            <div className="title_summary">
+              <h1>Víš jaký je dneska den?</h1>
+            </div>
+            <img
+              className="dinosaurus_asking"
+              src="/img/dinoAsking.png"
+              alt="Dino míno se učí"
+            />
+          </>
+        )}
+        {learn === '' && learning && (
+          <>
+            <div className="title_summary">
+              <h1>Pojď se naučit víc!</h1>
+            </div>
+            <img
+              className="dinosaurus_asking"
+              src="/img/dinoAsking.png"
+              alt="Dino míno se učí"
+            />
+          </>
+        )}
+        {learn === 'days' && (
+          <Day
+            popCheck={popCheck}
+            setPopCheck={setPopCheck}
+            learning={learning}
+            currentDay={currentDay}
+          />
+        )}
+        {learn === 'months' && (
+          <Months
+            popCheck={popCheck}
+            setPopCheck={setPopCheck}
+            learning={learning}
+            currentMonth={currentMonth}
+          />
+        )}
+        {learn === 'seasons' && (
+          <Seasons
+            popCheck={popCheck}
+            setPopCheck={setPopCheck}
+            learning={learning}
+            season={currentSeason}
+          />
+        )}
       </div>
     </>
   );

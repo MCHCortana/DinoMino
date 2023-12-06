@@ -9,8 +9,9 @@
   font-size: 28px;
 }
 
-.summary_activity_page h2 {
-  margin: 1rem;
+.summary_activity_page h1 {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .activitiy_page-task h3 {

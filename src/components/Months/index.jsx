@@ -1,8 +1,11 @@
 import './style.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
-export const Months = ({ currentMonth }) => {
-  console.log(currentMonth);
+import { PopUp } from './../Popup';
+
+export const Months = ({ learning, currentMonth, popCheck, setPopCheck }) => {
+  const [learningMonth, setLearningMonth] = useState(currentMonth);
+
   const januaryRef = useRef();
   const februaryRef = useRef();
   const marchRef = useRef();
@@ -44,104 +47,183 @@ export const Months = ({ currentMonth }) => {
     decemberRef.current.classList.remove('wrong-answer__months');
   };
   const handleClickJanuary = () => {
-    removeAllClasses();
-    if (currentMonth === 0) {
-      januaryRef.current.classList.add('right-answer__months');
-    } else {
-      januaryRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('leden');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 0) {
+        januaryRef.current.classList.add('right-answer__months');
+      } else {
+        januaryRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickFebruary = () => {
-    removeAllClasses();
-    if (currentMonth === 1) {
-      februaryRef.current.classList.add('right-answer__months');
-    } else {
-      februaryRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('únor');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 1) {
+        februaryRef.current.classList.add('right-answer__months');
+      } else {
+        februaryRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickMarch = () => {
-    removeAllClasses();
-    if (currentMonth === 2) {
-      marchRef.current.classList.add('right-answer__months');
-    } else {
-      marchRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('březen');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 2) {
+        marchRef.current.classList.add('right-answer__months');
+      } else {
+        marchRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickApril = () => {
-    removeAllClasses();
-    if (currentMonth === 3) {
-      aprilRef.current.classList.add('right-answer__months');
-    } else {
-      aprilRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('duben');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 3) {
+        aprilRef.current.classList.add('right-answer__months');
+      } else {
+        aprilRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickMay = () => {
-    removeAllClasses();
-    if (currentMonth === 4) {
-      mayRef.current.classList.add('right-answer__months');
-    } else {
-      mayRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('květen');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 4) {
+        mayRef.current.classList.add('right-answer__months');
+      } else {
+        mayRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickJune = () => {
-    removeAllClasses();
-    if (currentMonth === 5) {
-      juneRef.current.classList.add('right-answer__months');
-    } else {
-      juneRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('červen');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 5) {
+        juneRef.current.classList.add('right-answer__months');
+      } else {
+        juneRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickJuly = () => {
-    removeAllClasses();
-    if (currentMonth === 6) {
-      julyRef.current.classList.add('right-answer__months');
-    } else {
-      julyRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('červenec');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 6) {
+        julyRef.current.classList.add('right-answer__months');
+      } else {
+        julyRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickAugust = () => {
-    removeAllClasses();
-    if (currentMonth === 7) {
-      augustRef.current.classList.add('right-answer__months');
-    } else {
-      augustRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('srpen');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 7) {
+        augustRef.current.classList.add('right-answer__months');
+      } else {
+        augustRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickSeptember = () => {
-    removeAllClasses();
-    if (currentMonth === 8) {
-      septemberRef.current.classList.add('right-answer__months');
-    } else {
-      septemberRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('září');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 8) {
+        septemberRef.current.classList.add('right-answer__months');
+      } else {
+        septemberRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickOctober = () => {
-    removeAllClasses();
-    if (currentMonth === 9) {
-      octoberRef.current.classList.add('right-answer__months');
-    } else {
-      octoberRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('říjen');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 9) {
+        octoberRef.current.classList.add('right-answer__months');
+      } else {
+        octoberRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickNovember = () => {
-    removeAllClasses();
-    if (currentMonth === 10) {
-      novemberRef.current.classList.add('right-answer__months');
-    } else {
-      novemberRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('listopad');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 10) {
+        novemberRef.current.classList.add('right-answer__months');
+      } else {
+        novemberRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
   const handleClickDecember = () => {
-    removeAllClasses();
-    if (currentMonth === 11) {
-      decemberRef.current.classList.add('right-answer__months');
-    } else {
-      decemberRef.current.classList.add('wrong-answer__months');
+    if (learning) {
+      setPopCheck(true);
+      setLearningMonth('prosinec');
+    }
+    if (!learning) {
+      removeAllClasses();
+      if (currentMonth === 11) {
+        decemberRef.current.classList.add('right-answer__months');
+      } else {
+        decemberRef.current.classList.add('wrong-answer__months');
+      }
     }
   };
 
   return (
     <div className="mounths-box">
+      {learning && popCheck && (
+        <PopUp
+          popCheck={setPopCheck}
+          location={'days_activity_months'}
+          learningMonth={learningMonth}
+        />
+      )}
       <div className="season">
         <div className="mounths">
           <div
