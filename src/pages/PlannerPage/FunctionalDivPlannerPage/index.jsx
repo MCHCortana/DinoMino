@@ -24,7 +24,7 @@ export const FunctionalDivPlannerPage = ({
   };
 
   const handleAllDeleteClick = () => {
-    confirm('Určitě chce vymazat plán na celý den?') &&
+    confirm('Určitě chceš vymazat plán na celý týden?') &&
       onClearing([
         { id: 'monday', dayName: 'pondělí', activities: [] },
         { id: 'tuesday', dayName: 'úterý', activities: [] },

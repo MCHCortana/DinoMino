@@ -6,7 +6,6 @@ export const PopUpInfoPlanner = () => {
       <div className="info-tutorial">
         <h1>Jak používat plánovač</h1>
         <div className="legenda">
-          <h2>Legenda</h2>
           <div className="legenda_row">
             <div className="legenda--planner">
               <img
@@ -50,7 +49,6 @@ export const PopUpInfoPlanner = () => {
               <h2>Vytisknout plán</h2>
             </div>
           </div>
-          <div className="legenda_row"></div>
         </div>
       </div>
     </div>
