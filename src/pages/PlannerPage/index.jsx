@@ -39,7 +39,7 @@ export const PlannerPage = () => {
           onClearing={setWeekDays}
         />
 
-        <div className="planner_days">
+        <div className="planner_days" id="planner_days">
           {tooManyActivities && (
             <PopUp popCheck={setTooManyActivities} location="alert" />
           )}

@@ -15,8 +15,14 @@ export const DefaultActivity = ({ learn, learning }) => {
     learn('seasons');
   };
   return (
-    <>
-      {' '}
+    <div className="activity-box">
+      {/* <div className="activity-dino_reading">
+        <img
+          className="dinosaurus_asking"
+          src="/img/DinoReading.png"
+          alt="Dino míno se učí"
+        />
+      </div> */}
       <div className="default_activity">
         <h2>Rok má 12 měsíců. </h2>
         <h2>Rok má 4 roční období </h2>
@@ -49,6 +55,6 @@ export const DefaultActivity = ({ learn, learning }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

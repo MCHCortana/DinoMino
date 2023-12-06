@@ -2,10 +2,10 @@
   width: 100%;
   border-radius: 2rem;
   background-color: rgb(246, 202, 249);
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 }
 
 .days_months {
