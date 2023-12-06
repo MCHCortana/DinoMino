@@ -81,12 +81,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 1050px) {
-  .faq-menupage {
-    display: none;
-  }
-}
-
 @media (max-width: 860px) {
   .menu_page-content {
     flex-direction: column;
