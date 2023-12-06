@@ -1,7 +1,7 @@
 import './style.css';
 import { useRef, useState } from 'react';
 
-import { PopUp } from './../Popup';
+import { PopUp } from './../../../components/Popup';
 
 export const Months = ({ learning, currentMonth, popCheck, setPopCheck }) => {
   const [learningMonth, setLearningMonth] = useState(currentMonth);

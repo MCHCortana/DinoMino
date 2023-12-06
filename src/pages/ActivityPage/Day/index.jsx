@@ -1,6 +1,6 @@
 import './style.css';
 import { useRef } from 'react';
-import { PopUp } from '../../components/Popup';
+import { PopUp } from './../../../components/Popup';
 
 export const Day = ({ currentDay, learning, popCheck, setPopCheck }) => {
   const mondayRef = useRef();

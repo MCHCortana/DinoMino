@@ -3,7 +3,7 @@ import './style.css';
 import React, { useRef, useState } from 'react';
 import dayjs from 'dayjs';
 
-import { PopUp } from './../Popup';
+import { PopUp } from '../../../components/Popup';
 
 export const Seasons = ({ learning, popCheck, setPopCheck }) => {
   const [learningSeason, setLearingSeason] = useState('');

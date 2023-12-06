@@ -1,8 +1,7 @@
 import './style.css';
-import { DefaultActivity } from '../DefaultActivity';
-import { Day } from './../../../components/Day';
-import { Months } from './../../../components/Months';
-import { Seasons } from './../../../components/Seasons';
+import { Day } from './../Day';
+import { Months } from './../Months';
+import { Seasons } from './../Seasons';
 import dayjs from 'dayjs';
 
 export const DaysMonths = ({ learn, learning, popCheck, setPopCheck }) => {
