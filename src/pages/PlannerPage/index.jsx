@@ -19,17 +19,16 @@ export const PlannerPage = () => {
 
   useEffect(() => {
     const data = window.localStorage.getItem('weekDays');
-    (data !== '' || data !== null) && setWeekDays(JSON.parse(data));
+    data !== '' && data !== null && setWeekDays(JSON.parse(data));
   }, []);
 
   useEffect(() => {
     window.localStorage.setItem('weekDays', JSON.stringify(weekDays));
   }, [weekDays]);
 
-  const [activityForDay, setActivityForDay] = useState(null);
+  const [activityForDay, setActivityForDay] = useState('');
   const [tooManyActivities, setTooManyActivities] = useState(false);
   const [onDeleting, setDeleting] = useState(false);
-
   return (
     <>
       <Header />

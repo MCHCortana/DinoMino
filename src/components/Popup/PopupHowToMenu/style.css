@@ -1,6 +1,7 @@
 .how_to_menu {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -14,11 +15,19 @@
   border-radius: 3rem;
 }
 
-.activities_options-one {
+.activities_options {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 55%;
+}
+
+.activities_options-one {
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 0.5rem
+  gap: 1rem;
+  font-size: 1.5rem;
 }
 
 .activities_options-img {

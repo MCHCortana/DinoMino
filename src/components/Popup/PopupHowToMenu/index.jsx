@@ -3,7 +3,9 @@ import './style.css';
 export const PopuoHowToMenu = () => {
   return (
     <div className="how_to_menu">
-      <h1>Co všechno můžeš dělat?</h1>
+      <div>
+        <h1>Co všechno můžeš dělat?</h1>
+      </div>
       <div>
         <img
           className="how_to_menu--img"
@@ -20,67 +22,23 @@ export const PopuoHowToMenu = () => {
           />
           <h2>Učíme se DNY, MĚSÍCE</h2>
         </div>
-      </div>
-
-      {/* <div className="legenda">
-        <h2>Legenda</h2>
-        <div className="legenda_row">
-          <div className="legenda--div">
-            <img
-              className="legenda--img"
-              src="/img/IconsFunctional/footPrintMain.png"
-              alt="Ikona start"
-            />{' '}
-            <h2>Začni hrát a učit se!</h2>
-          </div>
-          <div className="legenda--div">
-            <img
-              className="legenda--img"
-              src="/img/IconsFunctional/faq.png"
-              alt="Ikona nápovědy"
-            />
-            <h2>Nápověda</h2>
-          </div>
-          <div className="legenda--div">
-            <img
-              className="legenda--img"
-              src="/img/IconsFunctional/dust.png"
-              alt="Ikona smaznání uloženého jména"
-            />
-            <h2>Smazat uložené jméno</h2>
-          </div>
+        <div className="activities_options-one">
+          <img
+            className="activities_options-img"
+            src="/img/IconsFunctional/planner.png"
+            alt="Ikona plánovač"
+          />
+          <h2>Naplánuj si, co tě čeká tento týden</h2>
         </div>
-        <div className="legenda_row">
-          
-          <div className="legenda--div">
-            <img
-              className="legenda--img"
-              src="/img/IconsFunctional/planner.png"
-              alt="Ikona plánovač"
-            />
-            <h2>Plánovač</h2>
-          </div>
-          <div className="legenda--div">
-            <img
-              className="legenda--img"
-              src="/img/IconsFunctional/puzzle.png"
-              alt="Ikona Hry"
-            />
-            <h2>Hry</h2>
-          </div>
+        <div className="activities_options-one">
+          <img
+            className="activities_options-img"
+            src="/img/IconsFunctional/puzzle.png"
+            alt="Ikona Hry"
+          />
+          <h2>Zahraj si Mínovi oblíbené hry</h2>
         </div>
       </div>
-
-      <div className="info-animated">
-        <div className="info_one">
-          <img src="/img/info1.gif" alt="Napíš svoje jméno" />
-        </div>
-        <div className="info_two">
-          <img src="/img/info2.gif" alt="Dej packu" />
-        </div>
-
-        
-  </div>*/}
     </div>
   );
 };

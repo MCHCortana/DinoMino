@@ -31,7 +31,7 @@ export const DayPlan = ({
           <h2>{day.dayName}</h2>
         </div>
         <div className="activities">
-          {day.activities.length === 0 && (
+          {(day.activities.length === 0 || day.activities === null) && (
             <>
               <img src="/img/IconsFunctional/square.png" />
               <img src="/img/IconsFunctional/square.png" />
