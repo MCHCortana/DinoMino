@@ -40,7 +40,8 @@ export const ActivityPage = () => {
           />
         )}
         <div className="imgs_activity_page">
-          <div className="learning_days-months">
+          {/* <div className="learning_days-months"> */}
+          <div className="learning_section">
             <h2>Učení</h2>
             <img
               onClick={handleClickLearning}
@@ -49,7 +50,8 @@ export const ActivityPage = () => {
             />
           </div>
 
-          <div className="whatDay">
+          {/* <div className="whatDay"> */}
+          <div className="learning_section">
             <h2>Cvičení</h2>
             <img
               onClick={handleClickWhatDay}
@@ -73,11 +75,13 @@ export const ActivityPage = () => {
             )}
             {learning === false && <DaysMonths learn={learn} />}
             {(learning || learning === null) && (
-              <img
-                className="dinosaurus_asking"
-                src="/img/dinoAsking.png"
-                alt="Dino míno se učí"
-              />
+              <div className="activity-dino_reading">
+                <img
+                  className="dinosaurus_asking"
+                  src="/img/DinoReading.png"
+                  alt="Dino míno se učí"
+                />
+              </div>
             )}
           </div>
         </div>
