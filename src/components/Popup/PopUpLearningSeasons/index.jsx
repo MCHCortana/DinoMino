@@ -1,5 +1,4 @@
 import './style.css';
-
 import { useEffect, useState } from 'react';
 
 export const PopUpLearningSeasons = ({ learningSeason }) => {
@@ -30,13 +29,15 @@ export const PopUpLearningSeasons = ({ learningSeason }) => {
 
   return (
     <div className="learning_months">
-      <h1> {learningSeason.toUpperCase()}</h1>
-      <p>{seasonsData && getPoem()}</p>
-      <div className="audio_hint">
-        <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
-        {/* <audio controls>
+      <div className="learning_months_box">
+        <h1> {learningSeason.toUpperCase()}</h1>
+        <p>{seasonsData && getPoem()}</p>
+        <div className="audio_hint">
+          <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
+          {/* <audio controls>
           <source src={monthData && getAudio} type="audio/mpeg" />{' '}
         </audio> */}
+        </div>
       </div>
     </div>
   );
