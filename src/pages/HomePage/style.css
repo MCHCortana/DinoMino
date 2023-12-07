@@ -1,5 +1,4 @@
 .container-main__page {
-  /* min-height: calc(100vh - 3.8rem); */
   height: 100dvh;
   background-image: url(/img/bg1.png);
   background-repeat: no-repeat;

@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { PopUp } from './../../../components/Popup';
 
 export const Day = ({ currentDay, learning, popCheck, setPopCheck }) => {
+  console.log('dnešní den', currentDay);
   const mondayRef = useRef();
   const tuesdayRef = useRef();
   const wednesdayRef = useRef();
@@ -60,7 +61,7 @@ export const Day = ({ currentDay, learning, popCheck, setPopCheck }) => {
   };
   const handleClickThursday = () => {
     removeAllClasses();
-    if (currentDay === 'Thursday ') {
+    if (currentDay === 'Thursday') {
       thursdayRef.current.classList.add('right-answer__day');
     } else {
       thursdayRef.current.classList.add('wrong-answer__day');
