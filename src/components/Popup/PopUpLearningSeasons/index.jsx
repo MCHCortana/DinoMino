@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 
 export const PopUpLearningSeasons = ({ learningSeason }) => {
   const [seasonsData, setSeasonsData] = useState(null);
-  const [poem, setPoem] = useState('');
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -24,7 +22,10 @@ export const PopUpLearningSeasons = ({ learningSeason }) => {
     return poem;
   };
   const getAudio = () => {
-    return seasonsData.find((season) => season.name === learningSeason).audio;
+    const audioSeason = seasonsData.find(
+      (season) => season.name === learningSeason,
+    ).audio;
+    return audioSeason;
   };
 
   return (

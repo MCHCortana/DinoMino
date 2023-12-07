@@ -23,9 +23,11 @@ export const PopUpLearningMonths = ({ learningMonth }) => {
     return poemLines;
   };
   const getAudio = () => {
-    return monthData.find((month) => month.monthName === learningMonth).audio;
+    const audioMonth = monthData.find(
+      (month) => month.monthName === learningMonth,
+    ).audio;
+    return audioMonth;
   };
-
   return (
     <div className="learning_months">
       <div className="learning_months_box">
