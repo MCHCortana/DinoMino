@@ -24,18 +24,24 @@ export const PopUpLearningMonths = ({ learningMonth }) => {
     return poemLines;
   };
   const getAudio = () => {
-    return monthData.find((month) => month.monthName === learningMonth).audio;
+    const audioMonth = monthData.find(
+      (month) => month.monthName === learningMonth,
+    ).audio;
+    return audioMonth;
   };
-
   return (
     <div className="learning_months">
       <h1> {learningMonth.toUpperCase()}</h1>
-      <p>{monthData && getPoem()}</p>
+      {monthData && <p>{getPoem()}</p>}
       <div className="audio_hint">
         <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
-        {/* <audio controls>
-          <source src={monthData && getAudio} type="audio/mpeg" />{' '}
-        </audio> */}
+        {monthData && (
+          <audio
+            controls
+            src={`/audio/months/${getAudio()}.m4a`}
+            type="audio/mpeg"
+          ></audio>
+        )}
       </div>
     </div>
   );
