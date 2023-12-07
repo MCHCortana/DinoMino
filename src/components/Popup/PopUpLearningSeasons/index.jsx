@@ -32,12 +32,20 @@ export const PopUpLearningSeasons = ({ learningSeason }) => {
     <div className="learning_months">
       <div className="learning_months_box">
         <h1> {learningSeason.toUpperCase()}</h1>
-        <p>{seasonsData && getPoem()}</p>
+
+        {seasonsData && <p>{getPoem()}</p>}
         <div className="audio_hint">
           <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
           {/* <audio controls>
           <source src={monthData && getAudio} type="audio/mpeg" />{' '}
         </audio> */}
+          {seasonsData && (
+            <audio
+              controls
+              src={`/audio/seasons/${getAudio()}.m4a`}
+              type="audio/mpeg"
+            ></audio>
+          )}
         </div>
       </div>
     </div>
