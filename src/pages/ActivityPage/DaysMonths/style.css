@@ -4,7 +4,7 @@
   background-color: rgb(246, 202, 249);
   display: flex;
   justify-content: center;
-
+  text-align: center;
 }
 
 .days_months {
