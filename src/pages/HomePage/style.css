@@ -102,7 +102,7 @@ input {
 }
 
 .sweep-HomePage:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   cursor: pointer;
 }
 
@@ -113,7 +113,7 @@ input {
 }
 
 .faq-HomePage:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
   cursor: pointer;
 }
 
