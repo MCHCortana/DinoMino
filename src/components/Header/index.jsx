@@ -36,7 +36,6 @@ export const Header = ({ menuPageLink, gamePageLink }) => {
           <h2>Domů</h2>
         </Link>
       </div>
-      <div className="link_header mid_section_header"></div>
       <div className="link_header mid_section_header">
         {!menuPageLink && (
           <Link to="/menupage">
