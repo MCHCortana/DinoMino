@@ -7,23 +7,34 @@ header {
   align-items: center;
 }
 
-.mid_sec_menu {
+.link_header {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
-.mid_sec_menu a {
-  margin: 0;
+.link_header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.mid_section_header {
+  display: flex;
+  gap: 1rem;
 }
 
 header img,
 header a {
   height: 90%;
   margin: auto;
-  margin-left: 35px;
-  margin-right: 35px;
+  /* margin-left: 35px;
+  margin-right: 35px;*/
 }
 
 a .link-menu {

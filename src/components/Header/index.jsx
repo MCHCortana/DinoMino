@@ -12,23 +12,26 @@ export const Header = ({ menuPageLink, gamePageLink }) => {
 
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
-    console.log(data);
     setUserName(data);
   }, []);
 
   return (
     <header>
       {popCheck && <PopUp popCheck={setPopCheck} location={'popupinfo'} />}
-      <Link to="/">
-        <img
-          className="link-menu"
-          src="./img/IconsFunctional/footPrintMain.png"
-        />
-      </Link>
-      <div className="mid_sec_menu">
+      <div className="link_header">
+        <Link to="/">
+          <img
+            className="link-menu"
+            src="./img/IconsFunctional/footPrintMain.png"
+          />
+          <h2>Domů</h2>
+        </Link>
+      </div>
+      <div className="link_header mid_section_header">
         {!menuPageLink && (
           <Link to="/menupage">
             <img className="link-menu" src="./img/IconsFunctional/menu.png" />
+            <h2>Menu</h2>
           </Link>
         )}
         {!gamePageLink && (
@@ -37,15 +40,17 @@ export const Header = ({ menuPageLink, gamePageLink }) => {
               className="link-menu-puzzle"
               src="./img/IconsFunctional/puzzle.png"
             />
+            <h2>Hry</h2>
           </Link>
         )}
       </div>
-
-      <img
-        onClick={handleClickOpenInfo}
-        className="link-menu"
-        src="./img/IconsFunctional/faq.png"
-      />
+      <div className="link_header">
+        <img
+          onClick={handleClickOpenInfo}
+          className="link-menu"
+          src="./img/IconsFunctional/faq.png"
+        />
+      </div>
     </header>
   );
 };
