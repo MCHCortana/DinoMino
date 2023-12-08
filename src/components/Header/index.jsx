@@ -18,6 +18,15 @@ export const Header = ({ menuPageLink, gamePageLink }) => {
   return (
     <header>
       {popCheck && <PopUp popCheck={setPopCheck} location={'popupinfo'} />}
+      {/* <div className="link_header">
+        <Link to="/">
+          <img
+            className="link-menu"
+            src="./img/IconsFunctional/footPrintMain.png"
+          />
+          <h2>Domů</h2>
+        </Link>
+      </div> */}
       <div className="link_header">
         <Link to="/">
           <img
@@ -27,6 +36,7 @@ export const Header = ({ menuPageLink, gamePageLink }) => {
           <h2>Domů</h2>
         </Link>
       </div>
+      <div className="link_header mid_section_header"></div>
       <div className="link_header mid_section_header">
         {!menuPageLink && (
           <Link to="/menupage">
@@ -44,6 +54,13 @@ export const Header = ({ menuPageLink, gamePageLink }) => {
           </Link>
         )}
       </div>
+      {/* <div className="link_header">
+        <img
+          onClick={handleClickOpenInfo}
+          className="link-menu"
+          src="./img/IconsFunctional/faq.png"
+        />
+      </div> */}
       <div className="link_header">
         <img
           onClick={handleClickOpenInfo}
