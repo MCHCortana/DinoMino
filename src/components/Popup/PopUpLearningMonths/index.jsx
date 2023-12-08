@@ -36,9 +36,6 @@ export const PopUpLearningMonths = ({ learningMonth }) => {
         {monthData && <p>{getPoem()}</p>}
         <div className="audio_hint">
           <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
-          {/* <audio controls>
-          <source src={monthData && getAudio} type="audio/mpeg" />{' '}
-        </audio> */}
           {monthData && (
             <audio
               controls

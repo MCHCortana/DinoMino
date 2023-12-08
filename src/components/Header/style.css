@@ -31,6 +31,7 @@ header {
 .mid_section_header {
   display: flex;
   gap: 1rem;
+  transform: translate(-25%);
 }
 
 .link-menu_home img,
@@ -45,8 +46,7 @@ header img,
 header a {
   height: 90%;
   margin: auto;
-  margin-left: 35px;
-  margin-right: 35px;
+
 }
 
 a .link-menu {
