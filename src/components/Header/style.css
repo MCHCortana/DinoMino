@@ -7,19 +7,34 @@ header {
   align-items: center;
 }
 
+<<<<<<< HEAD
 .link-menu_box {
   display: flex;
 }
 
 .mid_sec_menu {
+=======
+.link_header {
+>>>>>>> b0a80fce6b2dc9357c9bcf749bfc2848f467731f
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
-.mid_sec_menu a {
-  margin: 0;
+.link_header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+.mid_section_header {
+  display: flex;
+  gap: 1rem;
 }
 
 .link-menu_home img,
@@ -34,8 +49,8 @@ header img,
 header a {
   height: 90%;
   margin: auto;
-  margin-left: 35px;
-  margin-right: 35px;
+  /* margin-left: 35px;
+  margin-right: 35px;*/
 }
 
 a .link-menu {

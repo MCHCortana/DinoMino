@@ -15,9 +15,11 @@
 }
 
 .advent_calendar_dino img {
-  margin-top: -5rem;
+  margin-bottom: 10rem;
+  margin-left: 10rem;
   max-width: 300px;
   transform: scaleX(-1);
+
 }
 
 /* 

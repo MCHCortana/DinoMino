@@ -13,13 +13,6 @@ export const MonsterPage = ({ hideSourceOnDrag }) => {
   };
 
   const [bodyParts, setBodyParts] = useState(bodyPartsImport);
-  // const handlePrint = () => {
-  //   const printContent = document.querySelector('.monster-container__box');
-  //   const printWindow = window.open('', '_blank');
-  //   printWindow.document.write(printContent.innerHTML);
-  //   printWindow.document.close();
-  //   printWindow.print();
-  // };
 
   const moveBox = useCallback(
     (id, left, top) => {
@@ -70,12 +63,6 @@ export const MonsterPage = ({ hideSourceOnDrag }) => {
               </DragableBox>
             );
           })}
-          <img
-            className="print-icon"
-            src="./img/IconsFunctional/printer3.png"
-            alt="Printer"
-            // onClick={handlePrint}
-          />
         </div>
       </main>
     </>
