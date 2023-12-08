@@ -1,5 +1,4 @@
 import './style.css';
-
 import { useDrag } from 'react-dnd';
 
 const style = {

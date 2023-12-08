@@ -55,21 +55,6 @@
   cursor: pointer;
 }
 
-.faq-gamepage {
-  max-width: 150px;
-  max-height: 150px;
-  justify-self: flex-start;
-  align-self: flex-end;
-  margin-bottom: 3rem;
-  margin-left: -5rem;
-  margin-right: 5rem;
-}
-
-.faq-gamepage:hover {
-  transform: scale(1.5);
-  cursor: pointer;
-}
-
 @media (max-width: 500px) {
   .game_menu img {
     max-width: 8rem;
