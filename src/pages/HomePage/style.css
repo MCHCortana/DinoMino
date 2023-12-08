@@ -98,17 +98,23 @@ input {
 
 .how_to--home_page .sweep-HomePage {
   border-radius: 3px;
-  max-width: 80px;
+  max-width: 70px;
 }
 
 .sweep-HomePage:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   cursor: pointer;
 }
 
 .faq-HomePage {
   border-radius: 3px;
-  max-width: 80px;
+  max-width: 70px;
+  padding-top: 5px;
+}
+
+.faq-HomePage:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 @media (max-width: 860px) {
