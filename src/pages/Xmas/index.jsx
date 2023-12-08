@@ -33,6 +33,9 @@ export const Xmas = () => {
     <>
       <Header />
       <main className="xmas_tree-container">
+        <div className="advent_calendar_dino">
+          <img src="./img/dinoWinter2.png" />
+        </div>
         {popCheck && (
           <PopUp
             popContent={popupTreeDec}
@@ -42,9 +45,6 @@ export const Xmas = () => {
             day={day}
           />
         )}
-        <div className="advent_calendar_dino">
-          <img src="./img/dinoWinter2.png" />
-        </div>
         <XmasTreeButtons
           tree={treeDec}
           popCheck={setPopCheck}

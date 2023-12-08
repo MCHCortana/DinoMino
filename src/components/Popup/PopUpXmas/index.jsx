@@ -2,13 +2,12 @@ import './style.css';
 
 export const PopUpXmas = ({ popContent, day }) => {
   const { id, element, number, text, name } = popContent;
-  console.log('number ze stromku', number);
   return (
     <div className="popup_xmas">
       <div className="popup_xmas_general">
         {number === '' && (
           <div className="wrong_day_Xmas">
-            <h2>Tady nic není, hledej dál.</h2>
+            <h2>Tady DNESKA ještě nic není, hledej dál.</h2>
             <h2>Dnes je {day}.prosince</h2>
           </div>
         )}
