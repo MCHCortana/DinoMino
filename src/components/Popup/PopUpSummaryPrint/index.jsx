@@ -10,7 +10,6 @@ export const PopUpSummaryPrint = () => {
   dayjs.locale('cs');
   const currentDay = dayjs().format('dddd');
   const currentMonth = dayjs().format('MMMM');
-  // console.log(currentMonth);
 
   const currentSeason = () => {
     const currentMonth = dayjs().month() + 1;

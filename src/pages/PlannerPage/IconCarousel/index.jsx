@@ -66,7 +66,7 @@ export const IconCarousel = ({
   };
   return (
     <>
-      <div className="carousel">
+      <div className="carousel scroll">
         {iconList.map((icon) => {
           return (
             <div key={iconList.indexOf(icon)} className="carousel__media">

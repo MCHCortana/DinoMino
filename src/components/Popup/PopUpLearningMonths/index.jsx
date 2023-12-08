@@ -40,7 +40,7 @@ export const PopUpLearningMonths = ({ learningMonth }) => {
             <audio
               controls
               src={`/audio/months/${getAudio()}.m4a`}
-              type="audio/mpeg"
+              type="audio/m4a"
             ></audio>
           )}
         </div>

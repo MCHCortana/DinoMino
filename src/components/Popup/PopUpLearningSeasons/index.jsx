@@ -43,7 +43,7 @@ export const PopUpLearningSeasons = ({ learningSeason }) => {
             <audio
               controls
               src={`/audio/seasons/${getAudio()}.m4a`}
-              type="audio/mpeg"
+              type="audio/m4a"
             ></audio>
           )}
         </div>
