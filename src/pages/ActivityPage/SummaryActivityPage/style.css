@@ -1,7 +1,6 @@
 .summary_activity_page {
   display: flex;
   flex-direction: column;
-  width: 90%;
   font-family: 'Andika', sans-serif;
   padding: 1rem;
   justify-content: center;

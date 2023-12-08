@@ -98,7 +98,7 @@ export const ActivityPage = () => {
                 <div className="tisk-sumary__activity"></div>
                 <div className="sumary-print">
                   <img
-                    src="./img/IconsFunctional/printer3.png"
+                    src="./img/IconsFunctional/printer.png"
                     alt="Printer"
                     onClick={handleClichPrint}
                   />
