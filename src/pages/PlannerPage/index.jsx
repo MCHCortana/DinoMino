@@ -29,10 +29,14 @@ export const PlannerPage = () => {
   const [activityForDay, setActivityForDay] = useState('');
   const [tooManyActivities, setTooManyActivities] = useState(false);
   const [onDeleting, setDeleting] = useState(false);
+
   return (
     <>
       <Header />
       <main className="container__planner_page">
+        {tooManyActivities && (
+          <PopUp popCheck={setTooManyActivities} location="alert" />
+        )}
         <FunctionalDivPlannerPage
           onDeleting={setDeleting}
           deleting={onDeleting}
@@ -40,9 +44,6 @@ export const PlannerPage = () => {
         />
 
         <div className="planner_days" id="planner_days">
-          {tooManyActivities && (
-            <PopUp popCheck={setTooManyActivities} location="alert" />
-          )}
           {weekDays?.map((day) => {
             return (
               <DayPlan
@@ -54,11 +55,12 @@ export const PlannerPage = () => {
                 setTooManyActivities={setTooManyActivities}
                 endDeleting={setDeleting}
                 activityForDay={activityForDay}
+                tooManActivities={tooManyActivities}
               />
             );
           })}
         </div>
-        {!!activityForDay && (
+        {!!activityForDay && !tooManyActivities && (
           <IconCarousel
             weekDays={weekDays}
             setWeekDays={setWeekDays}

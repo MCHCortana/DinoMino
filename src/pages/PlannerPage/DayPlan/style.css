@@ -13,6 +13,11 @@
   justify-content: flex-start;
 }
 
+.deleting_button--planner {
+  border: none;
+  background-color: transparent;
+}
+
 .active-day {
   background-color: #54d9fe;
 }

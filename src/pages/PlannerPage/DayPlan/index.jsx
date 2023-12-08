@@ -10,11 +10,15 @@ export const DayPlan = ({
   setWeekDays,
   endDeleting,
   activityForDay,
+  tooManActivities,
 }) => {
   const handleAdd = () => {
     endDeleting(false);
     setActivityForDay(day.dayName);
     day.activities.length === 3 && setTooManyActivities(true);
+  };
+  const handleDelete = () => {
+    endDeleting(true);
   };
 
   return (
@@ -24,9 +28,16 @@ export const DayPlan = ({
           activityForDay === day.dayName && 'active-day'
         }`}
       >
-        <button className="adding_button" onClick={handleAdd}>
-          <img src="./img/IconsFunctional/plus.png" alt="add-button" />
-        </button>
+        {day.activities.length === 3 && (
+          <button className="deleting_button--planner" onClick={handleDelete}>
+            <img src="./img/IconsFunctional/remove.png" alt="add-button" />
+          </button>
+        )}
+        {day.activities.length < 3 && (
+          <button className="adding_button" onClick={handleAdd}>
+            <img src="./img/IconsFunctional/plus.png" alt="add-button" />
+          </button>
+        )}
         <div className={`day_planner ${day.id}`}>
           <h2>{day.dayName}</h2>
         </div>
