@@ -43,7 +43,11 @@ export const PopUpSummaryPrint = () => {
     return monthData.find((month) => month.monthName === currentMonth).poem;
   };
   const getDataMonthAudio = () => {
-    return monthData.find((month) => month.monthName === currentMonth).audio;
+    const audioMonth = monthData.find(
+      (month) => month.monthName === currentMonth,
+    ).audio;
+    console.log(audioMonth);
+    return audioMonth;
   };
 
   useEffect(() => {
@@ -71,32 +75,39 @@ export const PopUpSummaryPrint = () => {
         <p>Rok má 365 dní</p>
         <h3>Rok má 4 ročni období.</h3>
         <div className="sumary-winter">
-          <h2>Teď je: {currentSeason()}</h2>
-          <p>{seasonsData && getDataSeasonPoem()}</p>
-          <div className="audio_hint">
-            <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
-            <audio controls>
-              <source
-                src={seasonsData && getDataSeasonAudio()}
-                type="audio/mpeg"
-              />{' '}
-            </audio>
-          </div>
+          {seasonsData && (
+            <>
+              {' '}
+              <h2>Teď je: {currentSeason()}</h2>
+              <p>{getDataSeasonPoem()}</p>
+              <div className="audio_hint">
+                <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
+                <audio
+                  controls
+                  src={`/audio/seasons/${getDataSeasonAudio()}.m4a`}
+                  type="audio/mpeg"
+                ></audio>
+              </div>
+            </>
+          )}
         </div>
 
         <h3>Rok Má 12 měsíců.</h3>
         <div key={currentMonth} className="sumary-winter">
-          <h2>Teď máme: {currentMonth}</h2>
-          <p>{monthData && getDataMonthPoem()}</p>
-          <div className="audio_hint">
-            <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
-            <audio controls>
-              <source
-                src={monthData && getDataMonthAudio()}
-                type="audio/mpeg"
-              />{' '}
-            </audio>
-          </div>
+          {monthData && (
+            <>
+              <h2>Teď máme: {currentMonth}</h2>
+              <p>{getDataMonthPoem()}</p>
+              <div className="audio_hint">
+                <img src="/img/IconsCalendar/music-notes.png" alt="Noty" />
+                <audio
+                  controls
+                  src={`/audio/months/${getDataMonthAudio()}.m4a`}
+                  type="audio/mpeg"
+                />
+              </div>
+            </>
+          )}
         </div>
         <h3>Týden má 7 dní, dnes je: {currentDay}</h3>
         <div className="print">
