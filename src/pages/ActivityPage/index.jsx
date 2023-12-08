@@ -74,7 +74,7 @@ export const ActivityPage = () => {
               <DefaultActivity learning={setLearning} learn={setLearn} />
             )}
             {learning === false && <DaysMonths learn={learn} />}
-            {(learning || learning === null) && (
+            {/* {(learning || learning === null) && (
               <div className="activity-dino_reading">
                 <img
                   className="dinosaurus_asking"
@@ -82,7 +82,7 @@ export const ActivityPage = () => {
                   alt="Dino míno se učí"
                 />
               </div>
-            )}
+            )} */}
           </div>
         </div>
 
