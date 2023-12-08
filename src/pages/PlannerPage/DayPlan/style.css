@@ -28,6 +28,11 @@
   border: none;
 }
 
+.adding_button:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
 .adding_button img {
   max-width: 64px;
 }

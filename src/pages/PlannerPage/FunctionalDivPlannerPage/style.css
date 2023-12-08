@@ -10,3 +10,8 @@
   gap: 1rem;
   ;
 }
+
+.planner_page_action_container img:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
