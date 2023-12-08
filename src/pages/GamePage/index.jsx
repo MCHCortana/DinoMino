@@ -1,26 +1,13 @@
 import './style.css';
 import { Header } from './../../components/Header';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { PopUp } from './../../components/Popup';
 
 export const GamePage = () => {
-  const [popCheck, setPopCheck] = useState(false);
-  const handleClickOpenInfo = () => {
-    setPopCheck(true);
-  };
   return (
     <>
       <Header gamePageLink={true} />
-      {popCheck && <PopUp popCheck={setPopCheck} location={'popupinfogame'} />}
       <main className="container__game_page">
         <h1>A jdeme si hrát!</h1>
-        <img
-          onClick={handleClickOpenInfo}
-          className="faq-gamepage"
-          src="./img/IconsFunctional/faq.png"
-          alt="FAQ"
-        />
         <img className="dino-mino__gamepage" src="./img/DinoMinoNoShadow.png" />
         <div className="game_menu">
           <div>
