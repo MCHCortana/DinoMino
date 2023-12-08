@@ -56,6 +56,14 @@
   margin: 10px;
 }
 
+.legenda--img:hover {
+  transform: scale(1);
+}
+
+.info-animated:hover {
+  transform: scale(1);
+}
+
 @media screen and (max-width: 1200px) {
   .info-tutorial img {
     width: 300px;
