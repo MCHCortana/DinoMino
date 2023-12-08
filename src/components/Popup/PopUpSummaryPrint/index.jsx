@@ -84,7 +84,7 @@ export const PopUpSummaryPrint = () => {
                 <audio
                   controls
                   src={`/audio/seasons/${getDataSeasonAudio()}.m4a`}
-                  type="audio/mpeg"
+                  type="audio/m4a"
                 ></audio>
               </div>
             </>
@@ -102,7 +102,7 @@ export const PopUpSummaryPrint = () => {
                 <audio
                   controls
                   src={`/audio/months/${getDataMonthAudio()}.m4a`}
-                  type="audio/mpeg"
+                  type="audio/m4a"
                 />
               </div>
             </>
