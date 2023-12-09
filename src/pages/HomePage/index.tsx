@@ -1,7 +1,7 @@
 import './style.css';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PopUp } from './../../components/Popup';
+import { PopUp } from '../../components/Popup';
 
 export const HomePage = () => {
   const [popCheck, setPopCheck] = useState(false);
@@ -29,7 +29,7 @@ export const HomePage = () => {
     setPopCheckHT(true);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserNameEnter(true);
     setUserName(e.target.value);
   };
