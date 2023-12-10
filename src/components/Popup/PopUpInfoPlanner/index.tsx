@@ -38,7 +38,7 @@ export const PopUpInfoPlanner = () => {
                 src="/img/IconsFunctional/dust.png"
                 alt="Ikona smaznání uloženého jména"
               />
-              <h2>Vymazat plán na celý den/tyden</h2>
+              <h2>Vymazat plán na celý týden</h2>
             </div>
 
             <div className="legenda--planner">
