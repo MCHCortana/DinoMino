@@ -12,7 +12,7 @@ export const MenuPage = () => {
   const [popCheckMenuPage, setPopCheckMenuPage] = useState(false);
   useEffect(() => {
     const data = window.localStorage.getItem('userName');
-    setUserName(data);
+    data !== '' && data !== null && setUserName(data);
   }, []);
 
   const handleHowToClick = () => {

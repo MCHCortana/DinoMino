@@ -1,4 +1,4 @@
-export const osloveni = (jmeno) => {
+export const osloveni = (jmeno: string) => {
   /**
    * copyright: https://github.com/honzaskypala/osloveni
    * Vrací pátý pád jména k prvnímu pádu

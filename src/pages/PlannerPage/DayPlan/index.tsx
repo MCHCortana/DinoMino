@@ -1,6 +1,18 @@
 import './style.css';
 
+import { WeekDays } from '../../../lib/types';
+
 import { PlannerActivity } from '../PlannerActivity';
+
+type DayPlanProps = {
+  day: WeekDays;
+  onDeleting: boolean;
+  setActivityForDay: React.Dispatch<React.SetStateAction<string>>;
+  setTooManyActivities: React.Dispatch<React.SetStateAction<boolean>>;
+  setWeekDays: React.Dispatch<React.SetStateAction<WeekDays[]>>;
+  endDeleting: React.Dispatch<React.SetStateAction<boolean>>;
+  activityForDay: string;
+};
 
 export const DayPlan = ({
   day,
@@ -10,12 +22,11 @@ export const DayPlan = ({
   setWeekDays,
   endDeleting,
   activityForDay,
-  tooManActivities,
-}) => {
+}: DayPlanProps) => {
   const handleAdd = () => {
     endDeleting(false);
     setActivityForDay(day.dayName);
-    day.activities.length === 3 && setTooManyActivities(true);
+    (day.activities.length as number) === 3 && setTooManyActivities(true);
   };
   const handleDelete = () => {
     endDeleting(true);
@@ -28,7 +39,7 @@ export const DayPlan = ({
           activityForDay === day.dayName && 'active-day'
         }`}
       >
-        {day.activities.length === 3 && (
+        {(day.activities.length as number) === 3 && (
           <button className="deleting_button--planner" onClick={handleDelete}>
             <img src="./img/IconsFunctional/remove.png" alt="add-button" />
           </button>
@@ -49,7 +60,7 @@ export const DayPlan = ({
               <img src="/img/IconsFunctional/square.png" />
             </>
           )}
-          {day.activities.map((dayActivity, index) => {
+          {day.activities.map((dayActivity: string, index: number) => {
             const idKey = self.crypto.randomUUID();
             return (
               <PlannerActivity
@@ -59,7 +70,7 @@ export const DayPlan = ({
                 activity={dayActivity}
                 setWeekDays={setWeekDays}
                 indexToDelete={index}
-                setIndexToDelete={setActivityForDay}
+                // setIndexToDelete={setActivityForDay}
               />
             );
           })}

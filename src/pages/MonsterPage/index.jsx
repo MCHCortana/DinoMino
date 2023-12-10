@@ -3,7 +3,7 @@ import { bodyPartsImport } from './bodyPartsImport';
 import { useDrop } from 'react-dnd';
 import { useState, useCallback } from 'react';
 import update from 'immutability-helper';
-import { Header } from './../../components/Header';
+import { Header } from '../../components/Header';
 import { MonsterTitle } from './MonsterTitle';
 import { DragableBox } from './DragableBox';
 

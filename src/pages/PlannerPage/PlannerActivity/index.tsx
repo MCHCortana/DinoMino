@@ -1,12 +1,22 @@
 import './style.css';
 
+import { WeekDays } from '../../../lib/types';
+
+type PlannerActivityProps = {
+  activity: string;
+  onDeleting: boolean;
+  setWeekDays: React.Dispatch<React.SetStateAction<WeekDays[]>>;
+  whichDay: string;
+  indexToDelete: number;
+};
+
 export const PlannerActivity = ({
   activity,
   onDeleting,
   setWeekDays,
   whichDay,
   indexToDelete,
-}) => {
+}: PlannerActivityProps) => {
   const handleClick = () => {
     setWeekDays((prevState) => {
       let newState = [...prevState];

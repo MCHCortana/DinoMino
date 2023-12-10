@@ -17,3 +17,9 @@ export type Months = {
   monthName: string;
   poem: string;
 };
+
+export type WeekDays = {
+  id: string;
+  dayName: string;
+  activities: [];
+};

@@ -1,12 +1,21 @@
 import './style.css';
+
+import { WeekDays } from '../../../lib/types';
+
 import { useState } from 'react';
-import { PopUp } from './../../../components/Popup';
+import { PopUp } from '../../../components/Popup';
+
+type FunctionalDivPlannerPageProps = {
+  onDeleting: React.Dispatch<React.SetStateAction<boolean>>;
+  deleting: boolean;
+  onClearing: React.Dispatch<React.SetStateAction<WeekDays[]>>;
+};
 
 export const FunctionalDivPlannerPage = ({
   onDeleting,
   deleting,
   onClearing,
-}) => {
+}: FunctionalDivPlannerPageProps) => {
   const [popCheck, setPopCheck] = useState(false);
   const handleClickOpenInfo = () => {
     setPopCheck(true);

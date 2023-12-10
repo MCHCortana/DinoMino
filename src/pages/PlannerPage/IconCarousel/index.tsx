@@ -1,10 +1,17 @@
 import './style.css';
+import { WeekDays } from '../../../lib/types';
+
+type IconCarouselProps = {
+  activityForDay: string;
+  setActivityForDay: React.Dispatch<React.SetStateAction<string>>;
+  setWeekDays: React.Dispatch<React.SetStateAction<WeekDays[]>>;
+};
 
 export const IconCarousel = ({
   activityForDay,
   setActivityForDay,
   setWeekDays,
-}) => {
+}: IconCarouselProps) => {
   const iconList = [
     'angel.png',
     'exercise.png',
@@ -48,8 +55,9 @@ export const IconCarousel = ({
     'doctor.png',
   ];
 
-  const handleClick = (e) => {
-    const addingImg = e.target.src.split('/');
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    const imgSrc = (e.target as HTMLImageElement).src;
+    const addingImg: Array<string> = imgSrc.split('/');
 
     setWeekDays((prevState) => {
       let newState = [...prevState];
@@ -57,8 +65,8 @@ export const IconCarousel = ({
         return day.dayName === activityForDay;
       });
       let newDay = newState[dayIndex];
-      setActivityForDay(null);
-      newDay.activities.push(addingImg[5]);
+      setActivityForDay('');
+      (newDay.activities as Array<string>).push(addingImg[5]);
       newState[dayIndex] = newDay;
 
       return newState;

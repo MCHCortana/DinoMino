@@ -1,13 +1,14 @@
 import './style.css';
 import { useState, useEffect } from 'react';
-import { Header } from './../../components/Header';
+import { Header } from '../../components/Header';
 import { DayPlan } from './DayPlan';
 import { IconCarousel } from './IconCarousel';
 import { PopUp } from '../../components/Popup';
 import { FunctionalDivPlannerPage } from './FunctionalDivPlannerPage';
+import { WeekDays } from '../../lib/types';
 
 export const PlannerPage = () => {
-  const [weekDays, setWeekDays] = useState([
+  const [weekDays, setWeekDays] = useState<WeekDays[]>([
     { id: 'monday', dayName: 'pondělí', activities: [] },
     { id: 'tuesday', dayName: 'úterý', activities: [] },
     { id: 'wednesday', dayName: 'středa', activities: [] },
@@ -55,14 +56,14 @@ export const PlannerPage = () => {
                 setTooManyActivities={setTooManyActivities}
                 endDeleting={setDeleting}
                 activityForDay={activityForDay}
-                tooManActivities={tooManyActivities}
+                // tooManActivities={tooManyActivities}
               />
             );
           })}
         </div>
         {!!activityForDay && !tooManyActivities && (
           <IconCarousel
-            weekDays={weekDays}
+            // weekDays={weekDays}
             setWeekDays={setWeekDays}
             activityForDay={activityForDay}
             setActivityForDay={setActivityForDay}
